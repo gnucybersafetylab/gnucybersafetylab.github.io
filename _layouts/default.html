@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Roboracer Foundation – Education, Racing, and Research for autonomous driving with 1/10-scale platforms.">
+  <meta name="author" content="Roboracer Foundation">
+
+  <title>
+    {% if page.title %}
+      {{ page.title }} | Roboracer Foundation
+    {% else %}
+      Roboracer Foundation
+    {% endif %}
+  </title>
+
+  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+  <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap-theme.css' | relative_url }}" media="screen">
+  <link rel="stylesheet" href="{{ '/assets/css/da-slider.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="{{ '/assets/js/html5shiv.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/respond.min.js' | relative_url }}"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-inverse navbar-fixed-top headroom">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- Button for smallest screens -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ '/' | relative_url }}">
+          <img src="{{ '/assets/images/logo_korea.png' | relative_url }}" alt="Roboracer Foundation logo">
+        </a>
+      </div>
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li {% if page.nav_active == 'home' %}class="active"{% endif %}>
+            <a href="{{ '/' | relative_url }}">Home</a>
+          </li>
+          <li {% if page.nav_active == 'organization' %}class="active"{% endif %}>
+            <a href="{{ '/organization.html' | relative_url }}">Organization</a>
+          </li>
+          <li {% if page.nav_active == 'learn' %}class="active"{% endif %}>
+            <a href="{{ '/learn.html' | relative_url }}">Learn</a>
+          </li>
+          <li {% if page.nav_active == 'race' %}class="active"{% endif %}>
+            <a href="{{ '/race.html' | relative_url }}">Race</a>
+          </li>
+          <li {% if page.nav_active == 'research' %}class="active"{% endif %}>
+            <a href="{{ '/research.html' | relative_url }}">Research</a>
+          </li>
+          <li {% if page.nav_active == 'community' %}class="active"{% endif %}>
+            <a href="{{ '/community.html' | relative_url }}">Community</a>
+          </li>
+          <li {% if page.nav_active == 'contact' %}class="active"{% endif %}>
+            <a href="{{ '/record.html' | relative_url }}">Record</a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div> 
+  <!-- /.navbar -->
+
+  <!-- 메인 콘텐츠 -->
+  <main role="main">
+    {{ content }}
+  </main>
+
+  <!-- 공통 푸터 (원하면 여기서 나중에 재단 소개/저작권 등 통일) -->
+<footer id="footer" class="top-space">
+  <div class="footer1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 panel">
+          <h3 class="panel-title">RoboRacer Korea 소개</h3>
+          <div class="panel-body">
+            <p>
+              한국 RoboRacer연구회는 1/10 스케일 자율주행 플랫폼을 기반으로  
+              교육·레이스·연구 활동을 적극적으로 지원하는 비영리 단체입니다.
+            </p> 
+          </div>
+        </div>
+
+        <div class="col-md-4 panel contact"> 
+          <h3 class="panel-title">연락처</h3>
+          <div class="panel-body">
+            <p>협력, 개최, 후원 문의는 아래 메일로 연락해주세요.</p>
+            <ul>
+              <li><i class="fa fa-phone"></i>+82-55-772-9174</li>
+              <li><a href="#"><i class="fa fa-envelope-o"></i> roboracer.korea@gmail.com, f1tenth.korea@gmail.com</a></li>
+              <li><i class="fa fa-flag"></i>경남 진주시 진주대로 501, ICT융합센터 313호</li>
+            </ul> 
+          </div>
+        </div>
+
+        <div class="col-md-3 panel">
+          <h3 class="panel-title">Follow us</h3>
+          <div class="panel-body">
+            <p class="follow-me-icons">
+              <a href=""><i class="fa fa-twitter fa-2"></i></a>
+              <a href=""><i class="fa fa-github fa-2"></i></a>
+              <a href=""><i class="fa fa-facebook fa-2"></i></a>
+              <a href=""><i class="fa fa-youtube fa-2"></i></a>
+              <a href=""><i class="fa fa-pinterest fa-2"></i></a>
+            </p> 
+          </div>
+        </div>
+      </div> <!-- /row -->
+    </div>
+  </div>
+
+  <div class="footer2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="simplenav">
+              <a href="{{ '/' | relative_url }}">Home</a> | 
+              <a href="{{ '/about.html' | relative_url }}">조직</a> |
+              <a href="{{ '/services.html' | relative_url }}">교육·레이스</a> |
+              <a href="{{ '/portfolio.html' | relative_url }}">연구 프로젝트</a> |
+              <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="text-right">
+              Copyright &copy; 2014–{{ site.time | date: '%Y' }} 
+              Roboracer Foundation Korea. Template by 
+              <a href="http://webthemez.com/" rel="develop">WebThemez.com</a> 
+            </p>
+          </div>
+        </div>
+      </div> <!-- /row -->
+    </div>
+  </div>
+</footer>
+
+
+  <!-- JS -->
+  <script src="{{ '/assets/js/modernizr-latest.js' | relative_url }}"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="{{ '/assets/js/jquery.cslider.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/headroom.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/jquery.headroom.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggles = document.querySelectorAll(".sidebar-menu .toggle");
+
+    toggles.forEach(function (t) {
+      t.addEventListener("click", function () {
+        var next = t.nextElementSibling;
+        if (next && next.classList.contains("sub-items")) {
+          // 접힘/펼침 토글
+          next.style.display = (next.style.display === "block") ? "none" : "block";
+        }
+      });
+    });
+  });
+  </script>
+
+
+</body>
+</html>

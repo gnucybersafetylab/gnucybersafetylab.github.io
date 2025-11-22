@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Roboracer Foundation – Education, Racing, and Research for autonomous driving with 1/10-scale platforms.">
+  <meta name="author" content="Roboracer Foundation">
+
+  <title>
+    
+      Home | Roboracer Foundation
+    
+  </title>
+
+  <link rel="icon" href="/assets/images/favicon.png">
+  <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap-theme.css" media="screen">
+  <link rel="stylesheet" href="/assets/css/da-slider.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="/assets/js/html5shiv.js"></script>
+  <script src="/assets/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-inverse navbar-fixed-top headroom">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- Button for smallest screens -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="/assets/images/logo_korea.png" alt="Roboracer Foundation logo">
+        </a>
+      </div>
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li class="active">
+            <a href="/">Home</a>
+          </li>
+          <li >
+            <a href="/organization.html">Organization</a>
+          </li>
+          <li >
+            <a href="/learn.html">Learn</a>
+          </li>
+          <li >
+            <a href="/race.html">Race</a>
+          </li>
+          <li >
+            <a href="/research.html">Research</a>
+          </li>
+          <li >
+            <a href="/community.html">Community</a>
+          </li>
+          <li >
+            <a href="/record.html">Record</a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div> 
+  <!-- /.navbar -->
+
+  <!-- 메인 콘텐츠 -->
+  <main role="main">
+    <!-- Header -->
+<header id="head">
+  <div class="container">
+    <div class="banner-content">
+      <div id="da-slider" class="da-slider">
+        <div class="da-slide">
+          <h2>Roboracer Foundation Korea</h2>
+          <p>"Building an open community for autonomous racing through education, races, and research."</p>
+          <div class="da-img"></div>
+        </div>
+        <div class="da-slide">
+          <h2>Learn</h2>
+          <p>"Hands-on learning with 1/10-scale Roboracer and F1TENTH platforms, from basic setup to advanced autonomy."</p>
+          <div class="da-img"></div>
+        </div>
+        <div class="da-slide">
+          <h2>Race</h2>
+          <p>"Annual Roboracer competitions that connect universities, companies, and students on the same track."</p>
+          <div class="da-img"></div>
+        </div>
+        <div class="da-slide">
+          <h2>Research</h2>
+          <p>"Sharing ideas and datasets for safe and reliable autonomous driving research."</p>
+          <div class="da-img"></div>
+        </div>
+        <div class="da-slide">
+          <h2>Community</h2>
+          <p>"A collaborative hub where educators, racers, and researchers grow the ecosystem together."</p>
+          <div class="da-img"></div>
+        </div>
+        <nav class="da-arrows">
+          <span class="da-arrows-prev"></span>
+          <span class="da-arrows-next"></span>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- /Header -->
+
+<!-- Intro -->
+<div class="container text-center">
+  <br>
+  <h2>Roboracer is an open platform that accelerates education and research in autonomous driving.</h2>
+  <p class="text-muted">
+    Roboracer Foundation Korea connects universities, research labs, and industry partners<br/>
+    to design courses, organize races, and explore new ideas in autonomy with accessible 1/10-scale cars.
+  </p>
+</div>
+<!-- /Intro-->
+    
+<!-- Highlights - jumbotron -->
+<div class="jumbotron top-space">
+  <div class="container">
+    <h3 class="text-center">What we focus on</h3>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 highlight">
+        <div class="h-caption"><h4><i class="fa fa-arrows fa-2x circle"></i>Hands-on Learning</h4></div>
+        <div class="h-body text-center">
+          <p>We provide step-by-step guidance to build and program Roboracer/F1TENTH cars, from basic control to full autonomy projects in class and labs.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 highlight">
+        <div class="h-caption"><h4><i class="fa fa-css3 fa-2x circle"></i>Open Learning Resources</h4></div>
+        <div class="h-body text-center">
+          <p>Curricula, lecture slides, code repositories, and exercises are shared openly so that instructors and students can quickly adopt and extend them.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 highlight">
+        <div class="h-caption"><h4><i class="fa fa-lightbulb-o fa-2x circle"></i>Roboracer Races</h4></div>
+        <div class="h-body text-center">
+          <p>We host yearly Roboracer races and challenge events, recording tracks, results, and highlights to inspire the next generation of teams.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 highlight">
+        <div class="h-caption"><h4><i class="fa fa-desktop fa-2x circle"></i>Industry–Academia Network</h4></div>
+        <div class="h-body text-center">
+          <p>Professors, students, and engineers collaborate on real-world problems such as safety, perception, planning, and simulation-to-real transfer.</p>
+        </div>
+      </div>
+    </div> <!-- /row  -->
+  </div>
+</div>
+<!-- /Highlights -->
+
+<!-- container -->
+<div class="container">
+  <div class="heading text-center">
+    <h2>About Roboracer Foundation Korea</h2>
+    <p>We are a non-profit initiative to grow the autonomous racing ecosystem in Korea and beyond.</p>
+  </div>
+  <div>
+    <p>
+      Roboracer Foundation Korea is formed by university faculty members and industry practitioners
+      who share a common goal: making autonomous driving education and research more accessible.
+      By standardizing a 1/10-scale racing platform and sharing open resources, we lower the barrier
+      for students to experience perception, planning, and control in a real robotics setting.
+      Through our races and workshops, teams can compare algorithms fairly, exchange experiences,
+      and continuously improve their systems together.
+    </p>
+  </div>
+  <div class="row iconColor">
+    <div class="col-md-4 col-sm-4">
+      <h3><i class="fa fa-desktop color"></i>&nbsp; What we do</h3>
+      <p>
+        We design courses, bootcamps, and labs, and provide templates for universities that want to
+        integrate Roboracer or F1TENTH into their curriculum. We also support instructors with
+        teaching materials, evaluation tools, and example projects.
+      </p>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <h3><i class="fa fa-cloud color"></i>&nbsp;Why it matters</h3>
+      <p>
+        Autonomous driving integrates AI, control, embedded systems, and safety engineering.
+        Roboracer offers a concrete platform where these topics meet, helping students build
+        strong intuition and enabling researchers to rapidly prototype and validate new ideas.
+      </p>
+    </div>
+    <div class="col-md-4 col-sm-4">
+      <h3><i class="fa fa-home color"></i>&nbsp;Where we are</h3>
+      <p>
+        The foundation is coordinated in Korea, with core activities around universities and
+        partner companies. We welcome new member institutions, organizers, and volunteers
+        who are interested in hosting local races or educational programs.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron top-space">
+    <p>
+      Whether you are an instructor looking to launch a new autonomous driving course,
+      a student team preparing for your first race, or a researcher seeking a reproducible
+      platform, Roboracer Foundation Korea provides a place to start and a community to grow with.
+      Join us to design courses, race competitively, and explore cutting-edge research together.
+    </p>
+    <p class="text-right"><a class="btn btn-primary btn-large">Learn more about our programs</a></p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class='col-md-offset-2 col-md-8 text-center'>
+      <h2>Voices from the Community</h2>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-offset-2 col-md-8'>
+      <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+        <!-- Bottom Carousel Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#quote-carousel" data-slide-to="1"></li>
+          <li data-target="#quote-carousel" data-slide-to="2"></li>
+        </ol>
+        
+        <!-- Carousel Slides / Quotes -->
+        <div class="carousel-inner">
+          <!-- Quote 1 -->
+          <div class="item active">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="assets/images/person_1.png" style="width: 100px;height:100px;">
+                </div>
+                <div class="col-sm-9">
+                  <p>
+                    “Our students learned more about autonomy in one semester with Roboracer
+                    than in several years of purely theoretical courses.”
+                  </p>
+                  <small>University Instructor</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 2 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="assets/images/person_2.png" style="width: 100px;height:100px;">
+                </div>
+                <div class="col-sm-9">
+                  <p>
+                    “The race gave us a clear goal and deadline. Tuning our car and seeing it compete
+                    against other teams was an unforgettable experience.”
+                  </p>
+                  <small>Student Team Member</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <!-- Quote 3 -->
+          <div class="item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <img class="img-circle" src="assets/images/person_3.png" style="width: 100px;height:100px;">
+                </div>
+                <div class="col-sm-9">
+                  <p>
+                    “For our company, supporting Roboracer is a way to meet talented students
+                    and explore new ideas in perception and control in a low-risk environment.”
+                  </p>
+                  <small>Industry Partner</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+        
+        <!-- Carousel Buttons Next/Prev -->
+        <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+        <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+      </div>                          
+    </div>
+  </div>
+</div>
+
+<!-- Social links. -->
+<section id="social">
+  <div class="container">
+    <div class="wrapper clearfix">
+      <div class="addthis_toolbox addthis_default_style">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+        <a class="addthis_button_tweet"></a>
+        <a class="addthis_button_linkedin_counter"></a>
+        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="top-space">
+  <div class="footer1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 panel">
+          <h3 class="panel-title">About Roboracer Foundation</h3>
+          <div class="panel-body">
+            <p>
+              Roboracer Foundation Korea promotes autonomous driving education, racing,
+              and research using 1/10-scale platforms. We support instructors, students,
+              and partners with open resources, shared tracks, and a friendly but
+              competitive racing environment.
+            </p> 
+          </div>
+        </div>
+
+        <div class="col-md-4 panel contact"> 
+          <h3 class="panel-title">Contact Info</h3>
+          <div class="panel-body">
+            <p>For collaboration, hosting, or sponsorship inquiries, please get in touch.</p>
+            <ul>
+              <li><i class="fa fa-phone"></i>+82-00-000-0000</li>
+              <li><a href="#"><i class="fa fa-envelope-o"></i> info@roboracer.org</a></li>
+              <li><i class="fa fa-flag"></i>Jinju, Korea (example address)</li>
+            </ul> 
+          </div>
+        </div>
+
+        <div class="col-md-3 panel">
+          <h3 class="panel-title">Follow us</h3>
+          <div class="panel-body">
+            <p class="follow-me-icons">
+              <a href=""><i class="fa fa-twitter fa-2"></i></a>
+              <a href=""><i class="fa fa-github fa-2"></i></a>
+              <a href=""><i class="fa fa-facebook fa-2"></i></a>
+              <a href=""><i class="fa fa-youtube fa-2"></i></a>
+              <a href=""><i class="fa fa-pinterest fa-2"></i></a>
+            </p> 
+          </div>
+        </div>
+      </div> <!-- /row of panels -->
+    </div>
+  </div>
+
+  <div class="footer2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="simplenav">
+              <a href="/">Home</a> | 
+              <a href="/about.html">Organization</a> |
+              <a href="/services.html">Learn &amp; Race</a> |
+              <a href="/portfolio.html">Research &amp; Projects</a> |
+              <a href="/contact.html">Contact</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="text-right">
+              Copyright &copy; 2014–2025 Roboracer Foundation Korea. Template by <a href="http://webthemez.com/" rel="develop">WebThemez.com</a> 
+            </p>
+          </div>
+        </div>
+      </div> <!-- /row of panels -->
+    </div>
+  </div>
+</footer>
+
+  </main>
+
+  <!-- 공통 푸터 (원하면 여기서 나중에 재단 소개/저작권 등 통일) -->
+<footer id="footer" class="top-space">
+  <div class="footer1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 panel">
+          <h3 class="panel-title">RoboRacer Korea 소개</h3>
+          <div class="panel-body">
+            <p>
+              한국 RoboRacer연구회는 1/10 스케일 자율주행 플랫폼을 기반으로  
+              교육·레이스·연구 활동을 적극적으로 지원하는 비영리 단체입니다.
+            </p> 
+          </div>
+        </div>
+
+        <div class="col-md-4 panel contact"> 
+          <h3 class="panel-title">연락처</h3>
+          <div class="panel-body">
+            <p>협력, 개최, 후원 문의는 아래 메일로 연락해주세요.</p>
+            <ul>
+              <li><i class="fa fa-phone"></i>+82-55-772-9174</li>
+              <li><a href="#"><i class="fa fa-envelope-o"></i> roboracer.korea@gmail.com, f1tenth.korea@gmail.com</a></li>
+              <li><i class="fa fa-flag"></i>경남 진주시 진주대로 501, ICT융합센터 313호</li>
+            </ul> 
+          </div>
+        </div>
+
+        <div class="col-md-3 panel">
+          <h3 class="panel-title">Follow us</h3>
+          <div class="panel-body">
+            <p class="follow-me-icons">
+              <a href=""><i class="fa fa-twitter fa-2"></i></a>
+              <a href=""><i class="fa fa-github fa-2"></i></a>
+              <a href=""><i class="fa fa-facebook fa-2"></i></a>
+              <a href=""><i class="fa fa-youtube fa-2"></i></a>
+              <a href=""><i class="fa fa-pinterest fa-2"></i></a>
+            </p> 
+          </div>
+        </div>
+      </div> <!-- /row -->
+    </div>
+  </div>
+
+  <div class="footer2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="simplenav">
+              <a href="/">Home</a> | 
+              <a href="/about.html">조직</a> |
+              <a href="/services.html">교육·레이스</a> |
+              <a href="/portfolio.html">연구 프로젝트</a> |
+              <a href="/contact.html">Contact</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="text-right">
+              Copyright &copy; 2014–2025 
+              Roboracer Foundation Korea. Template by 
+              <a href="http://webthemez.com/" rel="develop">WebThemez.com</a> 
+            </p>
+          </div>
+        </div>
+      </div> <!-- /row -->
+    </div>
+  </div>
+</footer>
+
+
+  <!-- JS -->
+  <script src="/assets/js/modernizr-latest.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="/assets/js/jquery.cslider.js"></script>
+  <script src="/assets/js/headroom.min.js"></script>
+  <script src="/assets/js/jquery.headroom.min.js"></script>
+  <script src="/assets/js/custom.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggles = document.querySelectorAll(".sidebar-menu .toggle");
+
+    toggles.forEach(function (t) {
+      t.addEventListener("click", function () {
+        var next = t.nextElementSibling;
+        if (next && next.classList.contains("sub-items")) {
+          // 접힘/펼침 토글
+          next.style.display = (next.style.display === "block") ? "none" : "block";
+        }
+      });
+    });
+  });
+  </script>
+
+
+</body>
+</html>
