@@ -865,3 +865,104 @@ body {
     font-size: 0.9em;
     color: #999;
   }
+
+  /* 전체 본문 폰트 크기 및 줄 간격 확대 */
+body {
+    font-size: 17px;        /* 기본 14–15px → 17px 추천 */
+    line-height: 1.7;       /* 기본 1.4~1.5 → 1.7 추천 */
+}
+
+/* 본문 영역(maincontent)만 조정하고 싶으면 */
+.maincontent {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* p 태그 간격을 조금 더 띄우기 */
+p {
+    margin-bottom: 14px;
+}
+
+/* 전체 조직도 래퍼 */
+.org-chart {
+  margin: 40px 0;
+}
+
+/* 각 레벨(위/아래)을 가로로 가운데 정렬 */
+.org-level {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;            /* 박스 사이 간격 */
+}
+
+/* 위쪽 레벨(위원장)은 아래와 간격 조금 더 */
+.level-top {
+  margin-bottom: 10px;
+}
+
+/* 조직도 박스(위원장 / 부위원장 / 자문위원단) */
+.org-node {
+  min-width: 160px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.org-node .title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.org-node .desc {
+  display: block;
+  font-size: 13px;
+  color: #666;
+}
+
+/* 위원장과 아래 박스들 사이 선 */
+.org-connector {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 30px;
+  margin: 0 auto 10px;  /* 가운데 정렬 + 아래쪽 여백 */
+}
+
+/* 위원장에서 내려오는 세로선 */
+.org-connector::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 50%;
+  border-left: 1px solid #ccc;
+  transform: translateX(-50%);
+}
+
+/* 아래 레벨 위에 가로선 */
+.org-connector::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 260px;         /* 가로선 길이. 필요하면 숫자만 조절 */
+  border-top: 1px solid #ccc;
+  transform: translateX(-50%);
+}
+
+/* 화면이 좁을 때는 세로로 줄 세우기 */
+@media (max-width: 768px) {
+  .org-level.level-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .org-connector::after {
+    width: 80%;         /* 모바일에서 가로선 길이 줄이기 */
+  }
+}
