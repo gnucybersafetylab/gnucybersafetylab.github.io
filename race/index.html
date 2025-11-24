@@ -15,88 +15,112 @@ nav_active: "race"
 
 <div class="container race-page">
 
-  <!-- ⬇️ 탭 메뉴: Events | Race Rules -->
+  <!-- Tabs -->
   <ul class="nav nav-pills" style="margin-bottom: 25px;">
-    <li class="active">
-      <a href="{{ '/race/' | relative_url }}">Events</a>
-    </li>
-    <li>
-      <a href="{{ '/race/rules/' | relative_url }}">Race Rules</a>
-    </li>
+    <li class="active"><a href="{{ '/race/' | relative_url }}">Events</a></li>
+    <li><a href="{{ '/race/rules/' | relative_url }}">Race Rules</a></li>
   </ul>
 
-  <!-- Upcoming Events -->
+  <!-- ========================= -->
+  <!--      Upcoming Events      -->
+  <!-- ========================= -->
   <section class="race-section">
     <h2 class="text-center race-section-title">Upcoming Events</h2>
 
+
+    <!-- ------------------------ -->
+    <!--   🇰🇷 Korea Championships  -->
+    <!-- ------------------------ -->
+    <h3 class="race-subtitle">Korea Events</h3>
+
     <div class="row race-cards-grid">
 
-      <!-- 1 -->
+      <!-- G-NEX Championship -->
       <div class="col-md-3 col-sm-6">
         <div class="race-card">
-          <h4>IEEE 25th International Conference on Control, Automation, and Systems (ICCAS 2025)</h4>
-          <p class="race-date">Nov 4–6, 2025</p>
-          <p class="race-location">Songdo ConvensiA, Incheon, Korea</p>
+          <h4>2025 F1TENTH Global Innovation Festa G-NEX Championship</h4>
+          <p class="race-date">Nov 30 – Dec 1, 2025</p>
+          <p class="race-location">Changwon Convention Center, Changwon, Korea</p>
           <a href="#" class="race-link">View details</a>
         </div>
       </div>
 
-      <!-- 2 -->
+      <!-- ICCAS Korea Championship -->
       <div class="col-md-3 col-sm-6">
         <div class="race-card">
-          <h4>25th Roboracer Autonomous Racing Competition at CDC 2025</h4>
+          <h4>4th F1TENTH Korea Championship at ICCAS 2025</h4>
+          <p class="race-date">Nov 4–7, 2025</p>
+          <p class="race-location">Songdo ConvensiA, Incheon</p>
+          <a href="#" class="race-link">View details</a>
+        </div>
+      </div>
+
+    </div><!-- row -->
+
+
+    <!-- ------------------------ -->
+    <!--        🌎 Global          -->
+    <!-- ------------------------ -->
+    <h3 class="race-subtitle" style="margin-top:40px;">Global Events</h3>
+
+    <div class="row race-cards-grid">
+
+      <!-- CDC 2025 -->
+      <div class="col-md-3 col-sm-6">
+        <div class="race-card">
+          <h4>25th Roboracer Competition at CDC 2025</h4>
           <p class="race-date">Dec 9–12, 2025</p>
           <p class="race-location">Rio de Janeiro, Brazil</p>
           <a href="#" class="race-link">View details</a>
         </div>
       </div>
 
-      <!-- 3 -->
+      <!-- IIT Bombay -->
       <div class="col-md-3 col-sm-6">
         <div class="race-card">
-          <h4>26th Roboracer Autonomous Racing Competition at Techfest IIT-Bombay</h4>
+          <h4>26th Roboracer Competition at Techfest IIT Bombay</h4>
           <p class="race-date">Dec 22–24, 2025</p>
           <p class="race-location">IIT Bombay, India</p>
           <a href="#" class="race-link">View details</a>
         </div>
       </div>
 
-      <!-- 4 -->
+      <!-- ICRA 2026 -->
       <div class="col-md-3 col-sm-6">
         <div class="race-card">
-          <h4>27th Roboracer Autonomous Racing Competition at ICRA 2026</h4>
+          <h4>27th Roboracer Competition at ICRA 2026</h4>
           <p class="race-date">June 1–5, 2026</p>
           <p class="race-location">Vienna, Austria</p>
           <a href="#" class="race-link">View details</a>
         </div>
       </div>
 
-    </div><!-- /row -->
-
-    <div class="row race-cards-grid">
-
-      <!-- 5 -->
-      <div class="col-md-4 col-sm-6">
+      <!-- IV 2026 -->
+      <div class="col-md-3 col-sm-6">
         <div class="race-card">
-          <h4>28th Roboracer Competition at IEEE Intelligent Vehicles Symposium (IV 2026)</h4>
+          <h4>28th Roboracer Competition at IEEE IV 2026</h4>
           <p class="race-date">June 22–25, 2026</p>
           <p class="race-location">Detroit, MI, USA</p>
           <a href="#" class="race-link">View details</a>
         </div>
       </div>
 
-      <!-- 6 -->
-      <div class="col-md-4 col-sm-6">
+    </div><!-- row -->
+
+    <div class="row race-cards-grid">
+
+      <!-- VTC 2026 -->
+      <div class="col-md-3 col-sm-6">
         <div class="race-card">
-          <h4>29th Roboracer Competition at IEEE Vehicular Technology Conference (VTC 2026)</h4>
+          <h4>29th Roboracer Competition at IEEE VTC 2026</h4>
           <p class="race-date">Sep 6–9, 2026</p>
           <p class="race-location">Boston, MA, USA</p>
           <a href="#" class="race-link">View details</a>
         </div>
       </div>
 
-      <!-- 7 (예비 자리 / 향후 추가용) -->
-      <div class="col-md-4 col-sm-12">
+      <!-- Placeholder -->
+      <div class="col-md-3 col-sm-6">
         <div class="race-card race-card-placeholder">
           <h4>More events coming soon</h4>
           <p class="race-date">TBA</p>
@@ -105,12 +129,15 @@ nav_active: "race"
         </div>
       </div>
 
-    </div><!-- /row -->
+    </div><!-- row -->
+
   </section>
 
   <hr>
 
-  <!-- Past Events -->
+  <!-- ========================= -->
+  <!--        Past Events        -->
+  <!-- ========================= -->
   <section class="race-section">
     <h2 class="text-center race-section-title">Past Events</h2>
 
@@ -122,47 +149,43 @@ nav_active: "race"
           <div class="race-tag">
             <strong>1st F1TENTH Korea Championship</strong><br>
             <span class="race-tag-sub">
-              KSMTE 2022 · Dec 12–13, 2022<br>
-              Jeju, Korea
+              Dec 12–13, 2022 · Jeju, Korea
             </span>
           </div>
         </a>
       </div>
 
-      <!-- 2nd Korea Championship -->
+      <!-- 2nd -->
       <div class="col-md-3 col-sm-6">
         <a href="https://korea-race23.f1tenth.org/" target="_blank" class="race-tag-link">
           <div class="race-tag">
             <strong>2nd F1TENTH Korea Championship</strong><br>
             <span class="race-tag-sub">
-              ICCAS 2023 · Oct 17–19, 2023<br>
-              Yeosu, Korea
+              Oct 17–19, 2023 · Yeosu, Korea
             </span>
           </div>
         </a>
       </div>
 
-      <!-- 3rd Korea Championship -->
+      <!-- 3rd -->
       <div class="col-md-3 col-sm-6">
-        <a href="https://korea-race24.f1tenth.org" target="_blank" class="race-tag-link">
+        <a href="https://korea-race24.f1tenth.org/" target="_blank" class="race-tag-link">
           <div class="race-tag">
             <strong>3rd F1TENTH Korea Championship</strong><br>
             <span class="race-tag-sub">
-              Oct 29 – Nov 1, 2024<br>
-              Jeju Shinhwa World, Korea
+              Oct 29 – Nov 1, 2024 · Jeju Shinhwa World, Korea
             </span>
           </div>
         </a>
       </div>
 
-      <!-- 4th Korea Championship -->
+      <!-- 4th -->
       <div class="col-md-3 col-sm-6">
         <a href="http://f1tenthkorea.com/" target="_blank" class="race-tag-link">
           <div class="race-tag">
             <strong>4th F1TENTH Korea Championship</strong><br>
             <span class="race-tag-sub">
-              Nov 4 – 7, 2025<br>
-              Songdo ConvensiA, Incheon
+              Nov 4–7, 2025 · Songdo ConvensiA, Incheon
             </span>
           </div>
         </a>
