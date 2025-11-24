@@ -1,0 +1,257 @@
+<header id="head" class="secondary">
+  <div class="container">
+    <h1 class="page-title">F1TENTH Race Rules</h1>
+    <p class="lead">
+      자율주행 레이싱의 공정성과 안전을 위한 공식 규정 문서입니다.  
+      RoboRacer Korea 및 국제 F1TENTH 대회에서 모두 사용되는 표준 규칙입니다.
+    </p>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- 상단 탭 메뉴 -->
+  <ul class="nav nav-pills" style="margin-bottom: 25px;">
+    <li><a href="/race/">Events</a></li>
+    <li class="active"><a href="/race/rules/">Race Rules</a></li>
+  </ul>
+
+  <div class="row">
+
+    <!-- ⬅️ 왼쪽 연도별 메뉴 -->
+    <aside class="col-md-3 col-sm-4">
+      <div class="year-menu">
+        <h4>Race Rules by Year</h4>
+        <ul class="nav nav-pills nav-stacked">
+          <li>
+            <a href="/race/rules-2022/">2022 Rules</a>
+          </li>
+          <li>
+            <a href="/race/rules-2023/">2023 Rules</a>
+          </li>
+          <li>
+            <a href="/race/rules-2024/">2024 Rules</a>
+          </li>
+          <li class="active">
+            <a href="/race/rules">2025 Rules (ICCAS)</a>
+          </li>
+        </ul>
+        <p class="small text-muted" style="margin-top:10px;">
+          ※ 다른 연도 규정은 예시 링크입니다.  
+          해당 연도 규칙 페이지를 추가하여 연결할 수 있습니다.
+        </p>
+      </div>
+    </aside>
+
+    <!-- ➡️ 오른쪽 규칙 본문 -->
+    <div class="col-md-9 col-sm-8">
+
+      <!-- Table of Contents -->
+      <h2 class="rules-section-title">📘 Table of Contents</h2>
+
+      <div class="toc-box">
+        <ol>
+          <li>General</li>
+          <li>In-person (Physical) Competition
+            <ol>
+              <li>Vehicle Classes</li>
+              <li>Track &amp; Racing Environment</li>
+              <li>Inspection</li>
+              <li>Time Trial
+                <ol>
+                  <li>Definitions</li>
+                  <li>General</li>
+                  <li>Qualification Requirements</li>
+                  <li>Penalties</li>
+                  <li>Evaluation</li>
+                </ol>
+              </li>
+              <li>Head-to-Head Race
+                <ol>
+                  <li>General</li>
+                  <li>Qualification Requirements</li>
+                  <li>Penalties</li>
+                  <li>Evaluation</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+
+      <!-- 1. General -->
+      <div class="rule-block">
+        <h2 class="rules-section-title">1. General</h2>
+        <p>
+          International F1TENTH Autonomous Racing Competition is open to teams of all skill levels.
+          Each participant must belong to exactly one team.
+        </p>
+        <p>
+          The competition is held entirely in person.  
+          Teams must register in advance through the official registration form.
+        </p>
+
+        <div class="note-box">
+          📌 <strong>Organizer Contact:</strong>  
+          The preferred communication channel is the <strong>ICCAS2023</strong> Slack space on F1TENTH Teams.
+        </div>
+      </div>
+
+      <!-- 2. In-person -->
+      <div class="rule-block">
+        <h2 class="rules-section-title">2. In-Person Competition</h2>
+        <p>
+          The competition consists of three stages:  
+          <strong>Inspection → Time Trials → Head-to-Head Race</strong>
+        </p>
+        <ul>
+          <li>Teams must build their own F1TENTH vehicle meeting the official specifications.</li>
+          <li>Each team must have its own unique vehicle.</li>
+          <li>
+            Winners are encouraged to open-source their racing algorithms for the benefit of future competitors.
+          </li>
+        </ul>
+
+        <!-- 2.1 -->
+        <h3>2.1 Vehicle Classes</h3>
+        <p>The following constraints must be satisfied:</p>
+
+        <ul>
+          <li>Vehicle must follow the official Bill of Materials (similar or lower specification allowed).</li>
+          <li>All vehicles undergo a mandatory hardware inspection.</li>
+          <li><strong>Hardware aimed at creating unfair advantage is not permitted.</strong></li>
+          <li>
+            <strong>Chassis:</strong> Any 1:10 RC chassis (Traxxas recommended).
+          </li>
+          <li>
+            <strong>Main Compute Unit:</strong> Jetson NX / Orin NX or lower-spec devices (Raspberry Pi, Nano, TX2, etc.).
+          </li>
+          <li>
+            <strong>LiDAR:</strong> Hokuyo UST-10LX or lower spec (10m, 40Hz, 0.25°).
+          </li>
+          <li>
+            <strong>Camera:</strong> Mono or stereo (Logitech C920, Realsense, ZED, etc.).
+          </li>
+          <li>
+            <strong>Motor:</strong> Brushless only (Velineon 3500kV or lower spec).</li>
+          <li>
+            <strong>Battery &amp; Charger:</strong> 4S 5000mAh XT90, IMAX B6 recommended.</li>
+          <li>
+            <strong>Sensors:</strong> IMU, encoders OK; no indoor GPS (e.g., Marvelmind).</li>
+        </ul>
+
+        <div class="warning-box">
+          ⚠️ <strong>Important:</strong>  
+          Any component with high internal compute capability (e.g., custom AI modules) is prohibited.
+        </div>
+
+        <!-- 2.2 -->
+        <h3>2.2 Track &amp; Racing Environment</h3>
+        <ul>
+          <li>Flat reflective surface (LiDAR ground reflections may occur).</li>
+          <li>Bright room with glass walls; lower half will be covered.</li>
+          <li>Track border uses 33 cm diameter air pipes; gaps may exist.</li>
+          <li>Track size: approx. 28.5 × 11 m.</li>
+          <li>No dedicated mapping session; teams must map during practice or qualification.</li>
+        </ul>
+
+        <!-- 2.3 -->
+        <h3>2.3 Inspection</h3>
+        <ul>
+          <li>Conducted on the first day of competition.</li>
+          <li>Performed by race referees.</li>
+          <li>Any major hardware or algorithm change requires re-inspection.</li>
+        </ul>
+
+        <!-- 2.4 Time Trial -->
+        <h3>2.4 Time Trial</h3>
+
+        <h4>2.4.1 Definitions</h4>
+        <ul>
+          <li><strong>Touching:</strong> Object movement &lt; 5 cm.</li>
+          <li><strong>Crashing:</strong> Any border movement or object shift ≥ 5 cm.</li>
+          <li>Track includes multiple checkpoints (start line is not one).</li>
+        </ul>
+
+        <h4>2.4.2 General</h4>
+        <ul>
+          <li>Two heats, 5 minutes each.</li>
+          <li>Goal: fastest single lap + most completed consecutive laps.</li>
+          <li>No pause for crashes; timer continues.</li>
+          <li>Teams may update configs only while vehicle is stationary.</li>
+          <li>Track layout remains constant but may slightly shift.</li>
+        </ul>
+
+        <h4>2.4.3 Qualification Requirements</h4>
+        <ul>
+          <li>Vehicle must complete a lap autonomously without crashing.</li>
+          <li>Remote emergency-stop must be demonstrated.</li>
+        </ul>
+
+        <h4>2.4.4 Penalties</h4>
+        <ul>
+          <li>Touching is allowed unless excessive.</li>
+          <li>Crashing requires manual car reset to last checkpoint.</li>
+          <li>Total repair time counts as penalty.</li>
+        </ul>
+
+        <h4>2.4.5 Evaluation</h4>
+        <ul>
+          <li>Fastest lap score ranking</li>
+          <li>Most consecutive lap score ranking</li>
+          <li>Final = Sum of both rankings</li>
+        </ul>
+
+        <!-- 2.5 -->
+        <h3>2.5 Head-to-Head Race</h3>
+
+        <h4>2.5.1 General</h4>
+        <ul>
+          <li>Both cars race simultaneously from opposite points.</li>
+          <li>No intentional hindering or harmful maneuvers.</li>
+          <li>Knockout bracket based on Time Trial ranking.</li>
+          <li>Each match has 10-minute time limit.</li>
+          <li>No configuration change during race unless after crash reset.</li>
+        </ul>
+
+        <h4>2.5.2 Qualification Requirements</h4>
+        <ul>
+          <li>Must pass Time Trial.</li>
+          <li>Must have certified foam bumper.</li>
+          <li>Vehicle must be LiDAR-visible (≥ 12×12 cm silhouette from 10–30 cm height).</li>
+          <li>Must demonstrate static/dynamic obstacle avoidance.</li>
+        </ul>
+
+        <h4>2.5.3 Penalties</h4>
+        <ul>
+          <li>Touching allowed unless excessive.</li>
+          <li>Opponent touch OK unless deviation from expected path occurs.</li>
+          <li>Crash to wall → team must fix track + reposition car.</li>
+          <li>
+            Crash into opponent:
+            <ul>
+              <li>Referees assign blame.</li>
+              <li>Both cars reset to designated point.</li>
+              <li>Race restarts.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4>2.5.4 Evaluation</h4>
+        <ul>
+          <li>First to complete 8 laps wins.</li>
+          <li>Two referees (one per car).</li>
+          <li>Each referee validates laps and crash judgments.</li>
+        </ul>
+
+      </div>
+
+      <div class="rules-footer">
+        &copy; 2022 F1TENTH Foundation — All rights reserved.
+      </div>
+
+    </div><!-- /.col-md-9 -->
+
+  </div><!-- /.row -->
+
+</div><!-- /.container -->

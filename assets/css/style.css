@@ -966,3 +966,92 @@ p {
     width: 80%;         /* 모바일에서 가로선 길이 줄이기 */
   }
 }
+
+.rules-section-title {
+  margin-top: 50px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #eee;
+  font-weight: 700;
+}
+
+.toc-box {
+  background: #f8f9fc;
+  border: 1px solid #e0e4f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.rule-block {
+  margin-top: 40px;
+}
+
+.note-box {
+  background: #fff9e6;
+  border-left: 5px solid #ffcc00;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.warning-box {
+  background: #ffecec;
+  border-left: 5px solid #ff4d4d;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.rules-footer {
+  margin-top: 60px;
+  text-align: center;
+  color: #777;
+}
+
+/* 왼쪽 연도별 메뉴 스타일 */
+.year-menu {
+  margin-top: 40px;
+}
+
+.year-menu h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.year-menu .nav-pills > li > a {
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.year-menu .nav-pills > li.active > a {
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .year-menu {
+    margin-bottom: 30px;
+  }
+}
+
+/* 카드 스타일 */
+.rules-card {
+  border: 1px solid #e3e6f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease;
+}
+.rules-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.rules-card h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.rules-card .meta {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 8px;
+}
