@@ -1090,8 +1090,7 @@ p {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     height: 45px;
-    display: flex;
-    align-items: center;      /* 메뉴 텍스트도 가운데 */
+    display: flex;    
   }
 }
 
