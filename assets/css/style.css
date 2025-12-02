@@ -1279,3 +1279,47 @@ body {
     padding-top: 60px;
   }
 }
+
+/* 모바일 – 로고 왼쪽, 햄버거 오른쪽 수정본 */
+@media (max-width: 767px) {
+  .navbar-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 핵심: HTML 순서(버튼->로고)를 화면상에서 역순(로고->버튼)으로 배치 */
+    flex-direction: row-reverse; 
+    margin: 0;
+  }
+
+  .navbar-brand {
+    height: 50px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .navbar-brand img {
+    max-height: 24px;
+    width: auto;
+  }
+
+  .navbar-toggle {
+    margin: 0 15px 0 0;
+    padding: 9px 10px; /* 터치 영역 확보를 위해 padding 약간 조정 */
+    float: none;
+    /* display: flex;  <-- 이 줄을 삭제해야 아이콘 뭉개짐이 해결됨 */
+    /* align-items: center; <-- 이 줄도 삭제 */
+    border: 1px solid transparent; /* 테두리 깔끔하게 정리 */
+  }
+  
+  /* 혹시 아이콘 색상이 안 보일 경우를 대비한 추가 스타일 */
+  .navbar-toggle .icon-bar {
+    background-color: #888; /* 혹은 원하시는 색상 */
+  }
+
+  body {
+    padding-top: 60px;
+  }
+}
