@@ -1118,7 +1118,7 @@ p {
   /* 로고 쪽 */
   .navbar-header {
     display: flex;
-    align-items: center;
+    align-items: left;
     margin: 0;
   }
 
@@ -1139,6 +1139,7 @@ p {
   .navbar-toggle {
     margin: 0;
     margin-left: auto;            /* 브랜드 오른쪽 끝으로 밀기 */
+    align-items: right; 
   }
 
   /* 드롭다운된 메뉴 영역 여백 (지금처럼 아래로 잘 내려오게 유지) */
