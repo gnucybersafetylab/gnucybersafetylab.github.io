@@ -1327,7 +1327,7 @@ body {
   .navbar-toggle .icon-bar {
     display: block;               /* 블록 요소로 설정하여 위아래로 쌓이게 함 */
     width: 22px;
-    height: 20px;
+    height: 2px;
     border-radius: 1px;
     background-color: #fff;       /* 아이콘 색상 (배경에 맞춰 흰색) */
   }
