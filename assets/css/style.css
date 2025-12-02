@@ -1342,3 +1342,59 @@ body {
     padding-top: 60px;
   }
 }
+
+/* 모바일 화면 설정 (767px 이하) - 최종 수정본 */
+@media (max-width: 767px) {
+  
+  /* 1. 헤더 컨테이너: 너비를 100%로 강제하고 양쪽 끝 정렬 */
+  .navbar-header {
+    width: 100% !important;       /* ★중요: 화면 가로를 꽉 채우게 강제 */
+    display: flex;                
+    flex-direction: row-reverse;  /* HTML순서(버튼->로고)를 화면상(로고->버튼)으로 뒤집음 */
+    justify-content: space-between; /* ★중요: 로고와 메뉴를 양쪽 끝으로 밀어냄 */
+    align-items: center;          /* 수직 중앙 정렬 */
+    margin: 0 !important;         /* 불필요한 여백 제거 */
+    padding: 0 15px;              /* 좌우에 최소한의 여백 줌 */
+  }
+
+  /* 2. 로고 (왼쪽 배치) */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-brand img {
+    height: 24px;                 /* 로고 크기 */
+    width: auto;
+  }
+
+  /* 3. 햄버거 메뉴 (오른쪽 배치) */
+  .navbar-toggle {
+    display: block !important;    /* 아이콘 뭉개짐 방지 */
+    float: none;
+    margin: 0;
+    padding: 9px 10px;
+    border: 1px solid transparent;
+  }
+
+  /* 햄버거 아이콘 가로줄 스타일 복구 */
+  .navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;       /* 흰색 아이콘 */
+  }
+  
+  .navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+  
+  /* 본문 상단 여백 */
+  body {
+    padding-top: 60px;
+  }
+}
