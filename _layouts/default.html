@@ -99,12 +99,19 @@
           <div class="panel-body">
             <p>협력, 개최, 후원 문의는 아래 메일로 연락해주세요.</p>
             <ul>
-              <li><i class="fa fa-phone"></i>+82-55-772-9174</li>
-              <li><a href="#"><i class="fa fa-envelope-o"></i> roboracer.korea@gmail.com, f1tenth.korea@gmail.com</a></li>
+              <li><i class="fa fa-phone"></i> +82-55-772-9174/+82-01-9253-1935</li>
+
+              <li>
+                <i class="fa fa-envelope-o"></i>
+                <a href="mailto:roboracer.korea@gmail.com">roboracer.korea@gmail.com</a>,
+                <a href="mailto:f1tenth.korea@gmail.com">f1tenth.korea@gmail.com</a>
+              </li>
+
               <li><i class="fa fa-flag"></i> 경남 진주시 진주대로 501, 경상국립대 ICT융합센터 313호</li>
             </ul> 
           </div>
         </div>
+
 
         <div class="col-md-3 panel">
           <h3 class="panel-title">Follow us</h3>
@@ -129,10 +136,10 @@
           <div class="panel-body">
             <p class="simplenav">
               <a href="{{ '/' | relative_url }}">Home</a> | 
-              <a href="{{ '/about.html' | relative_url }}">조직</a> |
-              <a href="{{ '/services.html' | relative_url }}">교육·레이스</a> |
-              <a href="{{ '/portfolio.html' | relative_url }}">연구 프로젝트</a> |
-              <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+              <a href="{{ '/organization' | relative_url }}"> Organization </a> |
+              <a href="{{ '/learn.html' | relative_url }}"> Learn </a> |
+              <a href="{{ '/race' | relative_url }}"> Race </a> |
+              <a href="{{ '/community.html' | relative_url }}"> Community</a>
             </p>
           </div>
         </div>
@@ -153,13 +160,22 @@
 
 
   <!-- JS -->
-  <script src="{{ '/assets/js/modernizr-latest.js' | relative_url }}"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="{{ '/assets/js/jquery.cslider.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/headroom.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/jquery.headroom.min.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
+<!-- JS (필수 순서 유지) -->
+<script src="{{ '/assets/js/modernizr-latest.js' | relative_url }}"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- Bootstrap JS (로컬 버전 사용) -->
+<script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+
+<!-- Plugins -->
+<script src="{{ '/assets/js/jquery.cslider.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/headroom.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/jquery.headroom.min.js' | relative_url }}"></script>
+
+<!-- Custom JS -->
+<script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
 
   <script>
   document.addEventListener("DOMContentLoaded", function () {
