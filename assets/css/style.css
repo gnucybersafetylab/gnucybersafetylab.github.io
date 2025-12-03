@@ -1035,7 +1035,7 @@ p {
 
 /* 기본(데스크톱 포함) – navbar 높이만큼 위에 여백 */
 body {
-  padding-top: 70px;
+  padding-top: 76px;
 }
 
 /* 모바일에서는 조금 더 낮게 */
@@ -1098,6 +1098,9 @@ body {
 /* ===================================== */
 @media (max-width: 767px) {
 
+  body {
+    padding-top: 72px;
+  }
   /* 모바일 바 높이 */
   .navbar.navbar-inverse.navbar-fixed-top {
     min-height: 50px;
