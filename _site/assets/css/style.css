@@ -1153,6 +1153,6 @@ body {
 /* 모바일에서 탭 메뉴가 header와 겹치지 않도록 */
 @media (max-width: 767px) {
   .nav-pills {
-    margin-top: 20px !important;   /* 아래로 살짝 밀어줌 */
+    margin-top: 30px !important;   /* 아래로 살짝 밀어줌 */
   }
 }

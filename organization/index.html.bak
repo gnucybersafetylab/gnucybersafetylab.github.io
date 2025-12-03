@@ -20,6 +20,7 @@ org_tab: "home"
 
 <div class="container">
 
+
   <!-- ⬇️ 여기서부터 탭 메뉴를 바로 표시 -->
   <ul class="nav nav-pills" style="margin-bottom: 15px;">
     <li class="active"><a href="{{ '/organization/' | relative_url }}">Home</a></li>
@@ -31,6 +32,8 @@ org_tab: "home"
     <!-- Article -->
     <article class="col-sm-8 maincontent">
 
+      <!-- ⬇️ “RoboRacer Korea 조직” 제거됨 -->
+      <!-- ⬇️ 바로 본문 시작 -->
       <h3>RoboRacer Korea란?</h3>
       <p>
         RoboRacer Korea는 1/10 스케일 자율주행 레이싱 플랫폼을 기반으로
@@ -51,27 +54,6 @@ org_tab: "home"
       <p>
         자세한 내용은 상단 탭의 <strong>Organization / 비전 / 조직구조</strong>를 참고하세요.
       </p>
-
-      <!-- 🔽🔽🔽 여기서부터 추가된 섹션 🔽🔽🔽 -->
-      <hr style="margin: 40px 0;">
-
-      <h3 class="text-center" style="margin-bottom: 25px;">RoboRacer Korea 대표 이미지 (CI)</h3>
-
-      <div class="row text-center" style="margin-bottom: 40px;">
-        <div class="col-sm-6 col-md-3" style="margin-bottom: 20px;">
-          <img src="/assets/images/bg_header.jpg" class="img-responsive img-thumbnail" alt="RoboRacer BG Header">
-        </div>
-        <div class="col-sm-6 col-md-3" style="margin-bottom: 20px;">
-          <img src="/assets/images/logo_korea.png" class="img-responsive img-thumbnail" alt="RoboRacer Korea Logo">
-        </div>
-        <div class="col-sm-6 col-md-3" style="margin-bottom: 20px;">
-          <img src="/assets/images/roboracer_korea.png" class="img-responsive img-thumbnail" alt="RoboRacer Korea White Logo">
-        </div>
-        <div class="col-sm-6 col-md-3" style="margin-bottom: 20px;">
-          <img src="/assets/images/roboracer_korea_black.png" class="img-responsive img-thumbnail" alt="RoboRacer Korea Black Logo">
-        </div>
-      </div>
-      <!-- 🔼🔼🔼 추가된 섹션 끝 🔼🔼🔼 -->
 
     </article>
 
