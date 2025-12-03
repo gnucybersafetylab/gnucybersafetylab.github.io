@@ -1107,14 +1107,14 @@ body {
   }
   /* 모바일 바 높이 */
   .navbar.navbar-inverse.navbar-fixed-top {
-    min-height: 50px;
+    min-height: 40px;
   }
 
   /* 로고: 왼쪽 끝에, 살짝 작게 */
   .navbar-brand {
     float: left;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .navbar-brand img {
@@ -1138,5 +1138,6 @@ body {
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
+    align-items: left;
   }
 }
