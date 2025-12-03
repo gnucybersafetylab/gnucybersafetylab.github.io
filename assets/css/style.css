@@ -539,12 +539,7 @@ color: #ee0c45;
         margin-top: 30px;
     }
 }
-@media (max-width: 767px){
-	.navbar-collapse ul {
-		text-align: right;
-		margin-right:0px;
-	}
-}
+ 
 /* Small devices (tablets, up to 768px) */
 @media (max-width: 768px) {     
     /* Make the indicators larger for easier clicking with fingers/thumb on mobile */    
@@ -566,36 +561,13 @@ color: #ee0c45;
     }
 }
 
-/* fixed-top navbar 때문에 본문이 가려지는 것 방지 */
-body {
-  padding-top: 100px;   /* navbar 높이에 맞게 조정: 60~80px 사이에서 맞춰보면 됨 */
-}
-
+ 
 /* 헤더 영역이 너무 붙어 보이면 살짝 여유 */
 #head {
   margin-top: 0;
   padding-top: 0;
 }
-
-/* Navbar 로고 크기 튜닝 */
-.navbar-brand img {
-    height: 36px !important;   /* 기존 100px → 36px 수준으로 축소 */
-    width: auto;
-    margin-top: 7px;           /* 세로 정렬 맞추기 */
-    margin-bottom: 7px;
-}
-
-/* Navbar 전체 높이 조정 */
-.navbar {
-    min-height: 40px !important;
-}
-
-/* 메뉴 텍스트 정렬 */
-.navbar-nav > li > a {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
-    line-height: 20px !important;
-}
+ 
 
 /* Organization 등 서브 페이지용 헤더 스타일 */
 #head.secondary {
@@ -1056,334 +1028,108 @@ p {
   margin-bottom: 8px;
 }
 
-/* ===== 모바일 네비게이션 바 얇게 만들기 ===== */
+
+/* ===================================== */
+/*  고정 네비게이션 padding 설정         */
+/* ===================================== */
+
+/* 기본(데스크톱 포함) – navbar 높이만큼 위에 여백 */
+body {
+  padding-top: 70px;
+}
+
+/* 모바일에서는 조금 더 낮게 */
 @media (max-width: 767px) {
-
-  /* 전체 바 높이 줄이기 */
-  .navbar {
-    min-height: 48px;   
-    display: flex;
-    align-items: center;      /* 수직 가운데 정렬 핵심 */  }
-
-  /* 로고 주변 여백 줄이기 */
-  .navbar-brand {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    height: 60px;
-    display: flex;
-    align-items: center;      /* 로고 이미지 가운데 정렬 */
-  }
-
-  .navbar-brand img {
-    height: 36px;         /* 필요하면 24~30 사이로 조절 */
-    width: auto;
-  }
-
-  /* 햄버거 버튼 여백 줄이기 */
-  .navbar-toggle {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-
-    /* 메뉴 항목들 */
-  .navbar-nav > li > a {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    height: 45px;
-    display: flex;    
+  body {
+    padding-top: 60px;
   }
 }
 
-/* ===== 데스크톱에서 배너 텍스트 30% 아래로 내리기 ===== */
-@media (min-width: 768px) {
-  .banner-content {
-    padding-top: 10vh !important;
-  }
+/* ===================================== */
+/*  공통 Navbar 기본 스타일               */
+/* ===================================== */
+
+/* 상단 고정 dark navbar (기존 Bootstrap 구조 사용) */
+.navbar.navbar-inverse.navbar-fixed-top {
+  border: none;
 }
 
-
-/* ===== 모바일 메뉴 안쪽 여백 추가 ===== */
-@media (max-width: 767px) {
-
-  /* 접힌 메뉴 전체 위/아래 패딩 */
-  .navbar-collapse {
-    padding-top: 10px;
-    padding-bottom: 24px;   /* 아래쪽 여백 */
-  }
-
-  /* 각 메뉴 항목 간격 */
-  .navbar-nav > li > a {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 18px;        /* 글자 조금 크게 (원하면 줄여도 됨) */
-  }
-
-  /* 마지막 메뉴 아래쪽 여유 공간 추가 */
-  .navbar-nav > li:last-child > a {
-    padding-bottom: 20px;
-  }
+/* 데스크톱에서 브랜드 로고 크기 */
+.navbar-brand img {
+  max-height: 28px;
+  width: auto;
 }
-/* =============================== */
-/*   DESKTOP NAVBAR FIX (FINAL)    */
-/* =============================== */
+
+/* ===================================== */
+/*  데스크톱 레이아웃 (>= 768px)         */
+/* ===================================== */
 @media (min-width: 768px) {
 
-  /* 네비게이션 바 전체 높이 (필요 시 55~65px 조절 가능) */
-  .navbar {
-    height: 60px !important;
-    min-height: 60px !important;
-    padding: 0 !important;
-    display: flex;
-    align-items: center;          /* 로고와 메뉴를 한 줄 중앙정렬 */
-  }
-
-  /* 왼쪽 로고 영역 */
-  .navbar-brand {
-    height: 60px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    display: flex;
-    align-items: center;          /* 수직 중앙 정렬 */
-  }
-
-  /* 로고 이미지 */
-  .navbar-brand img {
-    height: 36px;                 /* 너무 크지 않게 */
-    width: auto;
-    vertical-align: middle;
-  }
-
-  /* 오른쪽 메뉴 */
-  .navbar-nav > li > a {
-    height: 60px !important;
-    line-height: 60px !important; /* 텍스트 수직 가운데 */
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
-  /* 메뉴 UL 자체도 flex 가운데정렬 */
-  .navbar-nav {
-    display: flex;
-    align-items: center;
-  }
-}
-
-/* ========================================= */
-/*   DESKTOP NAVBAR LOGO FIX (GUARANTEED)    */
-/* ========================================= */
-@media (min-width: 768px) {
-
-  /* navbar 자체를 flex 컨테이너로 전환 */
-  .navbar-header {
-    display: flex !important;
-    align-items: center !important;   /* ← 로고 세로 중앙 정렬 핵심 */
-    height: 60px !important;
-  }
-
-  .navbar-brand {
-    display: flex !important;
-    align-items: center !important;   /* ← 이미지의 세로 중앙 정렬 */
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 60px !important;          /* 메뉴 높이와 동일하게 */
-  }
-
-  .navbar-brand img {
-    height: 34px !important;          /* 로고 크기(원하면 조절 가능) */
-    width: auto;
-  }
-
-  /* 메뉴 항목도 flex 정렬 */
-  .navbar-nav {
-    display: flex !important;
-    align-items: center !important;
-  }
-
-  .navbar-nav > li > a {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    height: 60px !important;
-    line-height: 60px !important;
-  }
-}
-
-
-/* 데스크톱용 – 우리의 구조에 맞게 수정된 예시 */
-@media (min-width: 768px) {
+  /* 바 전체 최소 높이 */
   .navbar.navbar-inverse.navbar-fixed-top {
     min-height: 56px;
-    padding-top: 0;
-    padding-bottom: 0;
-    display: flex;
-    align-items: center; /* 로고 + 메뉴 세로 가운데 */
   }
 
+  /* 브랜드 로고 영역 */
   .navbar-brand {
-    height: 56px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    margin: 0;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   .navbar-brand img {
     max-height: 28px;
-    width: auto;
   }
 
+  /* 메뉴는 오른쪽 정렬 */
+  .navbar-nav {
+    float: right;
+  }
+
+  /* 메뉴 항목 줄 간격(너무 두껍지 않도록) */
   .navbar-nav > li > a {
-    height: 56px;
-    line-height: 56px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    line-height: 20px;
   }
 }
 
-/* 고정 네비 때문에 본문이 가려지는 것 방지 */
-body {
-  padding-top: 80px;  /* 실제 navbar 높이에 맞게 숫자만 조정 */
-}
-
-/* 모바일 – 로고 왼쪽, 햄버거 오른쪽 */
+/* ===================================== */
+/*  모바일 레이아웃 (<= 767px)           */
+/* ===================================== */
 @media (max-width: 767px) {
-  .navbar-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
+
+  /* 모바일 바 높이 */
+  .navbar.navbar-inverse.navbar-fixed-top {
+    min-height: 50px;
   }
 
+  /* 로고: 왼쪽 끝에, 살짝 작게 */
   .navbar-brand {
-    height: 50px;
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    margin: 0;
+    float: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .navbar-brand img {
     max-height: 24px;
-    width: auto;
   }
 
+  /* 햄버거 버튼: 오른쪽 끝에 정렬 */
   .navbar-toggle {
-    margin: 0 15px 0 0;
-    padding: 6px 10px;
-    float: none;
-    display: flex;
-    align-items: center;
+    float: right;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
-  body {
-    padding-top: 60px;
-  }
-}
-
-/* 모바일 화면 설정 (767px 이하) - 최종 수정본 */
-@media (max-width: 767px) {
-  
-  /* 1. 헤더 컨테이너: 너비를 100%로 강제하고 양쪽 끝 정렬 */
-  .navbar-header {
-    width: 100% !important;       /* ★중요: 화면 가로를 꽉 채우게 강제 */
-    display: flex;                
-    flex-direction: row-reverse;  /* HTML순서(버튼->로고)를 화면상(로고->버튼)으로 뒤집음 */
-    justify-content: space-between; /* ★중요: 로고와 메뉴를 양쪽 끝으로 밀어냄 */
-    align-items: center;          /* 수직 중앙 정렬 */
-    margin: 0 !important;         /* 불필요한 여백 제거 */
-    padding: 0 15px;              /* 좌우에 최소한의 여백 줌 */
+  /* collapse 메뉴가 navbar 아래에서 펼쳐지도록 기본값 유지 */
+  .navbar-collapse {
+    border-top: 1px solid #444;
   }
 
-  /* 2. 로고 (왼쪽 배치) */
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .navbar-brand img {
-    height: 24px;                 /* 로고 크기 */
-    width: auto;
-  }
-
-  /* 3. 햄버거 메뉴 (오른쪽 배치) */
-  .navbar-toggle {
-    display: block !important;    /* 아이콘 뭉개짐 방지 */
-    float: none;
-    margin: 0;
-    padding: 9px 10px;
-    border: 1px solid transparent;
-  }
-
-  /* 햄버거 아이콘 가로줄 스타일 복구 */
-  .navbar-toggle .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
-    background-color: #fff;       /* 흰색 아이콘 */
-  }
-  
-  .navbar-toggle .icon-bar + .icon-bar {
-    margin-top: 4px;
-  }
-  
-  /* 본문 상단 여백 */
-  body {
-    padding-top: 60px;
-  }
-}
-
-/* 모바일 전용: 로고는 왼쪽, 토글은 오른쪽, 바 높이 축소 */
-@media (max-width: 767px) {
-
-  .navbar {
-    min-height: 48px;
-    height: 48px;
-    padding: 0;
-    display: flex;
-    align-items: center;      /* 수직 가운데 정렬 */
-  }
-
-  .navbar-header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;      /* 좌→우 : 로고 → 햄버거 */
-    justify-content: space-between;  /* 양 끝으로 배치 */
-    align-items: center;
-    margin: 0;
-    padding: 0 10px;
-  }
-
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    height: 48px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .navbar-brand img {
-    height: 24px;            /* 로고 크기 (필요시 조정) */
-    width: auto;
-  }
-
-  .navbar-toggle {
-    display: block;
-    float: none;
-    margin: 0;
-    padding: 6px 8px;
-  }
-
-  .navbar-toggle .icon-bar {
-    width: 20px;
-    height: 2px;
-  }
-
-  /* 고정 네비 때문에 본문이 가려지지 않도록 상단 여백도 맞춰주기 */
-  body {
-    padding-top: 56px;
+  /* 모바일 메뉴 항목 줄 간격 */
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
