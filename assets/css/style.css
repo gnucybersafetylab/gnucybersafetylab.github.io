@@ -1125,8 +1125,8 @@ body {
   .navbar-toggle {
     float: right;
     margin-right: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 14px;
+    margin-bottom: 14px;
   }
 
   /* collapse 메뉴가 navbar 아래에서 펼쳐지도록 기본값 유지 */
@@ -1138,6 +1138,5 @@ body {
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
-    align-items: left;
   }
 }
