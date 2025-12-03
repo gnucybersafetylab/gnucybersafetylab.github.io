@@ -1097,6 +1097,8 @@ body {
   }
 }
 
+
+
 /* ===================================== */
 /*  모바일 레이아웃 (<= 767px)           */
 /* ===================================== */
@@ -1107,14 +1109,14 @@ body {
   }
   /* 모바일 바 높이 */
   .navbar.navbar-inverse.navbar-fixed-top {
-    min-height: 50px;
+    min-height: 40px;
   }
 
   /* 로고: 왼쪽 끝에, 살짝 작게 */
   .navbar-brand {
     float: left;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .navbar-brand img {
@@ -1125,8 +1127,8 @@ body {
   .navbar-toggle {
     float: right;
     margin-right: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 14px;
+    margin-bottom: 14px;
   }
 
   /* collapse 메뉴가 navbar 아래에서 펼쳐지도록 기본값 유지 */
@@ -1138,5 +1140,19 @@ body {
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+}
+
+/* Secondary header 영역이 모바일에서 너무 낮아서 탭 메뉴가 겹치는 현상 해결 */
+#head.secondary {
+  padding-top: 40px;       /* 필요에 따라 30~60px 조절 */
+  padding-bottom: 40px;    /* 아래 여백 증가 */
+  min-height: 200px;       /* 기존보다 살짝 증가 */
+}
+
+/* 모바일에서 탭 메뉴가 header와 겹치지 않도록 */
+@media (max-width: 767px) {
+  .nav-pills {
+    margin-top: 20px !important;   /* 아래로 살짝 밀어줌 */
   }
 }

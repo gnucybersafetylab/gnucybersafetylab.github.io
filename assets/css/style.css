@@ -1097,23 +1097,6 @@ body {
   }
 }
 
-/* ----------------------------------
-   PC·모바일 공통 기본 스타일
----------------------------------- */
-
-body {
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-#head {
-  background-size: cover;
-  background-position: center 70%;
-}
-
-.navbar-brand img {
-  width: auto;
-}
 
 
 /* ===================================== */
@@ -1160,118 +1143,16 @@ body {
   }
 }
 
-/* ----------------------------------
-   PC 전용 스타일 (>= 768px)
----------------------------------- */
-@media (min-width: 768px) {
-
-  /* 고정 네비게이션과 본문 간 여백 */
-  body {
-    padding-top: 72px;  /* navbar 높이와 일치 */
-  }
-
-  /* PC 네비게이션 바 높이 */
-  .navbar.navbar-inverse.navbar-fixed-top {
-    min-height: 72px;
-    padding: 0;
-    display: block;
-  }
-
-  /* PC 로고 */
-  .navbar-brand {
-    height: 72px;
-    padding: 20px 15px;
-  }
-  .navbar-brand img {
-    height: 34px;
-  }
-
-  /* 메뉴 정렬 */
-  .navbar-nav {
-    float: right;
-  }
-  .navbar-nav > li > a {
-    padding-top: 22px;
-    padding-bottom: 22px;
-    line-height: 20px;
-  }
-
-  /* Secondary header (Organization 등) */
-  #head.secondary {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    min-height: 220px;   /* PC에서는 넉넉하게 */
-  }
-
-  /* 배너(슬라이더) 위치 내리기 */
-  #head .banner-content {
-    padding-top: 80px;
-  }
+/* Secondary header 영역이 모바일에서 너무 낮아서 탭 메뉴가 겹치는 현상 해결 */
+#head.secondary {
+  padding-top: 40px;       /* 필요에 따라 30~60px 조절 */
+  padding-bottom: 40px;    /* 아래 여백 증가 */
+  min-height: 200px;       /* 기존보다 살짝 증가 */
 }
 
-/* ----------------------------------
-   모바일 전용 스타일 (<= 767px)
----------------------------------- */
+/* 모바일에서 탭 메뉴가 header와 겹치지 않도록 */
 @media (max-width: 767px) {
-
-  /* 모바일에서 고정 네비게이션과 본문 간 여백 */
-  body {
-    padding-top: 58px;  /* 모바일 navbar 높이에 맞춤 */
-  }
-
-  /* 모바일 네비게이션 바 높이 */
-  .navbar {
-    min-height: 58px;
-    height: 58px;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-  }
-
-  /* 모바일 로고 */
-  .navbar-brand {
-    height: 58px;
-    padding: 14px 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-  }
-  .navbar-brand img {
-    height: 26px;
-  }
-
-  /* 모바일 햄버거 버튼 오른쪽 정렬 */
-  .navbar-toggle {
-    display: block;
-    float: right;
-    margin: 0;
-    padding: 6px 8px;
-  }
-
-  /* 모바일 접힌 메뉴 스타일 */
-  .navbar-collapse {
-    padding-top: 8px;
-    padding-bottom: 20px;
-  }
-  .navbar-nav > li > a {
-    padding: 8px 0;
-    font-size: 18px;
-  }
-
-  /* 배너(슬라이더) 모바일 위치 */
-  #head .banner-content {
-    padding-top: 50px;
-  }
-
-  /* secondary header (Organization, Research 등) */
-  #head.secondary {
-    padding-top: 36px;
-    padding-bottom: 36px;
-    min-height: 180px; /* 모바일에서는 PC보다 조금 줄임 */
-  }
-
-  /* 탭 메뉴(nav-pills) header 가림 방지 */
   .nav-pills {
-    margin-top: 20px !important;
+    margin-top: 20px !important;   /* 아래로 살짝 밀어줌 */
   }
 }
