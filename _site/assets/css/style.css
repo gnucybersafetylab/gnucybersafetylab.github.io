@@ -1035,7 +1035,7 @@ p {
 
 /* 기본(데스크톱 포함) – navbar 높이만큼 위에 여백 */
 body {
-  padding-top: 76px;
+  padding-top: 60px;
 }
 
 /* 모바일에서는 조금 더 낮게 */
@@ -1056,7 +1056,7 @@ body {
 
 /* 데스크톱에서 브랜드 로고 크기 */
 .navbar-brand img {
-  max-height: 28px;
+  max-height: 30px;
   width: auto;
 }
 
@@ -1064,16 +1064,17 @@ body {
 /*  데스크톱 레이아웃 (>= 768px)         */
 /* ===================================== */
 @media (min-width: 768px) {
-
   /* 바 전체 최소 높이 */
   .navbar.navbar-inverse.navbar-fixed-top {
-    min-height: 56px;
+    min-height: 46px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 
   /* 브랜드 로고 영역 */
   .navbar-brand {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 
   .navbar-brand img {
@@ -1087,9 +1088,12 @@ body {
 
   /* 메뉴 항목 줄 간격(너무 두껍지 않도록) */
   .navbar-nav > li > a {
-    padding-top: 18px;
-    padding-bottom: 18px;
-    line-height: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  #head .banner-content {
+    padding-top: 80px;   /* 40~120 사이에서 취향대로 조절 가능 */
   }
 }
 
