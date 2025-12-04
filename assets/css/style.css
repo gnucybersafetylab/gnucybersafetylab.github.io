@@ -1078,7 +1078,8 @@ body {
   }
 
   .navbar-brand img {
-    max-height: 28px;
+   
+    min-height: 40px;
   }
 
   /* 메뉴는 오른쪽 정렬 */
@@ -1120,7 +1121,7 @@ body {
   }
 
   .navbar-brand img {
-    max-height: 24px;
+    min-height: 24px;
   }
 
   /* 햄버거 버튼: 오른쪽 끝에 정렬 */
