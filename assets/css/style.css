@@ -572,8 +572,8 @@ color: #ee0c45;
 /* Organization 등 서브 페이지용 헤더 스타일 */
 #head.secondary {
   background: #f5f5f5;        /* 연한 회색 배경 (원하면 변경 가능) */
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   min-height: 160px;
   text-align: left;           /* 원래 about 페이지처럼 왼쪽 정렬 */
   color: #333;                /* 🔥 여기서 글자색을 다시 어두운 색으로 */
@@ -1145,9 +1145,9 @@ body {
 
 /* Secondary header 영역이 모바일에서 너무 낮아서 탭 메뉴가 겹치는 현상 해결 */
 #head.secondary {
-  padding-top: 40px;       /* 필요에 따라 30~60px 조절 */
-  padding-bottom: 40px;    /* 아래 여백 증가 */
-  min-height: 200px;       /* 기존보다 살짝 증가 */
+  padding-top: 20px;       /* 필요에 따라 30~60px 조절 */
+  padding-bottom: 20px;    /* 아래 여백 증가 */
+  min-height: 150px;       /* 기존보다 살짝 증가 */
 }
 
 /* 모바일에서 탭 메뉴가 header와 겹치지 않도록 */
