@@ -1225,3 +1225,50 @@ body {
     color: #555;
     border-radius: 4px;
 }
+
+/* =============================== */
+/*   공통 Navbar 높이 / 정렬 조정  */
+/* =============================== */
+
+.navbar.navbar-inverse.navbar-fixed-top {
+  min-height: 50px;
+}
+
+/* 로고 위치 & 크기 */
+.navbar-brand {
+  height: 50px;         /* 전체 바 높이와 맞춤 */
+  padding: 6px 15px;    /* 위아래 여백 줄이기 (기본 15px보다 작게) */
+}
+
+.navbar-brand img {
+  height: 36px;         /* 로고 아이콘 크기 */
+  width: auto;
+  margin-top: 0;
+}
+
+/* 햄버거 버튼(모바일 메뉴) 위치 */
+.navbar-toggle {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 4px 8px;
+}
+
+/* 메뉴 텍스트 줄 간격 (PC 기준) */
+.navbar-nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* =============================== */
+/*         모바일 전용 조정        */
+/* =============================== */
+@media (max-width: 767px) {
+  body {
+    padding-top: 56px;   /* fixed-top 때문에 가려지는 부분 보정 */
+  }
+
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
