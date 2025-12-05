@@ -1129,6 +1129,7 @@ body {
     float: right;
     margin-right: 10px;
     padding-bottom: 16px;
+	padding-top: 16px;
   }
 
   /* collapse 메뉴가 navbar 아래에서 펼쳐지도록 기본값 유지 */
