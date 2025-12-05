@@ -82,8 +82,12 @@
         <a href="{{ '/news' | relative_url }}">News</a>
       </li>
 
-      <li {% if page.nav_active == 'contact' %}class="active"{% endif %}>
+      <li {% if page.nav_active == 'record' %}class="active"{% endif %}>
         <a href="{{ '/record.html' | relative_url }}">Record</a>
+      </li>
+
+      <li {% if page.nav_active == 'join' %}class="active"{% endif %}>
+        <a href="{{ '/join.html' | relative_url }}">Join</a>
       </li>
 
     </ul>
