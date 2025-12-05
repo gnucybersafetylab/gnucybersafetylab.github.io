@@ -1140,8 +1140,8 @@ body {
 
   /* 모바일 메뉴 항목 줄 간격 */
   .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 }
 
