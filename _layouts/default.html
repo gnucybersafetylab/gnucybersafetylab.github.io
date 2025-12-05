@@ -73,6 +73,10 @@
         <a href="{{ '/research.html' | relative_url }}">Research</a>
       </li>
 
+      <li {% if page.nav_active == 'community' %}class="active"{% endif %}>
+        <a href="{{ '/community.html' | relative_url }}">Community</a>
+      </li>
+
       <!-- 🔹 News 메뉴 추가 -->
       <li {% if page.nav_active == 'news' %}class="active"{% endif %}>
         <a href="{{ '/news' | relative_url }}">News</a>
