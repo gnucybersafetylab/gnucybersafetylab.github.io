@@ -1,4 +1,3 @@
-
 ---
 layout: default
 title: "RoboRacer Korea Application"
@@ -9,25 +8,26 @@ nav_active: "join"
 
 <div class="container">
 
+  <!-- 탭 메뉴 -->
   <ul class="nav nav-pills" style="margin:5px 0 20px;">
     <li>
-      <a href="{{ '/join' | relative_url }}">가입 안내 (Overview)</a>
+      <a href="{{ '/join/' | relative_url }}">가입 안내 (Overview)</a>
     </li>
     <li class="active">
-      <a href="{{ '/join/apply.html' | relative_url }}">가입 신청서 (Application Form)</a>
+      <a href="{{ '/join/apply/' | relative_url }}">가입 신청서 (Application Form)</a>
     </li>
   </ul>
 
+  <!-- 페이지 타이틀 -->
   <h2>가입 신청서 (Membership Application Form)</h2>
   <p class="section-text" style="max-width:860px;">
     아래 양식을 작성해 주시면 운영위원회에서 검토 후 개별 연락을 드립니다.
   </p>
 
-<!-- =========================== -->
-<!-- 5. 가입 신청서 양식 (Application Form) -->
-<!-- =========================== -->
-<section class="section">
-  <div class="container">
+  <!-- =========================== -->
+  <!-- 가입 신청서 양식 (Application Form) -->
+  <!-- =========================== -->
+  <section class="section" style="margin-top:20px;">
 
     <h3>가입 신청서 (Membership Application Form)</h3>
     <p class="section-text" style="max-width:860px;">
@@ -35,7 +35,9 @@ nav_active: "join"
       실제 동작하는 온라인 폼으로 연결하려면 <code>action</code> URL 및 백엔드 설정이 추가로 필요합니다.
     </p>
 
-    <form id="join-form" action="#" method="post" style="max-width:860px; margin-top:20px;">
+    <!-- 필요 시 action을 mailto 또는 Formspree 등으로 교체 -->
+    <form id="join-form" action="#" method="post"
+          style="max-width:860px; margin-top:20px;">
 
       <!-- 1. 신청자 유형 -->
       <div class="form-group">
@@ -53,68 +55,90 @@ nav_active: "join"
       <!-- 2. 성명 / 단체명 -->
       <div class="form-group">
         <label for="name-ko"><strong>2. 성명 또는 단체명 (Name or Organization)</strong></label>
-        <input type="text" id="name-ko" name="name_ko" class="form-control" placeholder="한글 이름 또는 기관명 (Korean name)" required>
+        <input type="text" id="name-ko" name="name_ko"
+               class="form-control"
+               placeholder="한글 이름 또는 기관명 (Korean name)" required>
       </div>
 
       <div class="form-group">
         <label for="name-en">영문 이름 또는 단체명 (English name, optional)</label>
-        <input type="text" id="name-en" name="name_en" class="form-control" placeholder="English name (optional)">
+        <input type="text" id="name-en" name="name_en"
+               class="form-control"
+               placeholder="English name (optional)">
       </div>
 
       <!-- 3. 소속 및 직위 -->
       <div class="form-group">
         <label for="affiliation"><strong>3. 소속 (Affiliation)</strong></label>
-        <input type="text" id="affiliation" name="affiliation" class="form-control" placeholder="예: 경상국립대학교 AI정보공학과 / ○○기업 / ○○연구소" required>
+        <input type="text" id="affiliation" name="affiliation"
+               class="form-control"
+               placeholder="예: 경상국립대학교 AI정보공학과 / ○○기업 / ○○연구소" required>
       </div>
 
       <div class="form-group">
         <label for="position">직위/학년 (Position / Year)</label>
-        <input type="text" id="position" name="position" class="form-control" placeholder="예: 교수, 박사과정, 3학년, 연구원 등">
+        <input type="text" id="position" name="position"
+               class="form-control"
+               placeholder="예: 교수, 박사과정, 3학년, 연구원 등">
       </div>
 
       <!-- 4. 연락처 정보 -->
       <div class="form-group">
         <label for="email"><strong>4. 이메일 (E-mail)</strong></label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required>
+        <input type="email" id="email" name="email"
+               class="form-control"
+               placeholder="name@example.com" required>
       </div>
 
       <div class="form-group">
         <label for="phone">연락처 (Phone, optional)</label>
-        <input type="text" id="phone" name="phone" class="form-control" placeholder="+82-10-XXXX-XXXX">
+        <input type="text" id="phone" name="phone"
+               class="form-control"
+               placeholder="+82-10-XXXX-XXXX">
       </div>
 
       <div class="form-group">
         <label for="website">웹사이트 / GitHub / Lab 페이지 (optional)</label>
-        <input type="url" id="website" name="website" class="form-control" placeholder="https://example.com">
+        <input type="url" id="website" name="website"
+               class="form-control"
+               placeholder="https://example.com">
       </div>
 
       <!-- 5. 관심 분야 및 참여 형태 -->
       <div class="form-group">
         <label><strong>5. 관심 분야 (Research / Activity Interests)</strong></label>
         <div class="checkbox">
-          <label><input type="checkbox" name="interests[]" value="education"> 자율주행/로보틱스 교육 (Education)</label>
+          <label><input type="checkbox" name="interests[]" value="education">
+            자율주행/로보틱스 교육 (Education)</label>
         </div>
         <div class="checkbox">
-          <label><input type="checkbox" name="interests[]" value="race"> 자율주행 레이스 및 대회 (Races &amp; Competitions)</label>
+          <label><input type="checkbox" name="interests[]" value="race">
+            자율주행 레이스 및 대회 (Races &amp; Competitions)</label>
         </div>
         <div class="checkbox">
-          <label><input type="checkbox" name="interests[]" value="research"> 연구 협업 (Research Collaboration)</label>
+          <label><input type="checkbox" name="interests[]" value="research">
+            연구 협업 (Research Collaboration)</label>
         </div>
         <div class="checkbox">
-          <label><input type="checkbox" name="interests[]" value="sponsorship"> 후원 / 파트너십 (Sponsorship / Partnership)</label>
+          <label><input type="checkbox" name="interests[]" value="sponsorship">
+            후원 / 파트너십 (Sponsorship / Partnership)</label>
         </div>
         <div class="checkbox">
-          <label><input type="checkbox" name="interests[]" value="outreach"> 청소년·지역 교육 프로그램 (Outreach &amp; Youth Programs)</label>
+          <label><input type="checkbox" name="interests[]" value="outreach">
+            청소년·지역 교육 프로그램 (Outreach &amp; Youth Programs)</label>
         </div>
         <div class="checkbox">
-          <label><input type="checkbox" name="interests[]" value="other"> 기타 (Other)</label>
+          <label><input type="checkbox" name="interests[]" value="other">
+            기타 (Other)</label>
         </div>
       </div>
 
       <!-- 6. 구체적인 참여 계획/관심 내용 -->
       <div class="form-group">
-        <label for="plan"><strong>6. 구체적인 참여 계획 또는 관심 내용</strong><br>
-          (Please describe how you would like to participate)</label>
+        <label for="plan">
+          <strong>6. 구체적인 참여 계획 또는 관심 내용</strong><br>
+          (Please describe how you would like to participate)
+        </label>
         <textarea id="plan" name="plan" class="form-control" rows="5"
                   placeholder="예) 학부 프로젝트 수업에서 팀을 구성해 RoboRacer Korea 대회에 참가하고 싶습니다.&#10;예) SLAM/경로 계획/AI 안전 관련 공동 연구를 제안하고 싶습니다."
                   required></textarea>
@@ -122,8 +146,10 @@ nav_active: "join"
 
       <!-- 7. 보유 장비 및 인프라 (선택) -->
       <div class="form-group">
-        <label for="resources"><strong>7. 보유 장비 및 인프라 (선택)</strong><br>
-          (Available resources: 차량, 트랙, 센서, 시뮬레이터 등)</label>
+        <label for="resources">
+          <strong>7. 보유 장비 및 인프라 (선택)</strong><br>
+          (Available resources: 차량, 트랙, 센서, 시뮬레이터 등)
+        </label>
         <textarea id="resources" name="resources" class="form-control" rows="4"
                   placeholder="예) F1TENTH 차량 3대, 실내 트랙 1개, LiDAR 센서 ○개, GPU 서버 ○대 보유 등"></textarea>
       </div>
@@ -157,5 +183,6 @@ nav_active: "join"
 
     </form>
 
+  </section>
 
-</div>
+</div> <!-- /.container -->
