@@ -84,8 +84,8 @@ nav_active: "education"
     <div class="heading">
       <h2>🚗 RoboRacer 초급 과정 (3일 기본 교육)</h2>
       <p class="section-text" style="max-width:860px;">
-        플랫폼 이해, ROS 2 기초, 벽타기(Wall Following), Follow-The-Gap 등  
-        자율주행의 기본기를 3일간 실습 중심으로 배우는 입문 과정입니다.
+        플랫폼 이해, ROS 2 기초, 벽타기, Follow-The-Gap까지  
+        자율주행의 핵심을 3일 동안 실습 중심으로 배우는 과정입니다.
       </p>
     </div>
 
@@ -102,20 +102,10 @@ nav_active: "education"
 
         <!-- 1일차 -->
         <tr>
-          <td rowspan="7" style="text-align:center; font-weight:bold; vertical-align:middle;">1일차</td>
-          <td>09:30–10:00</td>
-          <td>플랫폼 소개</td>
-          <td>구성 요소, 센서 개요</td>
-        </tr>
-        <tr>
-          <td>10:00–11:00</td>
-          <td>플랫폼 점검</td>
-          <td>배선·LiDAR·조이스틱 점검</td>
-        </tr>
-        <tr>
-          <td>11:00–11:30</td>
-          <td>기본 실행 테스트</td>
-          <td>센서 토픽·주행 확인</td>
+          <td rowspan="4" style="text-align:center; font-weight:bold; vertical-align:middle;">1일차</td>
+          <td>09:30–11:30</td>
+          <td>플랫폼 소개 및 기본 점검</td>
+          <td>구성요소 설명, LiDAR·조이스틱 점검, 기본 주행 테스트</td>
         </tr>
         <tr>
           <td>11:30–12:30</td>
@@ -124,84 +114,49 @@ nav_active: "education"
         </tr>
         <tr>
           <td>13:30–15:30</td>
-          <td>Safety Node</td>
-          <td>simple_safety_node 실습</td>
+          <td>Safety Node 실습</td>
+          <td>simple_safety_node 구현</td>
         </tr>
         <tr>
-          <td>15:30–16:30</td>
-          <td>벽타기 알고리즘</td>
-          <td>Wall Following 구현</td>
-        </tr>
-        <tr>
-          <td>16:30–17:30</td>
+          <td>15:30–17:30</td>
           <td>벽타기 + PID</td>
-          <td>PID 기반 주행 안정화</td>
+          <td>Wall Following & PID 안정화</td>
         </tr>
 
         <!-- 2일차 -->
         <tr>
-          <td rowspan="6" style="text-align:center; font-weight:bold; vertical-align:middle;">2일차</td>
-          <td>09:30–10:00</td>
-          <td>Day 2 안내</td>
-          <td>학습 목표 공유</td>
-        </tr>
-        <tr>
-          <td>10:00–11:00</td>
-          <td>자율주행 기본 개념</td>
+          <td rowspan="3" style="text-align:center; font-weight:bold; vertical-align:middle;">2일차</td>
+          <td>09:30–11:00</td>
+          <td>자율주행 개념</td>
           <td>센서 기반 주행 개요</td>
         </tr>
         <tr>
-          <td>11:00–12:00</td>
-          <td>ROS 2 Part 1</td>
-          <td>노드·토픽·서비스</td>
+          <td>11:00–14:00</td>
+          <td>ROS 2 기초 실습</td>
+          <td>노드·토픽·서비스, 메시지·Launch 파일</td>
         </tr>
         <tr>
-          <td>13:00–14:00</td>
-          <td>ROS 2 Part 2</td>
-          <td>메시지·Launch 파일</td>
-        </tr>
-        <tr>
-          <td>14:00–17:00</td>
-          <td>Follow-The-Gap</td>
-          <td>FTG 구현 및 테스트</td>
-        </tr>
-        <tr>
-          <td>17:00–18:00</td>
-          <td>미니 레이스</td>
-          <td>FTG 기반 타임어택</td>
+          <td>14:00–18:00</td>
+          <td>Follow-The-Gap 실습</td>
+          <td>FTG 구현 및 미니 레이스</td>
         </tr>
 
         <!-- 3일차 -->
         <tr>
-          <td rowspan="6" style="text-align:center; font-weight:bold; vertical-align:middle;">3일차</td>
-          <td>09:30–10:00</td>
-          <td>경주 준비</td>
-          <td>점검 및 평가 기준</td>
+          <td rowspan="3" style="text-align:center; font-weight:bold; vertical-align:middle;">3일차</td>
+          <td>09:30–12:00</td>
+          <td>경주 준비 및 스택 점검</td>
+          <td>FTG 점검 및 PID 보정</td>
         </tr>
         <tr>
-          <td>10:00–12:00</td>
-          <td>자율주행 스택 정비</td>
-          <td>FTG 점검·PID 보정</td>
+          <td>13:00–16:00</td>
+          <td>트랙 주행 & 공식 경주</td>
+          <td>연습 → Time-Trial 경주</td>
         </tr>
         <tr>
-          <td>13:00–14:30</td>
-          <td>트랙 연습</td>
-          <td>실내·실외 트랙 적응</td>
-        </tr>
-        <tr>
-          <td>14:30–16:00</td>
-          <td>공식 경주</td>
-          <td>Time-Trial 방식</td>
-        </tr>
-        <tr>
-          <td>16:00–17:00</td>
-          <td>경주 분석</td>
-          <td>로그 분석·피드백</td>
-        </tr>
-        <tr>
-          <td>17:00–17:30</td>
-          <td>수료식</td>
-          <td>중급 과정 안내</td>
+          <td>16:00–17:30</td>
+          <td>경주 분석 & 수료</td>
+          <td>로그 분석, 피드백 및 중급 과정 안내</td>
         </tr>
 
       </tbody>
