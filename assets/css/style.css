@@ -1116,7 +1116,7 @@ body {
   /* 로고: 왼쪽 끝에, 살짝 작게 */
   .navbar-brand {
     float: left;
-    padding-top: 16px;
+    padding-top: 10px;
     padding-bottom: 16px;
   }
 
@@ -1127,9 +1127,9 @@ body {
   /* 햄버거 버튼: 오른쪽 끝에 정렬 */
   .navbar-toggle {
     float: right;
-    margin-right: 15px;
-    margin-top: 10px;
-    margin-bottom: 16px;
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 16px;
   }
 
   /* collapse 메뉴가 navbar 아래에서 펼쳐지도록 기본값 유지 */
@@ -1156,4 +1156,70 @@ body {
   .nav-pills {
     margin-top: 30px !important;   /* 아래로 살짝 밀어줌 */
   }
+}
+
+
+/* ============================= */
+/*        NEWS CARD STYLES       */
+/* ============================= */
+
+#news-list {
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.news-thumb {
+    flex: 0 0 180px;
+}
+
+.news-thumb-placeholder {
+    width: 100%;
+    padding-top: 56%;
+    background: #e5e5e5;
+    border-radius: 10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+
+.news-body h3 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.news-body .meta {
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #777;
+}
+
+.news-body p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.news-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 11px;
+    background: #ddd;
+    color: #555;
+    border-radius: 4px;
 }

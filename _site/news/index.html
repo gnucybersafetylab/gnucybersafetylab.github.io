@@ -8,25 +8,23 @@
   <meta name="author" content="Roboracer Foundation">
 
   <title>
-    {% if page.title %}
-      {{ page.title }} | Roboracer Foundation
-    {% else %}
-      Roboracer Foundation
-    {% endif %}
+    
+      News | Roboracer Foundation
+    
   </title>
 
-  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+  <link rel="icon" href="/assets/images/favicon.png">
   <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/bootstrap-theme.css' | relative_url }}" media="screen">
-  <link rel="stylesheet" href="{{ '/assets/css/da-slider.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap-theme.css" media="screen">
+  <link rel="stylesheet" href="/assets/css/da-slider.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
-  <script src="{{ '/assets/js/html5shiv.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/respond.min.js' | relative_url }}"></script>
+  <script src="/assets/js/html5shiv.js"></script>
+  <script src="/assets/js/respond.min.js"></script>
   <![endif]-->
 </head>
 <body>
@@ -40,46 +38,46 @@
           <span class="icon-bar"></span> 
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ '/' | relative_url }}">
-          <img src="{{ '/assets/images/logo_korea.png' | relative_url }}" alt="Roboracer Foundation logo">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/images/logo_korea.png" alt="Roboracer Foundation logo">
         </a>
       </div>
 
         <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav pull-right">
 
-      <li {% if page.nav_active == 'home' %}class="active"{% endif %}>
-        <a href="{{ '/' | relative_url }}">About</a>
+      <li >
+        <a href="/">About</a>
       </li>
 
-      <li {% if page.nav_active == 'organization' %}class="active"{% endif %}>
-        <a href="{{ '/organization' | relative_url }}">Organization</a>
+      <li >
+        <a href="/organization">Organization</a>
       </li>
 
       <!-- 🔹 Build 메뉴 추가 -->
-      <li {% if page.nav_active == 'build' %}class="active"{% endif %}>
-        <a href="{{ '/build' | relative_url }}">Build</a>
+      <li >
+        <a href="/build">Build</a>
       </li>
 
-      <li {% if page.nav_active == 'learn' %}class="active"{% endif %}>
-        <a href="{{ '/learn' | relative_url }}">Learn</a>
+      <li >
+        <a href="/learn">Learn</a>
       </li>
 
-      <li {% if page.nav_active == 'race' %}class="active"{% endif %}>
-        <a href="{{ '/race' | relative_url }}">Race</a>
+      <li >
+        <a href="/race">Race</a>
       </li>
 
-      <li {% if page.nav_active == 'research' %}class="active"{% endif %}>
-        <a href="{{ '/research.html' | relative_url }}">Research</a>
+      <li >
+        <a href="/research.html">Research</a>
       </li>
 
       <!-- 🔹 News 메뉴 추가 -->
-      <li {% if page.nav_active == 'news' %}class="active"{% endif %}>
-        <a href="{{ '/news' | relative_url }}">News</a>
+      <li class="active">
+        <a href="/news">News</a>
       </li>
 
-      <li {% if page.nav_active == 'contact' %}class="active"{% endif %}>
-        <a href="{{ '/record.html' | relative_url }}">Record</a>
+      <li >
+        <a href="/record.html">Record</a>
       </li>
 
     </ul>
@@ -92,7 +90,57 @@
 
   <!-- 메인 콘텐츠 -->
   <main role="main">
-    {{ content }}
+    <header id="head" class="secondary">
+  <div class="container">
+    <h1 class="page-title">News</h1>
+    <p class="lead">
+      RoboRacer 및 F1TENTH 관련 소식, 활동, 연구 하이라이트를 제공합니다.
+    </p>
+  </div>
+</header>
+
+<div class="container">
+
+  <section id="news-list">
+
+    <!-- 카드 1 -->
+    <article class="news-card">
+      <div class="news-thumb">
+        <div class="news-thumb-placeholder">Image Coming Soon</div>
+      </div>
+
+      <div class="news-body">
+        <h3>F1TENTH Korea Delegation – UPenn CoE 방문</h3>
+        <p class="meta">The Autoware Foundation · 예정일: Coming Soon</p>
+        <p>
+          F1TENTH Korea 대표단이 University of Pennsylvania Center of Excellence를 방문하여
+          자율주행 교육 및 레이싱 협력을 논의한 행사입니다. 자세한 내용은 곧 업로드됩니다.
+        </p>
+        <span class="news-badge">Coming Soon</span>
+      </div>
+    </article>
+
+    <!-- 카드 2 -->
+    <article class="news-card">
+      <div class="news-thumb">
+        <div class="news-thumb-placeholder">Image Coming Soon</div>
+      </div>
+
+      <div class="news-body">
+        <h3>RoboRacer Korea – 국내 대학 공동 레이스 시리즈</h3>
+        <p class="meta">RoboRacer Committee · 예정일: Coming Soon</p>
+        <p>
+          전국 공과대학 참여형 RoboRacer Korea 공동 레이스 시리즈 준비 중입니다.
+          규정, 참가 정보, 일정은 업데이트될 예정입니다.
+        </p>
+        <span class="news-badge">Coming Soon</span>
+      </div>
+    </article>
+
+  </section>
+
+</div>
+
   </main>
 
   <!-- 공통 푸터 (원하면 여기서 나중에 재단 소개/저작권 등 통일) -->
@@ -151,11 +199,11 @@
         <div class="col-md-6 panel">
           <div class="panel-body">
             <p class="simplenav">
-              <a href="{{ '/' | relative_url }}">Home</a> | 
-              <a href="{{ '/organization' | relative_url }}"> Organization </a> |
-              <a href="{{ '/learn.html' | relative_url }}"> Learn </a> |
-              <a href="{{ '/race' | relative_url }}"> Race </a> |
-              <a href="{{ '/community.html' | relative_url }}"> Community</a>
+              <a href="/">Home</a> | 
+              <a href="/organization"> Organization </a> |
+              <a href="/learn.html"> Learn </a> |
+              <a href="/race"> Race </a> |
+              <a href="/community.html"> Community</a>
             </p>
           </div>
         </div>
@@ -163,7 +211,7 @@
         <div class="col-md-6 panel">
           <div class="panel-body">
             <p class="text-right">
-              Copyright &copy; 2014–{{ site.time | date: '%Y' }} 
+              Copyright &copy; 2014–2025 
               Roboracer Foundation Korea. Template by 
               <a href="http://webthemez.com/" rel="develop">WebThemez.com</a> 
             </p>
@@ -177,21 +225,21 @@
 
   <!-- JS -->
 <!-- JS (필수 순서 유지) -->
-<script src="{{ '/assets/js/modernizr-latest.js' | relative_url }}"></script>
+<script src="/assets/js/modernizr-latest.js"></script>
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <!-- Bootstrap JS (로컬 버전 사용) -->
-<script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
 
 <!-- Plugins -->
-<script src="{{ '/assets/js/jquery.cslider.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/headroom.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/jquery.headroom.min.js' | relative_url }}"></script>
+<script src="/assets/js/jquery.cslider.js"></script>
+<script src="/assets/js/headroom.min.js"></script>
+<script src="/assets/js/jquery.headroom.min.js"></script>
 
 <!-- Custom JS -->
-<script src="{{ '/assets/js/custom.js' | relative_url }}"></script>
+<script src="/assets/js/custom.js"></script>
 
   <script>
   document.addEventListener("DOMContentLoaded", function () {

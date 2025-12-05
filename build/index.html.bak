@@ -1,0 +1,161 @@
+---
+layout: default
+title: "Build"
+nav_active: "build"
+tab_active: "home"
+---
+
+<header id="head" class="secondary">
+  <div class="container">
+    <h1 class="page-title">RoboRacer Build Guide</h1>
+    <p class="lead">
+      RoboRacer 차량을 조립하고 설정하는 전체 과정을 정리한 공식 Build 문서입니다.
+    </p>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- 🔹 단계별 탭 메뉴 (동일 페이지 내 앵커 이동) -->
+  <ul class="nav nav-pills" style="margin-bottom: 20px;">
+    <li class="active">
+      <a href="/build">Introduction</a>
+    </li>
+    <li>
+      <a href="#build-car">Car Build</a>
+    </li>
+    <li>
+      <a href="#jetson-setup">Jetson Setup</a>
+    </li>
+    <li>
+      <a href="#driver-stack">Driver Stack</a>
+    </li>
+    <li>
+      <a href="#drive-car">Drive</a>
+    </li>
+  </ul>
+
+  <div class="row">
+
+    <!-- Sidebar (Build Navigation) -->
+    <aside class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>🔧 RoboRacer - Build</strong></div>
+
+        <div class="panel-body" style="background:#233559;color:#f0f4ff;">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search docs">
+          </div>
+
+          <p style="color:#ff6b6b;font-weight:700;margin-top:10px;">BUILD AND DRIVE</p>
+          <ul class="list-unstyled">
+            <li><a href="#build-car" style="color:#f0f4ff;">Car Build</a></li>
+            <li><a href="#jetson-setup" style="color:#f0f4ff;">Jetson Setup</a></li>
+            <li><a href="#driver-stack" style="color:#f0f4ff;">Driver Stack</a></li>
+            <li><a href="#drive-car" style="color:#f0f4ff;">Drive</a></li>
+          </ul>
+
+          <p style="color:#ff6b6b;font-weight:700;margin-top:15px;">SIMULATE</p>
+          <ul class="list-unstyled">
+            <li>RoboRacer Simulator</li>
+          </ul>
+
+          <p style="color:#ff6b6b;font-weight:700;margin-top:15px;">AUTOWARE @ ROBORACER</p>
+          <ul class="list-unstyled">
+            <li>Autoware Installation</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <article class="col-sm-8 maincontent">
+
+      <h3>Introduction (소개)</h3>
+      <p>
+        이 문서는 RoboRacer 커뮤니티에 합류하고, 실제 차량을 직접 만들어 주행을 시작하고자 하는 분들을 위한
+        시작 가이드입니다. 전체 빌드 과정은 서로 이어지는 네 개의 단계로 나뉘며,
+        앞 단계에서 준비가 끝났다는 것을 전제로 다음 단계로 진행하도록 구성되어 있습니다.
+      </p>
+
+      <ul>
+        <li><strong>Building the RoboRacer Car</strong> – 완전히 처음부터 차량을 조립하는 경우, 이 단계부터 시작합니다.</li>
+        <li><strong>Configure Jetson and Peripherals</strong> – 차량 하드웨어 조립이 끝난 후, Jetson 및 주변 장치를 설정할 때 시작합니다.</li>
+        <li><strong>Install RoboRacer Driver Stack</strong> – 1, 2단계를 모두 마친 후, 소프트웨어 스택을 설치할 때 시작합니다.</li>
+        <li><strong>Drive the RoboRacer Car</strong> – 앞의 세 단계를 모두 완료하고, 이제 실제로 차량을 주행하고 워크스페이스를 구성할 준비가 되었을 때 시작합니다.</li>
+      </ul>
+
+      <p>
+        전체 과정의 <strong>난이도</strong>는 대략 <strong>Intermediate ~ Advanced</strong> 수준이며,<br>
+        <strong>예상 소요 시간</strong>은 대략 <strong>10–15시간</strong> 정도입니다.
+        처음부터 끝까지 한 번에 진행하려면 하루를 통째로 이 프로젝트에 쓰는 것이 좋습니다.
+      </p>
+
+      <p>
+        RoboRacer 차량을 실제로 조립하는 전 과정은 영상으로도 기록되어 있으며,  
+        차후 이 페이지에서 해당 링크를 제공할 예정입니다.
+      </p>
+
+      <div class="alert alert-info">
+        <strong>Important</strong><br>
+        빌드나 설정 과정에서 궁금한 점이 있다면 <em>RoboRacer Discourse</em>에 질문을 남겨 주세요.<br>
+        문서 내용 자체에 대한 질문이나 수정 제안이 있다면 GitHub 저장소에 Issue를 등록해 주시면 됩니다.
+      </div>
+
+      <hr>
+
+      <!-- 1) Car Build -->
+      <h3 id="build-car">1. Car Build (차량 제작)</h3>
+      <p>
+        이 단계에서는 Bill of Materials(BOM)에 따라 섀시, 구동계, 센서, 전자 장치를 모두 조립하여
+        하나의 완성된 1/10 스케일 RoboRacer 차량을 만드는 것이 목표입니다.
+      </p>
+      <p>
+        하부 섀시 조립 → 자율주행 센서 및 컴퓨팅 보드 장착 → 상부 구조물 조립 순서로 진행하며,
+        기계적 결합과 배선, 전원 분배 등을 안정적으로 구성하는 것이 핵심입니다.
+      </p>
+
+      <!-- 2) Jetson Setup -->
+      <h3 id="jetson-setup">2. Jetson Setup (Jetson &amp; 주변장치 설정)</h3>
+      <p>
+        차량 하드웨어 조립이 끝나면, NVIDIA Jetson 보드에 OS를 설치하고 네트워크와 계정을 설정한 뒤,
+        개발 환경과 기본 드라이버를 구성합니다.
+      </p>
+      <p>
+        특히 VESC, LiDAR, 카메라 등의 주변 장치와 Jetson 사이의 통신이 원활하게 이루어지도록
+        IP 설정, 포트 설정, 권한 설정 등을 꼼꼼하게 확인해야 합니다.
+      </p>
+
+      <!-- 3) Driver Stack -->
+      <h3 id="driver-stack">3. Driver Stack (RoboRacer 드라이버 스택 설치)</h3>
+      <p>
+        이 단계에서는 ROS 기반 RoboRacer 드라이버 스택을 설치하고,  
+        실제 차량 하드웨어와 토픽, 프레임 이름, 포트 설정이 모두 일치하도록 튜닝합니다.
+      </p>
+      <p>
+        로컬 설치 방식뿐 아니라 Docker 컨테이너를 활용한 설치 방법도 고려할 수 있으며,  
+        팀/수업 환경에서는 재현성과 통일성을 위해 컨테이너 방식을 추천할 수 있습니다.
+      </p>
+
+      <!-- 4) Drive -->
+      <h3 id="drive-car">4. Drive (주행 시작)</h3>
+      <p>
+        앞의 세 단계를 마치면, 이제 실제로 차량을 움직여 볼 차례입니다.  
+        기본 키보드/조종기 제어부터 시작하여, 점차 자율주행 노드 및 알고리즘을 실행하며
+        전체 시스템이 정상적으로 동작하는지 확인합니다.
+      </p>
+      <p>
+        이 과정에서 센서 데이터(예: LiDAR Scan, IMU, 상태 정보)를 모니터링하고,
+        필요하다면 파라미터를 조정하면서 안정적인 주행을 만들어 가는 것이 중요합니다.
+      </p>
+
+      <p class="text-right">
+        <a class="btn btn-primary btn-sm" href="#">
+          빌드 &amp; 설정 상세 문서 보기 &raquo;
+        </a>
+      </p>
+
+    </article>
+
+  </div>
+</div>
