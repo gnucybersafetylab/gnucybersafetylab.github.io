@@ -1705,3 +1705,298 @@ main.learn-page .course-highlight--green {
 main.learn-page .course-highlight--amber {
   border-left-color: #f59e0b;
 }
+
+
+/* =========================================
+   Education Page Styles
+   ========================================= */
+
+main.edu-page #head.secondary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+  color: #f9fafb;
+}
+main.edu-page #head.secondary .page-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+main.edu-page #head.secondary .lead {
+  max-width: 960px;
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* 섹션 여백 */
+main.edu-page .edu-section {
+  padding-top: 32px;
+  padding-bottom: 36px;
+}
+
+/* 탭 메뉴 (pill 스타일 통일) */
+main.edu-page .nav.nav-pills > li > a {
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #374151;
+}
+main.edu-page .nav.nav-pills > li.active > a {
+  background: #1d4ed8;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+/* 일정 요약 카드 */
+main.edu-page .edu-schedule-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+}
+main.edu-page .edu-schedule-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+main.edu-page .edu-schedule-note {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* 공통 테이블 카드 (초급/중급 과정) */
+main.edu-page .edu-table-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  margin-bottom: 26px;
+}
+
+/* 테이블 스타일 통일 */
+main.edu-page .edu-table {
+  margin-bottom: 0;
+}
+main.edu-page .edu-table thead th {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+main.edu-page .edu-table tbody td {
+  vertical-align: middle;
+}
+main.edu-page .edu-table tbody td:first-child {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 섹션 설명 텍스트 폭과 간격 */
+main.edu-page .section-text {
+  max-width: 860px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/* CTA 박스 */
+main.edu-page .edu-cta-box {
+  max-width: 860px;
+  margin: 10px 0 40px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #1d4ed8, #0f766e);
+  color: #e5e7eb;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
+}
+main.edu-page .edu-cta-box p {
+  margin-bottom: 10px;
+}
+main.edu-page .edu-cta-box .btn {
+  margin-top: 8px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
+}
+
+/* =========================================
+   Education Application Page Styles
+   ========================================= */
+
+main.edu-page .edu-apply-section {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+/* 왼쪽: 신청서 카드 */
+main.edu-page .edu-form-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  margin-bottom: 24px;
+}
+main.edu-page .edu-form-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
+}
+main.edu-page .edu-form-card p {
+  color: #4b5563;
+}
+
+/* 오른쪽: 안내 카드 */
+main.edu-page .edu-info-card {
+  background: #f9fafb;
+  border-radius: 18px;
+  padding: 18px 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+  margin-top: 28px;
+}
+main.edu-page .edu-info-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+main.edu-page .edu-info-card ul {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+main.edu-page .edu-info-card li {
+  margin-bottom: 6px;
+}
+main.edu-page .edu-info-card p {
+  font-size: 0.9em;
+  color: #6b7280;
+}
+
+
+/* =========================================
+   Race Rules Page Styles
+   ========================================= */
+
+main.race-rules-page #head.secondary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+  color: #f9fafb;
+}
+main.race-rules-page #head.secondary .page-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+main.race-rules-page #head.secondary .lead {
+  max-width: 960px;
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* 상단 탭 메뉴 */
+main.race-rules-page .nav.nav-pills > li > a {
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #374151;
+}
+main.race-rules-page .nav.nav-pills > li.active > a {
+  background: #1d4ed8;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+/* 좌측 연도 메뉴 카드 */
+main.race-rules-page .year-menu-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+  margin-bottom: 20px;
+}
+main.race-rules-page .year-menu-card h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+main.race-rules-page .year-menu-card .nav-stacked > li > a {
+  padding: 6px 10px;
+}
+main.race-rules-page .year-menu-meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* 내용 영역 공통 카드 느낌 */
+main.race-rules-page .rules-main-section {
+  padding-bottom: 40px;
+}
+
+/* TOC 카드 */
+main.race-rules-page .rules-toc-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 16px 18px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+main.race-rules-page .rules-toc-card ol {
+  margin-bottom: 0;
+}
+
+/* 규칙 섹션 블록 */
+main.race-rules-page .rule-block {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  margin-bottom: 26px;
+}
+main.race-rules-page .rules-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* 강조 박스 (알림 등) */
+main.race-rules-page .note-box {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-size: 14px;
+}
+
+/* 그림/캡션 스타일 */
+main.race-rules-page .rule-figure {
+  margin: 18px auto;
+  text-align: center;
+}
+main.race-rules-page .rule-figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 66%;
+  height: auto;
+}
+main.race-rules-page .rule-figure-caption {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* 푸터 */
+main.race-rules-page .rules-footer {
+  margin: 20px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 12px;
+  color: #6b7280;
+}

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://roboracer.or.kr/sitemap.xml
