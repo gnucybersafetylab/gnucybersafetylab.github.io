@@ -1,0 +1,226 @@
+---
+layout: default
+title: "Join RoboRacer Korea"
+nav_active: "join"
+---
+
+<!-- =========================== -->
+<!-- 0. 상단 헤더 + CTA 버튼 -->
+<!-- =========================== -->
+<header id="head" class="secondary">
+  <div class="container">
+    <h1 class="page-title"> Join </h1>
+    <p class="lead">
+      1/10 자율주행 레이싱 플랫폼을 중심으로,
+      자율주행 교육 · 레이스 · 연구 생태계를 함께 만들어 가는 개방형 커뮤니티입니다. 교수, 연구자, 대학(원)생, 기업, 연구소, 동아리 등
+      자율주행 · 로보레이싱 · AI 교육 · 연구에 관심 있는 모든 분들을 환영합니다.
+    </p>
+  </div>
+</header>
+
+<div class="container">
+  
+  <!-- =========================== -->
+  <!-- 1. 누구를 초대하나요? -->
+  <!-- =========================== -->
+  <section id="who-can-join" class="section appear clearfix">
+    <div class="heading">
+      <h2>누구를 초대하나요? (Who Can Join?)</h2>
+      <p class="section-text" style="max-width:860px;">
+        RoboRacer Korea는 다양한 배경을 가진 구성원들이 함께할 때
+        가장 큰 가치를 만들어낼 수 있다고 믿습니다. 다음과 같은 분들을 특히 환영합니다.
+      </p>
+    </div>
+
+    <div class="row" style="margin-top:20px;">
+
+      <!-- 교수 · 연구자 카드 -->
+      <div class="col-md-6">
+        <div class="panel panel-default" style="height:100%;">
+          <div class="panel-heading">
+            <h3 class="panel-title">교수 · 연구자 (Faculty &amp; Researchers)</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>자율주행, 로보틱스, 제어, AI, 임베디드 시스템, CPS 등 관련 분야를 연구하시는 분</li>
+              <li>학부/대학원 강의나 프로젝트 수업에 F1TENTH / RoboRacer 플랫폼을 도입하고 싶으신 분</li>
+              <li>공동 연구, 데이터셋 공유, 캡스톤/졸업연구 주제 연계를 고민하시는 분</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 학생 · 동아리 카드 -->
+      <div class="col-md-6">
+        <div class="panel panel-default" style="height:100%;">
+          <div class="panel-heading">
+            <h3 class="panel-title">학생 · 동아리 (Students &amp; Clubs)</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>자율주행 레이싱, ROS, SLAM, 경로 계획, 강화학습 등에 관심 있는 학부·대학원생</li>
+              <li>F1TENTH / RoboRacer 기반 프로젝트나 대회를 준비 중인 팀·동아리</li>
+              <li>국내외 자율주행 레이스에 도전해 보고 싶은 학생 팀</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row" style="margin-top:10px;">
+
+      <!-- 기업 · 연구소 카드 -->
+      <div class="col-md-6">
+        <div class="panel panel-default" style="height:100%;">
+          <div class="panel-heading">
+            <h3 class="panel-title">기업 (Companies)</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>센서, 제어기, SoC, 차량 플랫폼, 시뮬레이터 등 관련 기술/제품을 보유한 기업</li>
+              <li>급속 프로토타이핑, 기술 검증(PoC), 인재 발굴/채용 연계를 고민하는 조직</li>
+              <li>공동 대회 개최, 후원(Sponsorship), 기술 워크숍 협력을 희망하는 기업</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 연구소 · 공공기관 카드 -->
+      <div class="col-md-6">
+        <div class="panel panel-default" style="height:100%;">
+          <div class="panel-heading">
+            <h3 class="panel-title">연구소 · 공공기관 (Institutes &amp; Public Sector)</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>지자체·연구소·공공기관 차원에서 자율주행 교육 및 경진대회 운영을 검토 중인 조직</li>
+              <li>지역 기반 청소년/대학생 대상 STEM/AI 교육 프로그램을 기획 중인 기관</li>
+              <li>테스트베드, 실험 트랙, 공용 인프라 제공 및 공동 활용을 희망하는 기관</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================== -->
+  <!-- 2. 함께 하면 무엇을 할 수 있나요? -->
+  <!-- =========================== -->
+  <section id="why-join" class="section section-alt">
+    <div class="heading">
+      <h2>함께 하면 무엇을 할 수 있나요? (Why Join?)</h2>
+    </div>
+
+    <div class="row" style="max-width:960px; margin:0 auto;">
+
+      <div class="col-sm-6">
+        <div class="media" style="margin-bottom:15px;">
+          <div class="media-left">
+            <i class="fa fa-graduation-cap fa-2x"></i>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">교육 협력 (Education)</h4>
+            <p>
+              F1TENTH / RoboRacer 기반 강의, 랩, 캡스톤, 부트캠프 커리큘럼 공유 및 공동 설계.
+            </p>
+          </div>
+        </div>
+
+        <div class="media" style="margin-bottom:15px;">
+          <div class="media-left">
+            <i class="fa fa-flag-checkered fa-2x"></i>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">대회 및 행사 (Races &amp; Events)</h4>
+            <p>
+              국내·국제 RoboRacer / F1TENTH 레이스 공동 개최, 지역 예선전 운영, 심사 및 규정 협력.
+            </p>
+          </div>
+        </div>
+
+        <div class="media" style="margin-bottom:15px;">
+          <div class="media-left">
+            <i class="fa fa-users fa-2x"></i>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">커뮤니티 구축 (Community)</h4>
+            <p>
+              기술 교류 세미나, 정기 미팅, 온라인 커뮤니티(Slack/Discord 등) 운영.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="media" style="margin-bottom:15px;">
+          <div class="media-left">
+            <i class="fa fa-flask fa-2x"></i>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">연구 협업 (Research)</h4>
+            <p>
+              자율주행, AI 안전, 시뮬레이션, 디지털 트윈, 월드 모델, 의료/임상 응용 등 R&amp;D 공동 기획.
+            </p>
+          </div>
+        </div>
+
+        <div class="media" style="margin-bottom:15px;">
+          <div class="media-left">
+            <i class="fa fa-lightbulb-o fa-2x"></i>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">인재 양성 (Talent Development)</h4>
+            <p>
+              학생 팀 프로젝트 지원, 인턴십/채용 연계, 공동 지도 및 멘토링.
+            </p>
+          </div>
+        </div>
+
+        <div class="media" style="margin-bottom:15px;">
+          <div class="media-left">
+            <i class="fa fa-handshake-o fa-2x"></i>
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">파트너십 (Partnership)</h4>
+            <p>
+              기업·기관과의 공동 홍보, 후원 프로그램, 테스트베드 연계 등 다양한 파트너십 모델을 모색합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================== -->
+  <!-- 3. 가입 방법 -->
+  <!-- =========================== -->
+  <section id="how-to-join" class="section">
+    <div class="heading">
+      <h2>가입 방법 (How to Join)</h2>
+    </div>
+
+    <p class="section-text" style="max-width:860px;">
+      <strong>가입 절차는 매우 간단합니다.</strong><br>
+      아래 버튼을 눌러 <strong>가입 신청서 페이지</strong>로 이동한 뒤,
+      양식을 작성하여 제출해 주시면 운영위원회 검토 후 연락을 드립니다.
+    </p>
+
+    <p class="section-text" style="max-width:860px;">
+      현재는 <strong>연회비/가입비 없이</strong> 운영되며,
+      향후 별도 규정이 제정될 경우 사전에 충분히 안내드릴 예정입니다.
+      실제 제출 방식은 사이트 구축 상황에 따라
+      <strong>이메일 제출</strong>, <strong>온라인 폼(예: Google Form)</strong>,
+      또는 <strong>전용 회원 시스템</strong>으로 대체될 수 있습니다.
+    </p>
+
+    <p style="margin-top:20px;">
+      <a href="{{ '/join/apply.html' | relative_url }}" class="btn btn-primary btn-lg">
+        가입 신청서 작성하러 가기 (Go to Application Form)
+      </a>
+    </p>
+  </section>
+
+</div> <!-- /.container -->

@@ -1225,3 +1225,174 @@ body {
     color: #555;
     border-radius: 4px;
 }
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Join page custom decoration -->
+  <style>
+    /* 이 페이지에만 적용되도록 main.join-page 아래로 스코프 */
+    main.join-page #head.secondary {
+      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+      color: #f9fafb;
+    }
+    main.join-page #head.secondary .page-title {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    main.join-page #head.secondary .lead {
+      max-width: 960px;
+      margin-top: 10px;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    /* 공통 섹션 여백 */
+    main.join-page .join-section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    /* 작은 섹션 라벨 */
+    main.join-page .join-label {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #6b7280;
+      background: #e5e7eb;
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-bottom: 8px;
+    }
+
+    /* 인트로 박스 */
+    main.join-page .join-intro-box {
+      background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+      border-radius: 16px;
+      padding: 18px 22px;
+      margin-top: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+    main.join-page .join-intro-box p {
+      margin-bottom: 0;
+    }
+
+    /* 카드 스타일 공통 */
+    main.join-page .join-card {
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      overflow: hidden;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    main.join-page .join-card .panel-heading {
+      background: #ffffff;
+      border-bottom: none;
+    }
+    main.join-page .join-card .panel-title {
+      font-weight: 600;
+    }
+    main.join-page .join-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+    }
+    main.join-page .join-card-blue {
+      border-top: 4px solid #2563eb;
+    }
+    main.join-page .join-card-emerald {
+      border-top: 4px solid #059669;
+    }
+    main.join-page .join-card-amber {
+      border-top: 4px solid #d97706;
+    }
+    main.join-page .join-card-fuchsia {
+      border-top: 4px solid #c026d3;
+    }
+    main.join-page .join-card ul {
+      padding-left: 18px;
+      margin-bottom: 0;
+    }
+    main.join-page .join-card ul li {
+      margin-bottom: 6px;
+    }
+
+    /* Why Join 영역 배경 박스 */
+    main.join-page .join-features-wrap {
+      background:
+        radial-gradient(circle at top left, #eff6ff, transparent 55%),
+        radial-gradient(circle at bottom right, #ecfdf5, transparent 50%);
+      border-radius: 18px;
+      padding: 24px 24px 10px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+    main.join-page .feature-item {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    }
+    main.join-page .feature-item .media-left {
+      padding-right: 10px;
+    }
+    main.join-page .feature-item i {
+      width: 36px;
+      text-align: center;
+    }
+    main.join-page .feature-item .media-heading {
+      font-weight: 600;
+    }
+
+    /* 가입 방법 단계 리스트 */
+    main.join-page .join-steps {
+      max-width: 860px;
+      margin: 20px 0 10px;
+    }
+    main.join-page .join-step {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    main.join-page .join-step-number {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+    main.join-page .join-step-body strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    /* 하단 CTA 박스 */
+    main.join-page .join-cta-box {
+      max-width: 860px;
+      background: linear-gradient(135deg, #1d4ed8, #0f766e);
+      color: #e5e7eb;
+      border-radius: 18px;
+      padding: 22px 24px;
+      margin-top: 20px;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
+    }
+    main.join-page .join-cta-box p {
+      margin-bottom: 10px;
+    }
+    main.join-page .join-cta-box .btn {
+      margin-top: 8px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
+    }
+
+    @media (max-width: 767px) {
+      main.join-page .join-features-wrap {
+        padding: 18px 14px 6px;
+      }
+    }
+  </style>
