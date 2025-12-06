@@ -1,0 +1,2002 @@
+/*
+Theme: Atlanta - Free business bootstrap template
+Description: Free to use for personal and commercial use
+Author: WebThemez.com
+Website: http://webthemez.com
+Note: Please do not remove the footer backlink (webthemez.com)--(if you want to remove contact: webthemez@gmail.com)
+Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/licenses/by/3.0/
+*/
+
+/*General*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Open sans", Helvetica, Arial;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 30px;
+}
+
+blockquote {
+    font-style: italic;
+    font-family: Georgia;
+    color: #999;
+    margin: 30px 0 30px;
+}
+
+label {
+    color: #777;
+}
+
+/* Header */
+#head {
+    background: #181015 url( ../images/bg_header.jpg) no-repeat;
+    background-size: cover;
+    background-position: center 70%;
+    min-height: 520px;
+    text-align: center;
+    padding-top: 140px;
+    color: white;
+    font-family: "Open sans", Helvetica, Arial;
+    font-weight: 300;
+}
+
+#head.secondary {
+    height: 100px;
+    min-height: 100px;
+    padding-top: 0px;
+}
+
+#head .lead {
+    font-family: "Open sans", Helvetica, Arial;
+    font-size: 44px;
+    margin-bottom: 6px;
+    color: white;
+    line-height: 1.15em;
+}
+
+#head .tagline {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 25px;
+}
+
+#head .tagline a {
+    color: #fff;
+}
+
+#head .btn {
+    margin-bottom: 10px;
+}
+
+#head .btn-default {
+    text-shadow: none;
+    background: transparent;
+    color: rgba(255,255,255,.5);
+    -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.5);
+    -moz-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.5);
+    box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.5);
+    background: transparent;
+}
+
+#head .btn-default:hover,
+		#head .btn-default:focus {
+    color: rgba(255,255,255,.8);
+    -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.8);
+    -moz-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.8);
+    box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.8);
+    background: transparent;
+}
+
+#head .btn-default:active, 
+		#head .btn-default.active {
+    color: #fff;
+    -webkit-box-shadow: inset 0px 0px 0px 3px #fff;
+    -moz-box-shadow: inset 0px 0px 0px 3px #fff;
+    box-shadow: inset 0px 0px 0px 3px #fff;
+    background: transparent;
+}
+
+.panel {
+    margin-bottom: 0px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.panel-body {
+    padding: 0px;
+}
+
+.btn-action, .btn-primary {
+    color: #FFEFD7;
+    background-image: -webkit-linear-gradient(top, #0ecfec 0%, #09bed9 100%);
+    background-image: linear-gradient(to bottom, #0ecfec 0%, #09bed9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0ecfec22', endColorstr='#09bed900', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background-repeat: repeat-x;
+    border: 0 none;
+}
+
+.btn-action:hover, .btn-primary:hover {
+    background: #04a0b7;
+}
+
+.slideUp {
+    top: -100px;
+}
+.headroom {
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+/* Highlights*/
+.highlight {
+    margin-top: 40px;
+}
+
+.h-caption {
+    text-align: center;
+}
+
+.h-caption i {
+    display: block;
+    font-size: 54px;
+    color: #ee0c45;
+    margin-bottom: 36px;
+}
+
+.h-caption h4 {
+    color: #382526;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.h-body {
+}
+
+.jumbotron {
+    background-color: #E0E0E0;
+}
+
+
+.page-title {
+    margin-top: 20px;
+    font-weight: 300;
+    color: #ee0c45;
+}
+
+.text-muted {
+    color: #888;
+}
+
+.breadcrumb {
+    background: none;
+    padding: 0;
+    margin: 30px 0 0px 0;
+}
+
+ul.list-spaces li {
+    margin-bottom: 10px;
+}
+
+/* Helpers */
+.container-full {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.top-space {
+    margin-top: 60px;
+}
+
+.top-margin {
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+img.pull-right {
+    margin-left: 10px;
+}
+
+img.pull-left {
+    margin-right: 10px;
+}
+
+#map {
+    width: 100%;
+    height: 280px;
+}
+
+#social {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#social .wrapper {
+    width: 340px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    padding-top: 36px;
+    padding-bottom: 30px;
+}
+
+.sidebar .panel {
+    margin-bottom: 20px;
+}
+
+.sidebar h1, .sidebar .h1, .sidebar h2, .sidebar .h2, .sidebar h3, .sidebar .h3 {
+    margin-top: 20px;
+} 
+
+/* Footer */
+.footer1 {
+    background: #302A31;
+    padding: 30px 0 0 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.footer1 a {
+    color: #ccc;
+}
+
+.footer1 a:hover {
+    color: #fff;
+}
+
+.footer1 .panel {
+    margin-bottom: 30px;
+}
+
+.footer1 .panel-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #ccc;
+    margin: 0 0 20px;
+}
+
+.footer1 .entry-meta {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 35px 0;
+    padding: 2px 0;
+    color: #888888;
+    font-size: 12px;
+    font-size: 0.75rem;
+}
+
+.footer1 .entry-meta a {
+    color: #333333;
+}
+
+.footer1 .entry-meta .meta-in {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.follow-me-icons {
+    font-size: 30px;
+}
+
+.follow-me-icons i {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+.footer2 {
+    background: #191919;
+    padding: 15px 0;
+    color: #777;
+    font-size: 12px;
+}
+
+.footer2 a {
+    color: #aaa;
+}
+
+.footer2 a:hover {
+    color: #fff;
+}
+
+.footer2 p {
+    margin: 0;
+}
+
+.panel-simplenav {
+    margin-left: -5px;
+}
+
+.panel-simplenav a {
+    margin: 0 5px;
+}		
+	
+/* carousel */
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px 0px 0px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control {
+    background: none;
+    color: #222;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left {
+    left: -12px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right {
+    right: -12px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li {
+    background: #c0c0c0;
+}
+
+#quote-carousel .carousel-indicators .active {
+    background: #333333;
+}
+
+#quote-carousel img {
+    width: 250px;
+    height: 100px;
+}
+/* End carousel */
+
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+.contact ul {
+padding:0px;
+}
+.contact ul li {
+margin-bottom: 10px;
+list-style: none;
+}
+footer ul li {
+list-style: none;
+}
+#map-canvas {
+	height: 100%;
+	margin: 0px;
+	padding: 0px
+  }
+  
+  /* ------- */
+
+.isotopeWrapper article {
+    margin-bottom: 30px;
+}
+
+#portfolio {
+}
+
+    #portfolio img {
+        width: 100%;
+    }
+
+    #portfolio article p {
+        margin-bottom: 1.45em;
+        /*set next row on the baseline*/;
+    }
+
+nav#filter {
+    margin-bottom: 1.5em;
+}
+
+    nav#filter li {
+        display: inline-block;
+        margin: 0 0 0 5px;
+    }
+
+    nav#filter a {
+        padding: 4px 12px;
+        line-height: 20px;
+        border: 1px solid #00bfff;
+        text-decoration: none;
+		color:#00bfff;
+    }
+nav#filter a.current{
+background:#00bfff;
+color:#fff;
+}
+.iconColor .fa{
+color: #ee0c45;
+}
+
+.portfolio-items article img {
+    width: 100%;
+}
+
+.portfolio-item {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+    .portfolio-item img {
+        -webkit-transition: all 300ms linear;
+        -moz-transition: all 300ms linear;
+        -o-transition: all 300ms linear;
+        -ms-transition: all 300ms linear;
+        transition: all 300ms linear;
+    }
+
+    .portfolio-item .portfolio-desc {
+        display: block;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        color: rgba(220, 220, 220);
+    }
+
+.fancybox-overlay {
+    background: rgba(0, 0, 0, 0.64);
+}
+
+.portfolio-item:hover .portfolio-desc {
+    padding-top: 20%;
+    height: 100%;
+    transition: all 200ms ease-in-out 0s;
+    opacity: 1;
+    background: rgba(61, 61, 61, 0.67);
+}
+
+.portfolio-item .portfolio-desc a {
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+    .portfolio-item .portfolio-desc a:hover {
+        /*text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);*/
+        text-decoration: none;
+    }
+
+.portfolio-item .portfolio-desc .folio-info {
+    top: -20px;
+    padding: 30px;
+    height: 0;
+    opacity: 0;
+    position: relative;
+}
+
+.portfolio-item:hover .folio-info {
+    height: 100%;
+    opacity: 1;
+    transition: all 500ms ease-in-out 0s;
+    top: 5px;
+}
+
+.portfolio-item .portfolio-desc .folio-info h5 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.portfolio-item .portfolio-desc .folio-info p {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+/**
+  MEDIA QUERIES
+*/
+@media (max-width: 767px) {
+    #head {
+        min-height: 420px;
+        padding-top: 160px;
+    }
+
+    #head .lead {
+        font-size: 34px;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #quote-carousel {
+        margin-bottom: 0;
+        padding: 0 40px 30px 40px;
+        margin-top: 30px;
+    }
+}
+ 
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) {     
+    /* Make the indicators larger for easier clicking with fingers/thumb on mobile */    
+    #quote-carousel .carousel-indicators {
+        bottom: -20px !important;
+    }
+
+    #quote-carousel .carousel-indicators li {
+        display: inline-block;
+        margin: 0px 5px;
+        width: 15px;
+        height: 15px;
+    }
+
+    #quote-carousel .carousel-indicators li.active {
+        margin: 0px 5px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+ 
+/* 헤더 영역이 너무 붙어 보이면 살짝 여유 */
+#head {
+  margin-top: 0;
+  padding-top: 0;
+}
+ 
+
+/* Organization 등 서브 페이지용 헤더 스타일 */
+#head.secondary {
+  background: #f5f5f5;        /* 연한 회색 배경 (원하면 변경 가능) */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 160px;
+  text-align: left;           /* 원래 about 페이지처럼 왼쪽 정렬 */
+  color: #333;                /* 🔥 여기서 글자색을 다시 어두운 색으로 */
+}
+
+#head.secondary .page-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #e74c3c;             /* ‘About us’처럼 살짝 강조 색 (원하면 검정으로) */
+}
+
+#head.secondary .lead {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* ===== RoboRacer Build Sidebar ===== */
+.sidebar-menu {
+  background: #233559;
+  color: #d9e6ff;
+  padding: 15px 18px 20px 18px;
+}
+
+.sidebar-menu .form-control {
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+/* 섹션 제목 (BUILD AND DRIVE 등) */
+.sidebar-menu .section-title {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #ff6b6b;
+}
+
+/* 리스트 기본 들여쓰기/여백 */
+.sidebar-menu ul {
+  list-style: none;
+  padding-left: 8px;
+  margin: 0 0 4px 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 4px;
+}
+
+/* 링크 항목 */
+.sidebar-menu li a {
+  color: #d9e6ff;
+  text-decoration: none;
+  display: block;
+  padding: 3px 4px 3px 10px;
+}
+
+.sidebar-menu li a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+/* 접히는 토글 제목(소제목) */
+.sidebar-menu .toggle {
+  font-weight: 700;
+  cursor: pointer;
+  padding: 3px 4px 3px 6px;
+}
+
+.sidebar-menu .toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+/* 토글로 열리는 서브 리스트 */
+.sidebar-menu .sub-items {
+  display: none;            /* 처음에는 접힌 상태 */
+  padding-left: 18px;
+  margin-top: 4px;
+}
+
+.race-tag-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.race-tag {
+  cursor: pointer;
+  transition: all 0.18s ease-out;
+}
+
+.race-tag-sub {
+  font-size: 11px;
+  opacity: 0.85;
+  line-height: 1.3em;
+}
+
+.race-tag-link:hover .race-tag {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.25);
+}
+
+
+/* 카드 박스 – 각 Upcoming Event 하나 */
+.race-card {
+  background: linear-gradient(135deg, #ffe4ff, #d3b5ff); /* 기존보다 조금 밝은 톤 */
+  color: #262626;
+  border-radius: 16px;
+  padding: 18px 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.race-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.race-card .race-date,
+.race-card .race-location {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.race-card .race-link {
+  font-size: 13px;
+  margin-top: 10px;
+  text-decoration: underline;
+  color: #4b0082;
+}
+
+.race-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.22);
+  transition: all 0.18s ease-out;
+}
+
+/* Past Events – 태그형 박스 */
+.race-tag {
+  background: linear-gradient(135deg, #fdf2ff, #e0c3ff);
+  color: #262626;
+  border-radius: 999px;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+.race-tag-sub {
+  font-size: 11px;
+  opacity: 0.8;
+  line-height: 1.3em;
+}
+
+.race-tag-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.race-tag-link:hover .race-tag {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+  transition: all 0.16s ease-out;
+}
+
+  .community-section {
+    padding: 40px 0;
+  }
+  .community-section h2 {
+    margin-bottom: 25px;
+  }
+  .professor-card {
+    margin-bottom: 25px;
+  }
+  .professor-name {
+    font-size: 1.15em;
+    font-weight: 600;
+  }
+  .professor-affiliation {
+    margin-bottom: 5px;
+    color: #777;
+  }
+  .professor-tags {
+    font-size: 0.9em;
+    color: #999;
+  }
+
+  .partner-intro {
+    margin-bottom: 25px;
+  }
+  .partner-logo-box {
+    background: #f5f0ff;          /* 기존 사이트 톤과 어울리는 밝은 보라 계열 */
+    border: 1px solid #e0d7ff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .partner-logo-placeholder {
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    color: #888;
+  }
+
+   .record-section {
+    padding: 40px 0;
+  }
+  .record-section h2 {
+    margin-bottom: 20px;
+  }
+  .record-section h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .video-item {
+    flex: 1 1 300px;
+  }
+  .video-item iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+  }
+  .record-image-table {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .record-image-table th,
+  .record-image-table td {
+    vertical-align: top;
+  }
+  .image-placeholder {
+    width: 100%;
+    min-height: 80px;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+    background: #fafafa;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9em;
+    color: #999;
+  }
+
+  /* 전체 본문 폰트 크기 및 줄 간격 확대 */
+body {
+    font-size: 17px;        /* 기본 14–15px → 17px 추천 */
+    line-height: 1.7;       /* 기본 1.4~1.5 → 1.7 추천 */
+}
+
+/* 본문 영역(maincontent)만 조정하고 싶으면 */
+.maincontent {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* p 태그 간격을 조금 더 띄우기 */
+p {
+    margin-bottom: 14px;
+}
+
+/* 전체 조직도 래퍼 */
+.org-chart {
+  margin: 40px 0;
+}
+
+/* 각 레벨(위/아래)을 가로로 가운데 정렬 */
+.org-level {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;            /* 박스 사이 간격 */
+}
+
+/* 위쪽 레벨(위원장)은 아래와 간격 조금 더 */
+.level-top {
+  margin-bottom: 10px;
+}
+
+/* 조직도 박스(위원장 / 부위원장 / 자문위원단) */
+.org-node {
+  min-width: 160px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.org-node .title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.org-node .desc {
+  display: block;
+  font-size: 13px;
+  color: #666;
+}
+
+/* 위원장과 아래 박스들 사이 선 */
+.org-connector {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 30px;
+  margin: 0 auto 10px;  /* 가운데 정렬 + 아래쪽 여백 */
+}
+
+/* 위원장에서 내려오는 세로선 */
+.org-connector::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 50%;
+  border-left: 1px solid #ccc;
+  transform: translateX(-50%);
+}
+
+/* 아래 레벨 위에 가로선 */
+.org-connector::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 260px;         /* 가로선 길이. 필요하면 숫자만 조절 */
+  border-top: 1px solid #ccc;
+  transform: translateX(-50%);
+}
+
+/* 화면이 좁을 때는 세로로 줄 세우기 */
+@media (max-width: 768px) {
+  .org-level.level-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .org-connector::after {
+    width: 80%;         /* 모바일에서 가로선 길이 줄이기 */
+  }
+}
+
+.rules-section-title {
+  margin-top: 50px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #eee;
+  font-weight: 700;
+}
+
+.toc-box {
+  background: #f8f9fc;
+  border: 1px solid #e0e4f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.rule-block {
+  margin-top: 40px;
+}
+
+.note-box {
+  background: #fff9e6;
+  border-left: 5px solid #ffcc00;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.warning-box {
+  background: #ffecec;
+  border-left: 5px solid #ff4d4d;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.rules-footer {
+  margin-top: 60px;
+  text-align: center;
+  color: #777;
+}
+
+/* 왼쪽 연도별 메뉴 스타일 */
+.year-menu {
+  margin-top: 40px;
+}
+
+.year-menu h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.year-menu .nav-pills > li > a {
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.year-menu .nav-pills > li.active > a {
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .year-menu {
+    margin-bottom: 30px;
+  }
+}
+
+/* 카드 스타일 */
+.rules-card {
+  border: 1px solid #e3e6f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease;
+}
+.rules-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.rules-card h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.rules-card .meta {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+
+/* ===================================== */
+/*  고정 네비게이션 padding 설정         */
+/* ===================================== */
+
+/* 기본(데스크톱 포함) – navbar 높이만큼 위에 여백 */
+body {
+  padding-top: 60px;
+}
+
+/* 모바일에서는 조금 더 낮게 */
+@media (max-width: 767px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+/* ===================================== */
+/*  공통 Navbar 기본 스타일               */
+/* ===================================== */
+
+/* 상단 고정 dark navbar (기존 Bootstrap 구조 사용) */
+.navbar.navbar-inverse.navbar-fixed-top {
+  border: none;
+}
+
+/* 데스크톱에서 브랜드 로고 크기 */
+.navbar-brand img {
+  max-height: 30px;
+  width: auto;
+}
+
+/* ===================================== */
+/*  데스크톱 레이아웃 (>= 768px)         */
+/* ===================================== */
+@media (min-width: 768px) {
+  /* 바 전체 최소 높이 */
+  .navbar.navbar-inverse.navbar-fixed-top {
+    min-height: 46px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  /* 브랜드 로고 영역 */
+  .navbar-brand {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .navbar-brand img {
+   
+    min-height: 40px;
+  }
+
+  /* 메뉴는 오른쪽 정렬 */
+  .navbar-nav {
+    float: right;
+  }
+
+  /* 메뉴 항목 줄 간격(너무 두껍지 않도록) */
+  .navbar-nav > li > a {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  #head .banner-content {
+    padding-top: 80px;   /* 40~120 사이에서 취향대로 조절 가능 */
+  }
+}
+
+/* ===================================== */
+/*  모바일 레이아웃 (<= 767px)           */
+/* ===================================== */
+@media (max-width: 767px) {
+
+  body {
+    /* 상단 여백도 조금 줄이기 */
+    padding-top: 56px;
+  }
+
+  /* 모바일 바 높이 */
+  .navbar.navbar-inverse.navbar-fixed-top {
+    min-height: 50px;
+  }
+
+  /* 로고: 위로 붙이기 위해 패딩 줄이기 */
+  .navbar-brand {
+    float: left;
+    padding: 6px 15px;   /* 위·아래 패딩 줄임 */
+    height: 50px;        /* 바 높이와 맞추기 */
+  }
+
+  .navbar-brand img {
+    height: 38px;        /* min-height 대신 고정 높이, 더 작게 */
+    width: auto;
+  }
+
+  /* 햄버거 버튼: 위로 올리기 위해 마진/패딩 조정 */
+  .navbar-toggle {
+    float: right;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 4px 8px;
+  }
+
+  /* collapse 메뉴가 navbar 아래에서 펼쳐지도록 */
+  .navbar-collapse {
+    border-top: 1px solid #444;
+  }
+
+  /* 모바일 메뉴 항목 줄 간격 */
+  .navbar-nav > li > a {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+
+/* Secondary header 영역이 모바일에서 너무 낮아서 탭 메뉴가 겹치는 현상 해결 */
+#head.secondary {
+  padding-top: 20px;       /* 필요에 따라 30~60px 조절 */
+  padding-bottom: 20px;    /* 아래 여백 증가 */
+  min-height: 150px;       /* 기존보다 살짝 증가 */
+}
+
+/* 모바일에서 탭 메뉴가 header와 겹치지 않도록 */
+@media (max-width: 767px) {
+  .nav-pills {
+    margin-top: 30px !important;   /* 아래로 살짝 밀어줌 */
+  }
+}
+
+
+/* ============================= */
+/*        NEWS CARD STYLES       */
+/* ============================= */
+
+#news-list {
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.news-thumb {
+    flex: 0 0 180px;
+}
+
+.news-thumb-placeholder {
+    width: 100%;
+    padding-top: 56%;
+    background: #e5e5e5;
+    border-radius: 10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+
+.news-body h3 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.news-body .meta {
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #777;
+}
+
+.news-body p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.news-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 11px;
+    background: #ddd;
+    color: #555;
+    border-radius: 4px;
+}
+
+/* =========================================
+   Join Page Custom Styles
+   ========================================= */
+main.join-page #head.secondary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+  color: #f9fafb;
+}
+main.join-page #head.secondary .page-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+main.join-page #head.secondary .lead {
+  max-width: 960px;
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* 공통 섹션 여백 */
+main.join-page .join-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* 작은 섹션 라벨 */
+main.join-page .join-label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7280;
+  background: #e5e7eb;
+  border-radius: 999px;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+}
+
+/* 인트로 박스 */
+main.join-page .join-intro-box {
+  background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-top: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+main.join-page .join-intro-box p {
+  margin-bottom: 0;
+}
+
+/* 카드 스타일 공통 */
+main.join-page .join-card {
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+main.join-page .join-card .panel-heading {
+  background: #ffffff;
+  border-bottom: none;
+}
+main.join-page .join-card .panel-title {
+  font-weight: 600;
+}
+main.join-page .join-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+}
+main.join-page .join-card-blue {
+  border-top: 4px solid #2563eb;
+}
+main.join-page .join-card-emerald {
+  border-top: 4px solid #059669;
+}
+main.join-page .join-card-amber {
+  border-top: 4px solid #d97706;
+}
+main.join-page .join-card-fuchsia {
+  border-top: 4px solid #c026d3;
+}
+main.join-page .join-card ul {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+main.join-page .join-card ul li {
+  margin-bottom: 6px;
+}
+
+/* Why Join 영역 배경 박스 */
+main.join-page .join-features-wrap {
+  background:
+    radial-gradient(circle at top left, #eff6ff, transparent 55%),
+    radial-gradient(circle at bottom right, #ecfdf5, transparent 50%);
+  border-radius: 18px;
+  padding: 24px 24px 10px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+main.join-page .feature-item {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+main.join-page .feature-item .media-left {
+  padding-right: 10px;
+}
+main.join-page .feature-item i {
+  width: 36px;
+  text-align: center;
+}
+main.join-page .feature-item .media-heading {
+  font-weight: 600;
+}
+
+/* 가입 방법 단계 리스트 */
+main.join-page .join-steps {
+  max-width: 860px;
+  margin: 20px 0 10px;
+}
+main.join-page .join-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+main.join-page .join-step-number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+main.join-page .join-step-body strong {
+  display: block;
+  font-size: 14px;
+}
+
+/* 하단 CTA 박스 */
+main.join-page .join-cta-box {
+  max-width: 860px;
+  background: linear-gradient(135deg, #1d4ed8, #0f766e);
+  color: #e5e7eb;
+  border-radius: 18px;
+  padding: 22px 24px;
+  margin-top: 20px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
+}
+main.join-page .join-cta-box p {
+  margin-bottom: 10px;
+}
+main.join-page .join-cta-box .btn {
+  margin-top: 8px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
+}
+
+@media (max-width: 767px) {
+  main.join-page .join-features-wrap {
+    padding: 18px 14px 6px;
+  }
+}
+
+/* =========================================
+   News Page Custom Styles
+   ========================================= */
+main.news-page #head.secondary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+  color: #f9fafb;
+}
+main.news-page #head.secondary .page-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+main.news-page #head.secondary .lead {
+  max-width: 960px;
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* 섹션 여백 */
+main.news-page .news-section {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+/* 작은 라벨 */
+main.news-page .news-label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7280;
+  background: #e5e7eb;
+  border-radius: 999px;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+}
+
+/* 설명 텍스트 좁게 */
+main.news-page #news-list .section-text {
+  max-width: 860px;
+  margin: 8px 0 24px;
+}
+
+/* News 카드 리스트 */
+main.news-page .news-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  background: #ffffff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+main.news-page .news-card:hover {
+  transform: translateY(-3px);
+  border-color: #2563eb;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+}
+
+/* 썸네일 영역 */
+main.news-page .news-thumb {
+  flex: 0 0 200px;
+  max-width: 220px;
+}
+main.news-page .news-thumb-placeholder {
+  height: 120px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+  color: #4b5563;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+main.news-page .news-thumb-placeholder .news-thumb-tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  margin-bottom: 4px;
+}
+
+/* 본문 영역 */
+main.news-page .news-body {
+  flex: 1;
+  min-width: 220px;
+}
+main.news-page .news-body h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+main.news-page .news-body .meta {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+main.news-page .news-body .meta .news-source {
+  font-weight: 500;
+}
+main.news-page .news-body p {
+  margin-bottom: 6px;
+}
+
+/* Coming Soon 뱃지 */
+main.news-page .news-badge {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.08);
+  color: #ea580c;
+  border: 1px solid rgba(234, 88, 12, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* 모바일 대응 */
+@media (max-width: 767px) {
+  main.news-page .news-card {
+    padding: 14px;
+  }
+  main.news-page .news-thumb {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  main.news-page .news-thumb-placeholder {
+    margin-bottom: 8px;
+  }
+}
+
+
+/* =========================================
+   Learn Page Custom Styles
+   ========================================= */
+main.learn-page #head.secondary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+  color: #f9fafb;
+}
+main.learn-page #head.secondary .page-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+main.learn-page #head.secondary .lead {
+  max-width: 960px;
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+main.learn-page .learn-section {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+/* 탭 메뉴 스타일 강화 */
+main.learn-page .nav.nav-pills > li > a {
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #374151;
+}
+main.learn-page .nav.nav-pills > li.active > a {
+  background: #1d4ed8;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+/* 설명 섹션 카드 */
+main.learn-page .section-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 26px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+}
+
+/* 목록 스타일 */
+main.learn-page ul li {
+  margin-bottom: 6px;
+}
+
+/* 강조 박스 (alert 개선 버전) */
+main.learn-page .learn-highlight {
+  background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+  padding: 18px 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-size: 14px;
+  margin-top: 18px;
+}
+main.learn-page .learn-highlight a {
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+/* 페이지 제목 */
+main.learn-page h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* 소제목 */
+main.learn-page h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* =========================================
+   Learn > Courses Page Styles
+   ========================================= */
+
+/* 섹션 여백 */
+main.learn-page .courses-section {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+/* 개별 코스 카드 */
+main.learn-page .course-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+}
+
+/* 카드 헤더 영역: 제목 + 태그 */
+main.learn-page .course-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+main.learn-page .course-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 코스 타입 태그 */
+main.learn-page .course-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+main.learn-page .course-tag--uni {
+  background: rgba(37, 99, 235, 0.08);
+  color: #1d4ed8;
+}
+main.learn-page .course-tag--blog {
+  background: rgba(16, 185, 129, 0.08);
+  color: #059669;
+}
+main.learn-page .course-tag--repo {
+  background: rgba(234, 179, 8, 0.08);
+  color: #ca8a04;
+}
+
+/* 메타 정보 (교수명, 작성자 등) */
+main.learn-page .course-meta {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+main.learn-page .course-meta strong {
+  font-weight: 600;
+}
+
+/* 링크 블럭 간 여백 */
+main.learn-page .course-links {
+  margin: 10px 0 14px;
+}
+main.learn-page .course-links p {
+  margin-bottom: 4px;
+}
+
+/* 하이라이트 박스 (설명 부분) */
+main.learn-page .course-highlight {
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: #f9fafb;
+  font-size: 13px;
+  color: #4b5563;
+  border-left: 4px solid #2563eb;
+}
+main.learn-page .course-highlight--blue {
+  border-left-color: #2563eb;
+}
+main.learn-page .course-highlight--green {
+  border-left-color: #16a34a;
+}
+main.learn-page .course-highlight--amber {
+  border-left-color: #f59e0b;
+}
+
+
+/* =========================================
+   Education Page Styles
+   ========================================= */
+
+main.edu-page #head.secondary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+  color: #f9fafb;
+}
+main.edu-page #head.secondary .page-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+main.edu-page #head.secondary .lead {
+  max-width: 960px;
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* 섹션 여백 */
+main.edu-page .edu-section {
+  padding-top: 32px;
+  padding-bottom: 36px;
+}
+
+/* 탭 메뉴 (pill 스타일 통일) */
+main.edu-page .nav.nav-pills > li > a {
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #374151;
+}
+main.edu-page .nav.nav-pills > li.active > a {
+  background: #1d4ed8;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+/* 일정 요약 카드 */
+main.edu-page .edu-schedule-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+}
+main.edu-page .edu-schedule-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+main.edu-page .edu-schedule-note {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* 공통 테이블 카드 (초급/중급 과정) */
+main.edu-page .edu-table-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  margin-bottom: 26px;
+}
+
+/* 테이블 스타일 통일 */
+main.edu-page .edu-table {
+  margin-bottom: 0;
+}
+main.edu-page .edu-table thead th {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+main.edu-page .edu-table tbody td {
+  vertical-align: middle;
+}
+main.edu-page .edu-table tbody td:first-child {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* 섹션 설명 텍스트 폭과 간격 */
+main.edu-page .section-text {
+  max-width: 860px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/* CTA 박스 */
+main.edu-page .edu-cta-box {
+  max-width: 860px;
+  margin: 10px 0 40px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #1d4ed8, #0f766e);
+  color: #e5e7eb;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
+}
+main.edu-page .edu-cta-box p {
+  margin-bottom: 10px;
+}
+main.edu-page .edu-cta-box .btn {
+  margin-top: 8px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
+}
+
+/* =========================================
+   Education Application Page Styles
+   ========================================= */
+
+main.edu-page .edu-apply-section {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+/* 왼쪽: 신청서 카드 */
+main.edu-page .edu-form-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  margin-bottom: 24px;
+}
+main.edu-page .edu-form-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
+}
+main.edu-page .edu-form-card p {
+  color: #4b5563;
+}
+
+/* 오른쪽: 안내 카드 */
+main.edu-page .edu-info-card {
+  background: #f9fafb;
+  border-radius: 18px;
+  padding: 18px 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+  margin-top: 28px;
+}
+main.edu-page .edu-info-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+main.edu-page .edu-info-card ul {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+main.edu-page .edu-info-card li {
+  margin-bottom: 6px;
+}
+main.edu-page .edu-info-card p {
+  font-size: 0.9em;
+  color: #6b7280;
+}
+
+
+/* =========================================
+   Race Rules Page Styles
+   ========================================= */
+
+main.race-rules-page #head.secondary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+  color: #f9fafb;
+}
+main.race-rules-page #head.secondary .page-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+main.race-rules-page #head.secondary .lead {
+  max-width: 960px;
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* 상단 탭 메뉴 */
+main.race-rules-page .nav.nav-pills > li > a {
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #374151;
+}
+main.race-rules-page .nav.nav-pills > li.active > a {
+  background: #1d4ed8;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+/* 좌측 연도 메뉴 카드 */
+main.race-rules-page .year-menu-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+  margin-bottom: 20px;
+}
+main.race-rules-page .year-menu-card h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+main.race-rules-page .year-menu-card .nav-stacked > li > a {
+  padding: 6px 10px;
+}
+main.race-rules-page .year-menu-meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* 내용 영역 공통 카드 느낌 */
+main.race-rules-page .rules-main-section {
+  padding-bottom: 40px;
+}
+
+/* TOC 카드 */
+main.race-rules-page .rules-toc-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 16px 18px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+main.race-rules-page .rules-toc-card ol {
+  margin-bottom: 0;
+}
+
+/* 규칙 섹션 블록 */
+main.race-rules-page .rule-block {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 20px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  margin-bottom: 26px;
+}
+main.race-rules-page .rules-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* 강조 박스 (알림 등) */
+main.race-rules-page .note-box {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-size: 14px;
+}
+
+/* 그림/캡션 스타일 */
+main.race-rules-page .rule-figure {
+  margin: 18px auto;
+  text-align: center;
+}
+main.race-rules-page .rule-figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 66%;
+  height: auto;
+}
+main.race-rules-page .rule-figure-caption {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* 푸터 */
+main.race-rules-page .rules-footer {
+  margin: 20px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 12px;
+  color: #6b7280;
+}

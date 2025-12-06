@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content="RoboRacer Korea — 자율주행 교육·연구·경진대회 커뮤니티">
+  <meta name="keywords" content="RoboRacer, F1TENTH, 자율주행, ROS2, SLAM, 레이싱, Korea">
+  <meta name="author" content="RoboRacer Korea">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Roboracer Foundation – Education, Racing, and Research for autonomous driving with 1/10-scale platforms.">
+  <meta name="author" content="Roboracer Foundation">
+
+  <title>
+    
+      RoboRacer Korea Application | Roboracer Foundation
+    
+  </title>
+
+  <link rel="icon" href="/assets/images/favicon.png">
+  <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap-theme.css" media="screen">
+  <link rel="stylesheet" href="/assets/css/da-slider.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="/assets/js/html5shiv.js"></script>
+  <script src="/assets/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-inverse navbar-fixed-top headroom">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- Button for smallest screens -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="/assets/images/logo_korea.png" alt="Roboracer Foundation logo">
+        </a>
+      </div>
+
+        <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav pull-right">
+
+      <li >
+        <a href="/">About</a>
+      </li>
+
+      <li >
+        <a href="/organization">Organization</a>
+      </li>
+
+      <!-- 🔹 Build 메뉴 추가 -->
+      <li >
+        <a href="/build">Build</a>
+      </li>
+
+      <li >
+        <a href="/learn">Learn</a>
+      </li>
+
+      <li >
+        <a href="/race">Race</a>
+      </li>
+
+      <li >
+        <a href="/research.html">Research</a>
+      </li>
+
+      <li >
+        <a href="/community.html">Community</a>
+      </li>
+
+      <!-- 🔹 News 메뉴 추가 -->
+      <li >
+        <a href="/news">News</a>
+      </li>
+
+      <li >
+        <a href="/record.html">Record</a>
+      </li>
+
+      <li class="active">
+        <a href="/join">Join</a>
+      </li>
+
+    </ul>
+        </div><!--/.nav-collapse -->
+
+
+    </div>
+  </div> 
+  <!-- /.navbar -->
+
+  <!-- 메인 콘텐츠 -->
+  <main role="main">
+    <main role="main" class="form-page join-apply-page">
+
+  <header id="head" class="secondary">
+    <div class="container">
+      <h1 class="page-title"> 가입 신청서 (Membership Application Form) </h1>
+      <p class="lead">
+        아래 양식을 작성해 주시면 RoboRacer Korea 운영위원회에서 검토 후 개별 연락을 드립니다.
+      </p>
+    </div>
+  </header>
+
+  <div class="container form-container">
+
+    <!-- 탭 메뉴 -->
+    <ul class="nav nav-pills form-nav-tabs">
+      <li>
+        <a href="/join/">가입 안내 (Overview)</a>
+      </li>
+      <li class="active">
+        <a href="/join/apply/">가입 신청서 (Application Form)</a>
+      </li>
+    </ul>
+
+    <!-- 안내 문구 -->
+    <p class="form-note">
+      <span>표시된 항목 중 <span style="color:#d9534f;">*</span> 표시는 필수 입력 항목입니다.</span>
+    </p>
+
+    <!-- =========================== -->
+    <!-- 가입 신청서 양식 (Application Form) -->
+    <!-- =========================== -->
+    <section class="form-section">
+
+      <div class="form-section-card">
+
+        <!-- Formspree 적용 완료 -->
+        <form id="join-form"
+              action="https://formspree.io/f/xblnkpel"
+              method="POST">
+
+          <!-- Formspree recommended hidden field -->
+          <input type="hidden" name="_subject" value="New RoboRacer Korea Membership Application">
+          <input type="hidden" name="_language" value="ko">
+
+          <!-- 1. 신청자 유형 -->
+          <h4 class="form-section-title">1. 기본 정보 (Basic Information)</h4>
+          <hr>
+
+          <div class="form-group">
+            <label for="member-type">
+              <strong>신청자 유형 (Applicant Type) <span style="color:#d9534f;">*</span></strong>
+            </label>
+            <select id="member-type" name="member_type" class="form-control" required>
+              <option value="">-- 선택하세요 (Please select) --</option>
+              <option value="professor">교수 / 연구자 (Professor / Researcher)</option>
+              <option value="student">학생 / 동아리 (Student / Club)</option>
+              <option value="company">기업 (Company)</option>
+              <option value="institute">연구소 / 공공기관 (Research Institute / Public Institution)</option>
+              <option value="other">기타 (Other)</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <!-- 성명 / 단체명 (KO) -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label>
+                  <strong>성명 또는 단체명 (Korean) <span style="color:#d9534f;">*</span></strong>
+                </label>
+                <input type="text" class="form-control"
+                       name="name_ko"
+                       placeholder="한글 이름 또는 기관명" required>
+              </div>
+            </div>
+
+            <!-- 성명 / 단체명 (EN) -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label>영문 이름 또는 단체명 (optional)</label>
+                <input type="text" class="form-control"
+                       name="name_en"
+                       placeholder="English name">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- 소속 -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label>
+                  <strong>소속 (Affiliation) <span style="color:#d9534f;">*</span></strong>
+                </label>
+                <input type="text" class="form-control"
+                       name="affiliation"
+                       placeholder="예: 경상국립대 AI정보공학과 / ○○기업" required>
+              </div>
+            </div>
+
+            <!-- 직위 -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label>직위/학년 (Position / Year)</label>
+                <input type="text" class="form-control"
+                       name="position"
+                       placeholder="예: 교수, 박사과정, 3학년 등">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- 이메일 -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label>
+                  <strong>이메일 (Email) <span style="color:#d9534f;">*</span></strong>
+                </label>
+                <input type="email" class="form-control"
+                       name="email"
+                       placeholder="name@example.com" required>
+              </div>
+            </div>
+
+            <!-- 연락처 -->
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label>연락처 (Phone)</label>
+                <input type="text" class="form-control"
+                       name="phone"
+                       placeholder="+82-10-0000-0000">
+              </div>
+            </div>
+          </div>
+
+          <!-- Website -->
+          <div class="form-group">
+            <label>웹사이트 / GitHub / Lab 페이지 (Optional)</label>
+            <input type="url" class="form-control"
+                   name="website"
+                   placeholder="https://example.com">
+          </div>
+
+          <!-- 2. Interests -->
+          <h4 class="form-section-title" style="margin-top:24px;">2. 관심 분야 및 참여 형태</h4>
+          <hr>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="checkbox">
+                <label><input type="checkbox" name="interests[]" value="education">
+                  자율주행/로보틱스 교육</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="interests[]" value="race">
+                  자율주행 레이스 및 대회</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="interests[]" value="research">
+                  연구 협업</label>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="checkbox">
+                <label><input type="checkbox" name="interests[]" value="sponsorship">
+                  후원/파트너십</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="interests[]" value="outreach">
+                  청소년/지역 교육 프로그램</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="interests[]" value="other">
+                  기타</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participation detail -->
+          <div class="form-group">
+            <label>
+              <strong>구체적인 참여 계획 또는 관심 내용 <span style="color:#d9534f;">*</span></strong>
+            </label>
+            <textarea class="form-control" name="plan" rows="5"
+                      placeholder="예) SLAM 기반 주행 연구 협업 희망..." required></textarea>
+          </div>
+
+          <!-- 3. Resources -->
+          <h4 class="form-section-title" style="margin-top:24px;">3. 보유 자원 및 기타 사항</h4>
+          <hr>
+
+          <div class="form-group">
+            <label>보유 장비 및 인프라 (Optional)</label>
+            <textarea class="form-control" name="resources" rows="3"
+                      placeholder="예) F1TENTH 차량 3대, 실내 트랙 1개 등"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>기타 전달 사항 (Optional)</label>
+            <textarea class="form-control" name="message" rows="3"
+                      placeholder="궁금한 점이나 참고할 사항을 적어주세요."></textarea>
+          </div>
+
+          <!-- 4. 개인정보 -->
+          <h4 class="form-section-title" style="margin-top:24px;">4. 개인정보 수집 및 이용 동의</h4>
+          <hr>
+
+          <div class="checkbox form-consent">
+            <label>
+              <input type="checkbox" name="consent" value="yes" required>
+              위 내용을 읽고 개인정보 수집 및 이용에 동의합니다.
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <div class="text-center form-submit-area">
+            <button type="submit" class="btn btn-primary btn-lg">
+              가입 신청서 제출 (Submit Application)
+            </button>
+          </div>
+
+        </form>
+
+      </div><!-- /.form-section-card -->
+    </section>
+
+  </div><!-- /.container.form-container -->
+
+</main>
+
+  </main>
+
+  <!-- 공통 푸터 (원하면 여기서 나중에 재단 소개/저작권 등 통일) -->
+<footer id="footer" class="top-space">
+  <div class="footer1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 panel">
+          <h3 class="panel-title">RoboRacer Korea 소개</h3>
+          <div class="panel-body">
+            <p>
+              한국 RoboRacer Korea는 1/10 부터 1/2 스케일의 다양한 자율주행 플랫폼을 기반으로  
+              교육·레이스·연구 활동을 적극적으로 지원하는 비영리 단체입니다.
+            </p> 
+          </div>
+        </div>
+
+        <div class="col-md-4 panel contact"> 
+          <h3 class="panel-title">연락처</h3>
+          <div class="panel-body">
+            <p>협력, 개최, 후원 문의는 아래 메일로 연락해주세요.</p>
+            <ul>
+              <li><i class="fa fa-phone"></i> +82-55-772-9174/+82-01-9253-1935</li>
+
+              <li>
+                <i class="fa fa-envelope-o"></i>
+                <a href="mailto:roboracer.korea@gmail.com">roboracer.korea@gmail.com</a>,
+                <a href="mailto:f1tenth.korea@gmail.com">f1tenth.korea@gmail.com</a>
+              </li>
+
+              <li><i class="fa fa-flag"></i> 경남 진주시 진주대로 501, 경상국립대 ICT융합센터 313호, 52828</li>
+            </ul> 
+          </div>
+        </div>
+
+
+        <div class="col-md-3 panel">
+          <h3 class="panel-title">Follow us</h3>
+          <div class="panel-body">
+            <p class="follow-me-icons">
+              <a href=""><i class="fa fa-twitter fa-2"></i></a>
+              <a href=""><i class="fa fa-github fa-2"></i></a>
+              <a href=""><i class="fa fa-facebook fa-2"></i></a>
+              <a href=""><i class="fa fa-youtube fa-2"></i></a>
+              <a href=""><i class="fa fa-pinterest fa-2"></i></a>
+            </p> 
+          </div>
+        </div>
+      </div> <!-- /row -->
+    </div>
+  </div>
+
+  <div class="footer2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="simplenav">
+              <a href="/">Home</a> | 
+              <a href="/organization"> Organization </a> |
+              <a href="/learn.html"> Learn </a> |
+              <a href="/race"> Race </a> |
+              <a href="/community.html"> Community</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 panel">
+          <div class="panel-body">
+            <p class="text-right">
+              Copyright &copy; 2014–2025 
+              Roboracer Foundation Korea. Template by 
+              <a href="http://webthemez.com/" rel="develop">WebThemez.com</a> 
+            </p>
+          </div>
+        </div>
+      </div> <!-- /row -->
+    </div>
+  </div>
+</footer>
+
+
+  <!-- JS -->
+<!-- JS (필수 순서 유지) -->
+<script src="/assets/js/modernizr-latest.js"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- Bootstrap JS (로컬 버전 사용) -->
+<script src="/assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="/assets/js/jquery.cslider.js"></script>
+<script src="/assets/js/headroom.min.js"></script>
+<script src="/assets/js/jquery.headroom.min.js"></script>
+
+<!-- Custom JS -->
+<script src="/assets/js/custom.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggles = document.querySelectorAll(".sidebar-menu .toggle");
+
+    toggles.forEach(function (t) {
+      t.addEventListener("click", function () {
+        var next = t.nextElementSibling;
+        if (next && next.classList.contains("sub-items")) {
+          // 접힘/펼침 토글
+          next.style.display = (next.style.display === "block") ? "none" : "block";
+        }
+      });
+    });
+  });
+  </script>
+
+
+</body>
+</html>
