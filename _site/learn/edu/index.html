@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="description" content="RoboRacer Korea — 자율주행 교육·연구·경진대회 커뮤니티">
+  <meta name="keywords" content="RoboRacer, F1TENTH, 자율주행, ROS2, SLAM, 레이싱, Korea">
+  <meta name="author" content="RoboRacer Korea">
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -105,7 +109,7 @@
   <div class="container">
     <h1 class="page-title"> Education </h1>
     <p class="lead">
-      1/10 자율주행 레이싱 플랫폼 F1TENTH를 기반으로,
+      1/10 자율주행 레이싱 플랫폼 RoboRacer를 기반으로,
       자율주행 교육 · 레이스 · 연구를 아우르는 실전형 교육 프로그램을 제공합니다. <br>
       RoboRacer 초급 · 중급 과정을 통해 ROS 2, SLAM, 경로 계획, 레이싱 전략까지 단계적으로 학습할 수 있습니다.
     </p>
@@ -117,7 +121,7 @@
   <!-- =========================== -->
   <!-- 탭 메뉴 (교육 안내 / 교육 신청서) -->
   <!-- =========================== -->
-  <ul class="nav nav-pills" style="margin:25px 0 5px;">
+  <ul class="nav nav-pills" style="margin-bottom: 20px;">
     <li class="active">
       <a href="/learn/edu">교육 안내 (Overview)</a>
     </li>
@@ -125,14 +129,6 @@
       <a href="/learn/edu/apply.html">교육 신청서 (Application Form)</a>
     </li>
   </ul>
-
-  <hr style="margin:10px 0 30px;">
-
-  <p style="margin-top:20px;">
-    <a href="/education/apply.html" class="btn btn-primary btn-lg">
-      교육 신청서 작성하기 (Go to Application Form)
-    </a>
-  </p>
 
   <!-- =========================== -->
   <!-- 1. 교육 일정 요약 박스 (Coming soon) -->
@@ -172,295 +168,182 @@
   </section>
 
   <!-- =========================== -->
-  <!-- 2. RoboRacer 초급 과정 (3일 기본 교육) -->
+  <!-- 🚗 RoboRacer 초급 과정 (3일 기본 교육) -->
   <!-- =========================== -->
   <section id="basic-course" class="section">
     <div class="heading">
-      <h2>🚗 RoboRacer 초급 과정 (3일 기본 교육)</h2>
+      <h2> RoboRacer 초급 과정 (3일 기본 교육)</h2>
       <p class="section-text" style="max-width:860px;">
-        F1TENTH 플랫폼 이해, ROS 2 기초, 벽타기 및 Follow-The-Gap 알고리즘을 중심으로
-        자율주행 입문자가 3일 안에 실전형 자율주행 레이스까지 경험할 수 있도록 설계된 기본 과정입니다.
+        플랫폼 이해, ROS 2 기초, 벽타기, Follow-The-Gap까지  
+        자율주행의 핵심을 3일 동안 실습 중심으로 배우는 과정입니다.
       </p>
     </div>
 
-    <h4 style="margin-top:20px;">1일차</h4>
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th style="text-align:center;">날짜</th>
+          <th style="text-align:center;">일차</th>
           <th style="text-align:center;">시간</th>
           <th style="text-align:center;">내용</th>
           <th style="text-align:center;">세부 사항</th>
         </tr>
       </thead>
       <tbody>
+
+        <!-- 1일차 -->
         <tr>
-          <td style="text-align:center; font-weight:bold;">1일차</td>
-          <td>09:30–10:00</td>
-          <td>F1TENTH 플랫폼 소개</td>
-          <td>플랫폼 구성, 센서 및 컴퓨팅 유닛 개요</td>
+          <td rowspan="4" style="text-align:center; font-weight:bold; vertical-align:middle;">1일차</td>
+          <td>09:30–11:30</td>
+          <td>플랫폼 소개 및 기본 점검</td>
+          <td>구성요소 설명, LiDAR·조이스틱 점검, 기본 주행 테스트</td>
         </tr>
         <tr>
-          <td></td>
-          <td>10:00–11:00</td>
-          <td>플랫폼 점검 및 구동</td>
-          <td>배선·LiDAR·조이스틱 점검, Bringup 실습</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>11:00–11:30</td>
-          <td>기본 실행 테스트</td>
-          <td>센서 토픽 확인, 기본 주행 테스트</td>
-        </tr>
-        <tr>
-          <td></td>
           <td>11:30–12:30</td>
           <td>VESC 튜닝</td>
-          <td>Steering/Throttle 보정, 안전 파라미터 설정</td>
+          <td>Steering/Throttle 보정</td>
         </tr>
         <tr>
-          <td></td>
           <td>13:30–15:30</td>
+          <td>Safety Node 실습</td>
           <td>simple_safety_node 구현</td>
-          <td>시뮬레이터, 실제 차량에서 Safety Node 실습</td>
         </tr>
         <tr>
-          <td></td>
-          <td>15:30–16:30</td>
-          <td>벽타기 알고리즘 실습</td>
-          <td>LiDAR 기반 벽타기 기본 로직 구현</td>
+          <td>15:30–17:30</td>
+          <td>벽타기 + PID</td>
+          <td>Wall Following & PID 안정화</td>
         </tr>
-        <tr>
-          <td></td>
-          <td>16:30–17:30</td>
-          <td>벽타기 + PID 제어</td>
-          <td>PID 기반 주행 안정화, 튜닝 실습</td>
-        </tr>
-      </tbody>
-    </table>
 
-    <h4 style="margin-top:20px;">2일차</h4>
-    <table class="table table-bordered table-striped">
-      <thead>
+        <!-- 2일차 -->
         <tr>
-          <th style="text-align:center;">날짜</th>
-          <th style="text-align:center;">시간</th>
-          <th style="text-align:center;">내용</th>
-          <th style="text-align:center;">세부 사항</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="text-align:center; font-weight:bold;">2일차</td>
-          <td>09:30–10:00</td>
-          <td>오늘의 과제 소개</td>
-          <td>Day 1 복습, 학습 목표 설정</td>
+          <td rowspan="3" style="text-align:center; font-weight:bold; vertical-align:middle;">2일차</td>
+          <td>09:30–11:00</td>
+          <td>자율주행 개념</td>
+          <td>센서 기반 주행 개요</td>
         </tr>
         <tr>
-          <td></td>
-          <td>10:00–11:00</td>
-          <td>자율주행 기본 개념</td>
-          <td>Reactive/Deliberative 개념, 센서 기반 주행</td>
+          <td>11:00–14:00</td>
+          <td>ROS 2 기초 실습</td>
+          <td>노드·토픽·서비스, 메시지·Launch 파일</td>
         </tr>
         <tr>
-          <td></td>
-          <td>11:00–12:00</td>
-          <td>ROS 2 실습 Part 1</td>
-          <td>노드/토픽/서비스 기본, ros2 CLI</td>
+          <td>14:00–18:00</td>
+          <td>Follow-The-Gap 실습</td>
+          <td>FTG 구현 및 미니 레이스</td>
         </tr>
-        <tr>
-          <td></td>
-          <td>13:00–14:00</td>
-          <td>ROS 2 실습 Part 2</td>
-          <td>Custom 메시지, Launch 파일 작성</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>14:00–17:00</td>
-          <td>Follow-The-Gap 구현</td>
-          <td>FTG 알고리즘 구현 및 시뮬레이션 테스트</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>17:00–18:00</td>
-          <td>미니 레이스</td>
-          <td>팀별 FTG 기반 타임어택</td>
-        </tr>
-      </tbody>
-    </table>
 
-    <h4 style="margin-top:20px;">3일차</h4>
-    <table class="table table-bordered table-striped">
-      <thead>
+        <!-- 3일차 -->
         <tr>
-          <th style="text-align:center;">날짜</th>
-          <th style="text-align:center;">시간</th>
-          <th style="text-align:center;">내용</th>
-          <th style="text-align:center;">세부 사항</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="text-align:center; font-weight:bold;">3일차</td>
-          <td>09:30–10:00</td>
-          <td>경주 준비 안내</td>
-          <td>평가 기준, 차량 점검 계획 안내</td>
+          <td rowspan="3" style="text-align:center; font-weight:bold; vertical-align:middle;">3일차</td>
+          <td>09:30–12:00</td>
+          <td>경주 준비 및 스택 점검</td>
+          <td>FTG 점검 및 PID 보정</td>
         </tr>
         <tr>
-          <td></td>
-          <td>10:00–12:00</td>
-          <td>자율주행 스택 정비</td>
-          <td>Safety + FTG 통합 테스트, PID 재튜닝</td>
+          <td>13:00–16:00</td>
+          <td>트랙 주행 & 공식 경주</td>
+          <td>연습 → Time-Trial 경주</td>
         </tr>
         <tr>
-          <td></td>
-          <td>13:00–14:30</td>
-          <td>트랙 연습 주행</td>
-          <td>실내·실외 트랙 적응 주행</td>
+          <td>16:00–17:30</td>
+          <td>경주 분석 & 수료</td>
+          <td>로그 분석, 피드백 및 중급 과정 안내</td>
         </tr>
-        <tr>
-          <td></td>
-          <td>14:30–16:00</td>
-          <td>공식 경주</td>
-          <td>Time-Trial 기반 실전 레이스</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>16:00–17:00</td>
-          <td>경주 후 분석·토의</td>
-          <td>주행 로그 분석, 문제점 토의</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>17:00–17:30</td>
-          <td>수료식 및 심화 과정 안내</td>
-          <td>중급 과정 및 연구 참여 안내</td>
-        </tr>
+
       </tbody>
     </table>
   </section>
 
   <!-- =========================== -->
-  <!-- 3. RoboRacer 중급 과정 (3일 심화 교육) -->
+  <!--  RoboRacer 중급 과정 (3일 심화 교육) -->
   <!-- =========================== -->
   <section id="advanced-course" class="section section-alt">
     <div class="heading">
-      <h2>🚀 RoboRacer 중급 과정 (3일 심화 교육)</h2>
+      <h2> RoboRacer 중급 과정 (3일 심화 교육)</h2>
       <p class="section-text" style="max-width:860px;">
-        고급 SLAM, 경로 추종 알고리즘(Pure Pursuit, Stanley, MPCC),
-        RRT/Hybrid A* 기반 경로 계획과 실제 경주 전략까지 다루는 심화 과정으로,
-        연구 및 대회 수준의 자율주행 성능을 목표로 합니다.
+        고급 SLAM, 경로 추종, 경로 계획, 레이싱 전략까지  
+        연구 및 대회 수준의 자율주행 기술을 다루는 심화 과정입니다.
       </p>
     </div>
 
-    <h4 style="margin-top:20px;">1일차</h4>
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-          <th style="text-align:center;">날짜</th>
+          <th style="text-align:center;">일차</th>
           <th style="text-align:center;">시간</th>
           <th style="text-align:center;">내용</th>
           <th style="text-align:center;">세부 사항</th>
         </tr>
       </thead>
       <tbody>
+
+        <!-- 1일차 -->
         <tr>
-          <td style="text-align:center; font-weight:bold;">1일차</td>
+          <td rowspan="4" style="text-align:center; font-weight:bold; vertical-align:middle;">1일차</td>
           <td>09:00–11:00</td>
           <td>자율주행 심화 개념</td>
-          <td>플랫폼 구조 심층 이해, 센서 융합, 고급 오도메트리</td>
+          <td>플랫폼 구조, 센서 융합, 고급 오도메트리</td>
         </tr>
         <tr>
-          <td></td>
           <td>11:00–12:30</td>
           <td>차량 셋팅·최적화</td>
-          <td>고정밀 센서 캘리브레이션, 오도메트리 튜닝</td>
+          <td>센서 캘리브레이션, 오도메트리 튜닝</td>
         </tr>
         <tr>
-          <td></td>
           <td>14:00–16:00</td>
-          <td>고급 SLAM 구현</td>
-          <td>LiDAR 기반 3D SLAM, Cartographer/RTAB-Map</td>
+          <td>고급 SLAM</td>
+          <td>3D SLAM (Cartographer/RTAB-Map)</td>
         </tr>
         <tr>
-          <td></td>
           <td>16:00–18:00</td>
-          <td>고급 시뮬레이션 실습</td>
-          <td>Gazebo에서 SLAM + 경로 계획 통합 실습</td>
+          <td>시뮬레이션 실습</td>
+          <td>Gazebo 기반 SLAM + 경로 계획 통합</td>
         </tr>
-      </tbody>
-    </table>
 
-    <h4 style="margin-top:20px;">2일차</h4>
-    <table class="table table-bordered table-striped">
-      <thead>
+        <!-- 2일차 -->
         <tr>
-          <th style="text-align:center;">날짜</th>
-          <th style="text-align:center;">시간</th>
-          <th style="text-align:center;">내용</th>
-          <th style="text-align:center;">세부 사항</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="text-align:center; font-weight:bold;">2일차</td>
+          <td rowspan="4" style="text-align:center; font-weight:bold; vertical-align:middle;">2일차</td>
           <td>09:00–12:00</td>
-          <td>고급 경로 추종 알고리즘</td>
-          <td>Pure Pursuit, Stanley, MPCC 구현</td>
+          <td>경로 추종 알고리즘</td>
+          <td>Pure Pursuit, Stanley, MPCC</td>
         </tr>
         <tr>
-          <td></td>
           <td>13:30–15:00</td>
           <td>경로 최적화·동적 계획</td>
-          <td>RRT, Hybrid A*, 동적 장애물 회피 실습</td>
+          <td>RRT, Hybrid A*, 동적 장애물 회피</td>
         </tr>
         <tr>
-          <td></td>
           <td>15:00–17:00</td>
           <td>실시간 경주 시뮬레이션</td>
-          <td>시뮬레이터 기반 알고리즘 성능 테스트</td>
+          <td>성능 비교 및 튜닝</td>
         </tr>
         <tr>
-          <td></td>
           <td>17:00–18:00</td>
           <td>경주 전략 수립</td>
-          <td>트랙 분석, 차량 세팅 전략 설계</td>
+          <td>트랙 분석, 최적 전략 설계</td>
         </tr>
-      </tbody>
-    </table>
 
-    <h4 style="margin-top:20px;">3일차</h4>
-    <table class="table table-bordered table-striped">
-      <thead>
+        <!-- 3일차 -->
         <tr>
-          <th style="text-align:center;">날짜</th>
-          <th style="text-align:center;">시간</th>
-          <th style="text-align:center;">내용</th>
-          <th style="text-align:center;">세부 사항</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td style="text-align:center; font-weight:bold;">3일차</td>
+          <td rowspan="2" style="text-align:center; font-weight:bold; vertical-align:middle;">3일차</td>
           <td>10:00–12:00</td>
           <td>실전 자율주행 경주</td>
-          <td>실제 차량 기반 주행, 장애물 회피 및 속도 평가</td>
+          <td>속도·안정성·회피 성능 평가</td>
         </tr>
         <tr>
-          <td></td>
           <td>14:00–16:00</td>
           <td>결과 분석 및 발표</td>
-          <td>팀별 성능 분석, 발표, 멘토 피드백</td>
+          <td>팀별 분석, 개선 방향 논의</td>
         </tr>
+
       </tbody>
     </table>
-
-    <p style="margin-top:20px;">
-      <a href="/education/apply.html" class="btn btn-primary btn-lg">
-        중급 과정 포함 교육 신청서 작성하기
-      </a>
-    </p>
   </section>
+
+  <p style="margin-top:20px;">
+    <a href="/learn/edu/apply.html" class="btn btn-primary btn-lg">
+      교육 신청서 작성하기
+    </a>
+  </p>
 
 </div> <!-- /.container -->
 
