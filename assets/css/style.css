@@ -2681,3 +2681,47 @@ main.form-page .help-text {
     padding-bottom: 30px;
   }
 }
+
+/* =========================================
+   서브 탭 (Organization / Build 공통 스타일)
+   ========================================= */
+.subnav-tabs {
+  margin: 15px 0 25px;
+  padding-left: 0;
+  border: none;
+  background: transparent;
+  display: flex;
+  gap: 18px;
+}
+
+/* li 기본 float 제거 (Bootstrap override) */
+.subnav-tabs > li {
+  float: none;
+}
+
+/* 기본 탭 모양: 텍스트만 보이는 형태 */
+.subnav-tabs > li > a {
+  border-radius: 999px;      /* 둥근 알약 모양 */
+  padding: 8px 18px;
+  font-weight: 600;
+  background: transparent;
+  color: #444;
+  border: none;
+}
+
+/* 호버 시 살짝 강조 */
+.subnav-tabs > li > a:hover {
+  background: rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  color: #222;
+}
+
+/* 활성 탭: 진한 네이비 컬러 알약 + 흰색 텍스트 */
+.subnav-tabs > li.active > a,
+.subnav-tabs > li.active > a:hover,
+.subnav-tabs > li.active > a:focus {
+  background: #111827;       /* 필요하면 브랜드 컬러로 조정 */
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 6px 12px rgba(15, 23, 42, 0.3);
+}
