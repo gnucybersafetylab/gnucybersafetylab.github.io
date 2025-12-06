@@ -49,9 +49,6 @@
 <loc>http://0.0.0.0:4000/race/</loc>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/join/</loc>
-</url>
-<url>
 <loc>http://0.0.0.0:4000/learn/edu/</loc>
 </url>
 <url>
@@ -81,6 +78,10 @@
 <url>
 <loc>http://0.0.0.0:4000/google962f8b5b5dc64bcb.html</loc>
 <lastmod>2025-12-06T08:54:55+09:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/join/</loc>
+<lastmod>2025-12-06T09:15:46+09:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/sidebar-left.html</loc>
