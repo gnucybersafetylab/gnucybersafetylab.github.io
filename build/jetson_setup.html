@@ -5,50 +5,66 @@ nav_active: "build"
 tab_active: "jetson"
 ---
 
-<header id="head" class="secondary">
+<main role="main" class="build-page">
+
+  <header id="head" class="secondary">
+    <div class="container">
+      <h1 class="page-title">Step 2: Jetson Setup</h1>
+      <p class="lead">
+        Jetson 보드 및 주변장치 설정 문서입니다. OS 설치, 네트워크, 센서 통신, 개발 환경 구성이 포함될 예정입니다.
+      </p>
+    </div>
+  </header>
+
   <div class="container">
-    <h1 class="page-title"> Step 2: Jetson Setup</h1>
-    <p class="lead">
-      Jetson 및 주변장치 설정 문서를 준비 중입니다.
-    </p>
-  </div>
-</header>
 
-<div class="container">
+    <!-- 🔹 Build 상단 서브 탭 -->
+    <ul class="nav nav-pills subnav-tabs">
+      <li><a href="{{ '/build/' | relative_url }}">Build Overview</a></li>
+      <li><a href="{{ '/build/car_build.html' | relative_url }}">Car Build</a></li>
+      <li class="active"><a href="{{ '/build/jetson_setup.html' | relative_url }}">Jetson Setup</a></li>
+      <li><a href="{{ '/build/driver_stack.html' | relative_url }}">Driver Stack</a></li>
+      <li><a href="{{ '/build/drive.html' | relative_url }}">Drive</a></li>
+    </ul>
 
-  <!-- 🔹 단계별 탭 메뉴 (동일 페이지 내 앵커 이동) -->
-  <ul class="nav nav-pills" style="margin-bottom: 20px;">
-    <li >
-      <a href="/build">Build</a>
-    </li>
-    <li>
-      <a href="/build/car_build.html">Car Build</a>
-    </li>
-    <li class="active">
-      <a href="/build/jetson_setup.html">Jetson Setup</a>
-    </li>
-    <li>
-      <a href="/build/drive.html">Driver Stack</a>
-    </li>
-    <li>
-      <a href="/build/drive.html">Drive</a>
-    </li>
-  </ul>
+    <!-- =============================== -->
+    <!-- Jetson Setup: Coming Soon       -->
+    <!-- =============================== -->
+    <section class="build-section text-center" style="padding:60px 20px;">
 
-  <article class="col-sm-12 text-center maincontent" style="padding:60px 20px;">
-    <h2>🚧 Under Construction</h2>
-    <p class="lead" style="margin-top:20px; margin-bottom:40px;">
-      Jetson OS 설치 및 주변기기 설정 문서는 준비 중입니다.<br>
-      곧 업데이트될 예정입니다.
-    </p>
+      <h2 class="section-title">🚧 Under Construction</h2>
 
-    <h3>Coming Soon…</h3>
-    <p>
-      - Jetson OS 설치<br>
-      - SSH / 네트워크 설정<br>
-      - LiDAR · 카메라 통신 설정<br>
-      - 개발 환경 구성
-    </p>
-  </article>
+      <p class="lead" style="margin-top:20px; margin-bottom:35px;">
+        Jetson OS 설치 및 주변 기기 설정 문서는 현재 준비 중입니다.<br>
+        곧 단계별 설치 가이드와 예제 설정 파일이 추가될 예정입니다.
+      </p>
 
-</div>
+      <div class="comingsoon-box" style="
+        max-width:520px;
+        margin:0 auto;
+        padding:25px;
+        background:#f8f8f8;
+        border-radius:10px;
+        border-left:6px solid #007bff;
+      ">
+        <h3 style="margin-bottom:15px;">Coming Soon…</h3>
+        <p style="margin:0; line-height:1.7;">
+          • Jetson OS 플래싱 및 초기 설정<br>
+          • SSH / Wi-Fi / 유선 네트워크 설정<br>
+          • LiDAR · 카메라 · VESC 통신 포트 설정<br>
+          • 개발 계정 및 sudo / 권한 설정<br>
+          • ROS2 / CUDA / 필수 패키지 설치<br>
+          • 원격 개발(Visual Studio Code / SSH) 환경 구성
+        </p>
+      </div>
+
+      <p style="margin-top:25px; font-size:0.95em;" class="text-muted">
+        Jetson Setup 문서가 공개되면, 예제 스크립트와 체크리스트 템플릿도 함께 제공하여  
+        여러 대의 차량을 동일한 설정으로 빠르게 세팅할 수 있도록 지원할 예정입니다.
+      </p>
+
+    </section>
+
+  </div><!-- /.container -->
+
+</main>

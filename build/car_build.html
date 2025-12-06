@@ -5,39 +5,74 @@ nav_active: "build"
 tab_active: "car"
 ---
 
-<header id="head" class="secondary">
+<main role="main" class="build-page">
+
+  <header id="head" class="secondary">
+    <div class="container">
+      <h1 class="page-title">Step 1: Car Build</h1>
+      <p class="lead">
+        RoboRacer 차량 제작(Build) 단계 문서입니다. 전체 조립 설명은 곧 공개될 예정입니다.
+      </p>
+    </div>
+  </header>
+
   <div class="container">
-    <h1 class="page-title"> Step 1: Car Build</h1>
-    <p class="lead">
-      RoboRacer 차량 제작 문서를 준비 중입니다.
-    </p>
-  </div>
-</header>
 
-<div class="container">
+    <!-- 🔹 Build 상단 서브 탭 -->
+    <ul class="nav nav-pills subnav-tabs">
+      <li>
+        <a href="{{ '/build/' | relative_url }}">Build Overview</a>
+      </li>
+      <li class="active">
+        <a href="{{ '/build/car_build.html' | relative_url }}">Car Build</a>
+      </li>
+      <li>
+        <a href="{{ '/build/jetson_setup.html' | relative_url }}">Jetson Setup</a>
+      </li>
+      <li>
+        <a href="{{ '/build/driver_stack.html' | relative_url }}">Driver Stack</a>
+      </li>
+      <li>
+        <a href="{{ '/build/drive.html' | relative_url }}">Drive</a>
+      </li>
+    </ul>
 
-  <ul class="nav nav-pills" style="margin-bottom:20px;">
-    <li><a href="/build">Build</a></li>
-    <li class="active"><a href="/build/car_build.html">Car Build</a></li>
-    <li><a href="/build/jetson_setup.html">Jetson Setup</a></li>
-    <li><a href="/build/driver_stack.html">Driver Stack</a></li>
-    <li><a href="/build/drive.html">Drive</a></li>
-  </ul>
+    <!-- =============================== -->
+    <!-- Coming Soon Section             -->
+    <!-- =============================== -->
+    <section class="build-section text-center" style="padding:60px 20px;">
 
-  <article class="col-sm-12 maincontent text-center" style="padding:60px 20px;">
-    <h2>🚧 Under Construction</h2>
-    <p class="lead" style="margin-top:20px; margin-bottom:40px;">
-      이 페이지는 현재 업데이트 중입니다.<br>
-      RoboRacer 차량 제작(Build) 문서는 곧 공개될 예정입니다.
-    </p>
+      <h2 class="section-title">🚧 Under Construction</h2>
 
-    <h3>Coming Soon…</h3>
-    <p>
-      - Bill of Materials (BOM)<br>
-      - Chassis Assembly<br>
-      - Sensor & Electronics Mounting<br>
-      - 전체 차량 조립 가이드
-    </p>
-  </article>
+      <p class="lead" style="margin-top:20px; margin-bottom:35px;">
+        현재 Car Build 페이지를 업데이트 중입니다.<br>
+        RoboRacer 차량 제작(Build) 문서는 최신 구성품, 조립 전략, 영상 자료와 함께 곧 공개됩니다.
+      </p>
 
-</div>
+      <div class="comingsoon-box" style="
+        max-width:480px;
+        margin:0 auto;
+        padding:25px;
+        background:#f8f8f8;
+        border-radius:10px;
+        border-left:6px solid #007bff;
+      ">
+        <h3 style="margin-bottom:15px;">Coming Soon…</h3>
+        <p style="margin:0; line-height:1.7;">
+          • Bill of Materials (BOM)<br>
+          • Chassis Assembly<br>
+          • Sensor & Electronics Mounting<br>
+          • Power Distribution & Wiring<br>
+          • Full Vehicle Assembly Guide<br>
+        </p>
+      </div>
+
+      <p style="margin-top:25px; font-size:0.95em;" class="text-muted">
+        최종 문서 공개 시 GitHub에도 함께 업로드될 예정입니다.
+      </p>
+
+    </section>
+
+  </div><!-- /.container -->
+
+</main>
