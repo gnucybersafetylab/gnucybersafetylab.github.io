@@ -572,9 +572,9 @@ color: #ee0c45;
 /* Organization 등 서브 페이지용 헤더 스타일 */
 #head.secondary {
   background: #f5f5f5;        /* 연한 회색 배경 (원하면 변경 가능) */
-  padding-top: 20px;
+  padding-top: 16px;
   padding-bottom: 20px;
-  min-height: 160px;
+  min-height: 0px;
   text-align: left;           /* 원래 about 페이지처럼 왼쪽 정렬 */
   color: #333;                /* 🔥 여기서 글자색을 다시 어두운 색으로 */
 }
@@ -582,7 +582,7 @@ color: #ee0c45;
 #head.secondary .page-title {
   font-size: 32px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   color: #e74c3c;             /* ‘About us’처럼 살짝 강조 색 (원하면 검정으로) */
 }
 
@@ -1146,13 +1146,6 @@ body {
 }
 
 
-/* Secondary header 영역이 모바일에서 너무 낮아서 탭 메뉴가 겹치는 현상 해결 */
-#head.secondary {
-  padding-top: 20px;       /* 필요에 따라 30~60px 조절 */
-  padding-bottom: 20px;    /* 아래 여백 증가 */
-  min-height: 150px;       /* 기존보다 살짝 증가 */
-}
-
 /* 모바일에서 탭 메뉴가 header와 겹치지 않도록 */
 @media (max-width: 767px) {
   .nav-pills {
@@ -1232,6 +1225,9 @@ body {
 main.join-page #head.secondary {
   background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
   color: #f9fafb;
+  padding-top: 5px;      /* 기존 20px → 10px */
+  padding-bottom: 5px;   /* 기존 20px → 10px */
+  min-height: 30px;       /* 기존 80px → 60px */
 }
 main.join-page #head.secondary .page-title {
   font-weight: 700;
@@ -1400,6 +1396,9 @@ main.join-page .join-cta-box .btn {
 main.news-page #head.secondary {
   background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
   color: #f9fafb;
+  padding-top: 5px;      /* 기존 20px → 10px */
+  padding-bottom: 5px;   /* 기존 20px → 10px */
+  min-height: 30px;       /* 기존 80px → 60px */
 }
 main.news-page #head.secondary .page-title {
   font-weight: 700;
@@ -1540,6 +1539,9 @@ main.news-page .news-badge {
 main.learn-page #head.secondary {
   background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
   color: #f9fafb;
+  padding-top: 5px;      /* 기존 20px → 10px */
+  padding-bottom: 5px;   /* 기존 20px → 10px */
+  min-height: 30px;       /* 기존 80px → 60px */
 }
 main.learn-page #head.secondary .page-title {
   font-weight: 700;
@@ -1553,8 +1555,8 @@ main.learn-page #head.secondary .lead {
 }
 
 main.learn-page .learn-section {
-  padding-top: 40px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 /* 탭 메뉴 스타일 강화 */
@@ -1619,8 +1621,8 @@ main.learn-page h3 {
 
 /* 섹션 여백 */
 main.learn-page .courses-section {
-  padding-top: 40px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 /* 개별 코스 카드 */
@@ -1714,6 +1716,9 @@ main.learn-page .course-highlight--amber {
 main.edu-page #head.secondary {
   background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
   color: #f9fafb;
+  padding-top: 5px;      /* 기존 20px → 10px */
+  padding-bottom: 5px;   /* 기존 20px → 10px */
+  min-height: 30px;       /* 기존 80px → 60px */
 }
 main.edu-page #head.secondary .page-title {
   font-weight: 700;
@@ -1728,8 +1733,8 @@ main.edu-page #head.secondary .lead {
 
 /* 섹션 여백 */
 main.edu-page .edu-section {
-  padding-top: 32px;
-  padding-bottom: 36px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 /* 탭 메뉴 (pill 스타일 통일) */
@@ -1881,6 +1886,9 @@ main.edu-page .edu-info-card p {
 main.race-rules-page #head.secondary {
   background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
   color: #f9fafb;
+  padding-top: 5px;      /* 기존 20px → 10px */
+  padding-bottom: 5px;   /* 기존 20px → 10px */
+  min-height: 30px;       /* 기존 80px → 60px */
 }
 main.race-rules-page #head.secondary .page-title {
   font-weight: 700;
@@ -2008,6 +2016,9 @@ main.race-rules-page .rules-footer {
 main.race-events-page #head.secondary {
   background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
   color: #f9fafb;
+  padding-top: 5px;      /* 기존 20px → 10px */
+  padding-bottom: 5px;   /* 기존 20px → 10px */
+  min-height: 30px;       /* 기존 80px → 60px */
 }
 
 main.race-events-page #head.secondary .page-title {
@@ -2083,7 +2094,11 @@ main.race-events-page .race-divider {
 main.form-page #head.secondary {
   background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
   color: #f9fafb;
+  padding-top: 5px;      /* 기존 20px → 10px */
+  padding-bottom: 5px;   /* 기존 20px → 10px */
+  min-height: 30px;       /* 기존 80px → 60px */
 }
+
 
 main.form-page #head.secondary .page-title {
   font-weight: 700;
@@ -2096,6 +2111,7 @@ main.form-page #head.secondary .lead {
   font-size: 16px;
   opacity: 0.95;
 }
+
 
 /* 상단 탭 */
 main.form-page .form-nav-tabs {

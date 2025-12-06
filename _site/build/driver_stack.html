@@ -102,42 +102,70 @@
 
   <!-- 메인 콘텐츠 -->
   <main role="main">
-    <header id="head" class="secondary">
+    <main role="main" class="build-page">
+
+  <header id="head" class="secondary">
+    <div class="container">
+      <h1 class="page-title">Step 3: Driver Stack</h1>
+    </div>
+  </header>
+
   <div class="container">
-    <h1 class="page-title"> Step 3: Driver Stack</h1>
-    <p class="lead">
-      RoboRacer 드라이버 스택 설치 문서를 준비 중입니다.
-    </p>
-  </div>
-</header>
 
-<div class="container">
+    <!-- 🔹 Build 상단 서브 탭 -->
+    <ul class="nav nav-pills subnav-tabs">
+      <li><a href="/build/">Build Overview</a></li>
+      <li><a href="/build/car_build.html">Car Build</a></li>
+      <li><a href="/build/jetson_setup.html">Jetson Setup</a></li>
+      <li class="active"><a href="/build/driver_stack.html">Driver Stack</a></li>
+      <li><a href="/build/drive.html">Drive</a></li>
+    </ul>
 
-  <ul class="nav nav-pills" style="margin-bottom:20px;">
-    <li><a href="/build">Introduction</a></li>
-    <li><a href="/build/car_build.html">Car Build</a></li>
-    <li><a href="/build/jetson_setup.html">Jetson Setup</a></li>
-    <li class="active"><a href="/build/driver_stack.html">Driver Stack</a></li>
-    <li><a href="/build/drive.html">Drive</a></li>
-  </ul>
+    <!-- =============================== -->
+    <!-- Driver Stack: Coming Soon       -->
+    <!-- =============================== -->
+    <section class="build-section text-center" style="padding:60px 20px;">
 
-  <article class="col-sm-12 text-center maincontent" style="padding:60px 20px;">
-    <h2>🚧 Under Construction</h2>
-    <p class="lead" style="margin-top:20px; margin-bottom:40px;">
-      드라이버 스택 설치 문서는 작성 중입니다.<br>
-      ROS / VESC / LiDAR / 네비게이션 패키지 설정 관련 내용이 포함될 예정입니다.
-    </p>
+      <br>
+      <p class="lead">
+        RoboRacer 드라이버 스택 설치 및 구성 문서입니다. 센서·모터·ROS 인터페이스 설정 관련 내용이 포함될 예정입니다.
+      </p>
+      <h2 class="section-title">🚧 Under Construction</h2>
 
-    <h3>Coming Soon…</h3>
-    <p>
-      - VESC 설정<br>
-      - LiDAR Ethernet 설정<br>
-      - Driver Stack 설치<br>
-      - Docker 기반 설치 옵션
-    </p>
-  </article>
+      <p class="lead" style="margin-top:20px; margin-bottom:35px;">
+        드라이버 스택 설치 문서는 현재 업데이트 중입니다.<br>
+        ROS, VESC, LiDAR, 네비게이션 패키지 설정 절차가 순차적으로 공개될 예정입니다.
+      </p>
 
-</div>
+      <div class="comingsoon-box" style="
+        max-width:520px;
+        margin:0 auto;
+        padding:25px;
+        background:#f8f8f8;
+        border-radius:10px;
+        border-left:6px solid #007bff;
+      ">
+        <h3 style="margin-bottom:15px;">Coming Soon…</h3>
+        <p style="margin:0; line-height:1.7;">
+          • VESC 설정 및 캘리브레이션<br>
+          • LiDAR Ethernet 설정 & UDP 연결 테스트<br>
+          • ROS 기반 Driver Stack 설치<br>
+          • Jetson ↔ 센서/모터 포트 매핑 가이드<br>
+          • Docker 기반 Driver Stack 설치 옵션<br>
+          • ros2_control / teleop / safety 모듈 구성
+        </p>
+      </div>
+
+      <p style="margin-top:25px; font-size:0.95em;" class="text-muted">
+        Driver Stack 문서가 업데이트되면 예제 rosbag, 설정 파일 샘플,  
+        GitHub 설치 스크립트 링크도 함께 제공될 예정입니다.
+      </p>
+
+    </section>
+
+  </div><!-- /.container -->
+
+</main>
 
   </main>
 
