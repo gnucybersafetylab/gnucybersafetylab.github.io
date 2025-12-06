@@ -4,8 +4,10 @@ title: "RoboRacer 교육 프로그램"
 nav_active: "education"
 ---
 
+<main role="main" class="edu-page">
+
 <!-- =========================== -->
-<!-- 0. 상단 헤더 + CTA 버튼 -->
+<!-- 0. 상단 헤더 -->
 <!-- =========================== -->
 <header id="head" class="secondary">
   <div class="container">
@@ -35,216 +37,128 @@ nav_active: "education"
   <!-- =========================== -->
   <!-- 1. 교육 일정 요약 박스 (Coming soon) -->
   <!-- =========================== -->
-  <section id="schedule-summary" class="section appear clearfix">
-    <div class="row" style="margin-top:10px;">
-      <div class="col-md-12">
-        <div class="panel panel-default" style="border-radius:8px;">
-          <div class="panel-heading" style="border-radius:8px 8px 0 0;">
-            <h3 class="panel-title">교육 일정 (Schedule)</h3>
-          </div>
-          <div class="panel-body">
-            <table class="table table-bordered table-striped text-center" style="margin-bottom:0;">
-              <thead>
-                <tr>
-                  <th style="text-align:center;">날짜</th>
-                  <th style="text-align:center;">시간</th>
-                  <th style="text-align:center;">내용</th>
-                  <th style="text-align:center;">세부 사항</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td colspan="4" style="text-align:center; font-weight:bold;">
-                    Coming soon
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="text-center" style="margin-top:10px; font-size:0.9em; color:#777;">
-              * 구체적인 개최 일정, 장소, 신청 방법은 추후 공지될 예정입니다.
-            </p>
-          </div>
-        </div>
-      </div>
+  <section id="schedule-summary" class="edu-section">
+    <div class="edu-schedule-card">
+      <h3>교육 일정 (Schedule)</h3>
+
+      <table class="table table-bordered table-striped text-center edu-table">
+        <thead>
+          <tr>
+            <th>날짜</th>
+            <th>시간</th>
+            <th>내용</th>
+            <th>세부 사항</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4" style="font-weight:bold;">
+              Coming soon
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="edu-schedule-note text-center">
+        * 구체적인 개최 일정, 장소, 신청 방법은 추후 공지될 예정입니다.
+      </p>
     </div>
   </section>
 
   <!-- =========================== -->
   <!-- 🚗 RoboRacer 초급 과정 (3일 기본 교육) -->
   <!-- =========================== -->
-  <section id="basic-course" class="section">
+  <section id="basic-course" class="section edu-section">
     <div class="heading">
-      <h2> RoboRacer 초급 과정 (3일 기본 교육)</h2>
-      <p class="section-text" style="max-width:860px;">
+      <h2>RoboRacer 초급 과정 (3일 기본 교육)</h2>
+      <p class="section-text">
         플랫폼 이해, ROS 2 기초, 벽타기, Follow-The-Gap까지  
         자율주행의 핵심을 3일 동안 실습 중심으로 배우는 과정입니다.
       </p>
     </div>
 
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th style="text-align:center;">일차</th>
-          <th style="text-align:center;">시간</th>
-          <th style="text-align:center;">내용</th>
-          <th style="text-align:center;">세부 사항</th>
-        </tr>
-      </thead>
-      <tbody>
+    <div class="edu-table-card">
+      <table class="table table-bordered table-striped edu-table">
+        <thead>
+          <tr>
+            <th>일차</th>
+            <th>시간</th>
+            <th>내용</th>
+            <th>세부 사항</th>
+          </tr>
+        </thead>
+        <tbody>
 
-        <!-- 1일차 -->
-        <tr>
-          <td rowspan="4" style="text-align:center; font-weight:bold; vertical-align:middle;">1일차</td>
-          <td>09:30–11:30</td>
-          <td>플랫폼 소개 및 기본 점검</td>
-          <td>구성요소 설명, LiDAR·조이스틱 점검, 기본 주행 테스트</td>
-        </tr>
-        <tr>
-          <td>11:30–12:30</td>
-          <td>VESC 튜닝</td>
-          <td>Steering/Throttle 보정</td>
-        </tr>
-        <tr>
-          <td>13:30–15:30</td>
-          <td>Safety Node 실습</td>
-          <td>simple_safety_node 구현</td>
-        </tr>
-        <tr>
-          <td>15:30–17:30</td>
-          <td>벽타기 + PID</td>
-          <td>Wall Following & PID 안정화</td>
-        </tr>
+          <!-- 1일차 -->
+          <tr>
+            <td rowspan="4">1일차</td>
+            <td>09:30–11:30</td>
+            <td>플랫폼 소개 및 기본 점검</td>
+            <td>구성요소 설명, LiDAR·조이스틱 점검, 기본 주행 테스트</td>
+          </tr>
+          <tr>
+            <td>11:30–12:30</td>
+            <td>VESC 튜닝</td>
+            <td>Steering/Throttle 보정</td>
+          </tr>
+          <tr>
+            <td>13:30–15:30</td>
+            <td>Safety Node 실습</td>
+            <td>simple_safety_node 구현</td>
+          </tr>
+          <tr>
+            <td>15:30–17:30</td>
+            <td>벽타기 + PID</td>
+            <td>Wall Following &amp; PID 안정화</td>
+          </tr>
 
-        <!-- 2일차 -->
-        <tr>
-          <td rowspan="3" style="text-align:center; font-weight:bold; vertical-align:middle;">2일차</td>
-          <td>09:30–11:00</td>
-          <td>자율주행 개념</td>
-          <td>센서 기반 주행 개요</td>
-        </tr>
-        <tr>
-          <td>11:00–14:00</td>
-          <td>ROS 2 기초 실습</td>
-          <td>노드·토픽·서비스, 메시지·Launch 파일</td>
-        </tr>
-        <tr>
-          <td>14:00–18:00</td>
-          <td>Follow-The-Gap 실습</td>
-          <td>FTG 구현 및 미니 레이스</td>
-        </tr>
+          <!-- 2일차 -->
+          <tr>
+            <td rowspan="3">2일차</td>
+            <td>09:30–11:00</td>
+            <td>자율주행 개념</td>
+            <td>센서 기반 주행 개요</td>
+          </tr>
+          <tr>
+            <td>11:00–14:00</td>
+            <td>ROS 2 기초 실습</td>
+            <td>노드·토픽·서비스, 메시지·Launch 파일</td>
+          </tr>
+          <tr>
+            <td>14:00–18:00</td>
+            <td>Follow-The-Gap 실습</td>
+            <td>FTG 구현 및 미니 레이스</td>
+          </tr>
 
-        <!-- 3일차 -->
-        <tr>
-          <td rowspan="3" style="text-align:center; font-weight:bold; vertical-align:middle;">3일차</td>
-          <td>09:30–12:00</td>
-          <td>경주 준비 및 스택 점검</td>
-          <td>FTG 점검 및 PID 보정</td>
-        </tr>
-        <tr>
-          <td>13:00–16:00</td>
-          <td>트랙 주행 & 공식 경주</td>
-          <td>연습 → Time-Trial 경주</td>
-        </tr>
-        <tr>
-          <td>16:00–17:30</td>
-          <td>경주 분석 & 수료</td>
-          <td>로그 분석, 피드백 및 중급 과정 안내</td>
-        </tr>
+          <!-- 3일차 -->
+          <tr>
+            <td rowspan="3">3일차</td>
+            <td>09:30–12:00</td>
+            <td>경주 준비 및 스택 점검</td>
+            <td>FTG 점검 및 PID 보정</td>
+          </tr>
+          <tr>
+            <td>13:00–16:00</td>
+            <td>트랙 주행 &amp; 공식 경주</td>
+            <td>연습 → Time-Trial 경주</td>
+          </tr>
+          <tr>
+            <td>16:00–17:30</td>
+            <td>경주 분석 &amp; 수료</td>
+            <td>로그 분석, 피드백 및 중급 과정 안내</td>
+          </tr>
 
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <!-- =========================== -->
   <!--  RoboRacer 중급 과정 (3일 심화 교육) -->
   <!-- =========================== -->
-  <section id="advanced-course" class="section section-alt">
+  <section id="advanced-course" class="section edu-section">
     <div class="heading">
-      <h2> RoboRacer 중급 과정 (3일 심화 교육)</h2>
-      <p class="section-text" style="max-width:860px;">
+      <h2>RoboRacer 중급 과정 (3일 심화 교육)</h2>
+      <p class="section-text">
         고급 SLAM, 경로 추종, 경로 계획, 레이싱 전략까지  
-        연구 및 대회 수준의 자율주행 기술을 다루는 심화 과정입니다.
-      </p>
-    </div>
-
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <th style="text-align:center;">일차</th>
-          <th style="text-align:center;">시간</th>
-          <th style="text-align:center;">내용</th>
-          <th style="text-align:center;">세부 사항</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <!-- 1일차 -->
-        <tr>
-          <td rowspan="4" style="text-align:center; font-weight:bold; vertical-align:middle;">1일차</td>
-          <td>09:00–11:00</td>
-          <td>자율주행 심화 개념</td>
-          <td>플랫폼 구조, 센서 융합, 고급 오도메트리</td>
-        </tr>
-        <tr>
-          <td>11:00–12:30</td>
-          <td>차량 셋팅·최적화</td>
-          <td>센서 캘리브레이션, 오도메트리 튜닝</td>
-        </tr>
-        <tr>
-          <td>14:00–16:00</td>
-          <td>고급 SLAM</td>
-          <td>3D SLAM (Cartographer/RTAB-Map)</td>
-        </tr>
-        <tr>
-          <td>16:00–18:00</td>
-          <td>시뮬레이션 실습</td>
-          <td>Gazebo 기반 SLAM + 경로 계획 통합</td>
-        </tr>
-
-        <!-- 2일차 -->
-        <tr>
-          <td rowspan="4" style="text-align:center; font-weight:bold; vertical-align:middle;">2일차</td>
-          <td>09:00–12:00</td>
-          <td>경로 추종 알고리즘</td>
-          <td>Pure Pursuit, Stanley, MPCC</td>
-        </tr>
-        <tr>
-          <td>13:30–15:00</td>
-          <td>경로 최적화·동적 계획</td>
-          <td>RRT, Hybrid A*, 동적 장애물 회피</td>
-        </tr>
-        <tr>
-          <td>15:00–17:00</td>
-          <td>실시간 경주 시뮬레이션</td>
-          <td>성능 비교 및 튜닝</td>
-        </tr>
-        <tr>
-          <td>17:00–18:00</td>
-          <td>경주 전략 수립</td>
-          <td>트랙 분석, 최적 전략 설계</td>
-        </tr>
-
-        <!-- 3일차 -->
-        <tr>
-          <td rowspan="2" style="text-align:center; font-weight:bold; vertical-align:middle;">3일차</td>
-          <td>10:00–12:00</td>
-          <td>실전 자율주행 경주</td>
-          <td>속도·안정성·회피 성능 평가</td>
-        </tr>
-        <tr>
-          <td>14:00–16:00</td>
-          <td>결과 분석 및 발표</td>
-          <td>팀별 분석, 개선 방향 논의</td>
-        </tr>
-
-      </tbody>
-    </table>
-  </section>
-
-  <p style="margin-top:20px;">
-    <a href="{{ '/learn/edu/apply.html' | relative_url }}" class="btn btn-primary btn-lg">
-      교육 신청서 작성하기
-    </a>
-  </p>
-
-</div> <!-- /.container -->
+        연구 및 대회 수준의
