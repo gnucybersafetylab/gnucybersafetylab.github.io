@@ -5,6 +5,8 @@ nav_active: "learn"
 tab_active: "courses"
 ---
 
+<main role="main" class="learn-page">
+
 <header id="head" class="secondary">
   <div class="container">
     <h1 class="page-title">Courses</h1>
@@ -17,7 +19,7 @@ tab_active: "courses"
 
 <div class="container">
 
-  <!-- 🔹 탭 메뉴 (Build / Learn / Edu) -->
+  <!-- 🔹 탭 메뉴 (Learn / Course & Resource / Edu) -->
   <ul class="nav nav-pills" style="margin-bottom: 20px;">
     <li>
       <a href="{{ '/learn/' | relative_url }}">Learn</a>
@@ -31,7 +33,7 @@ tab_active: "courses"
   </ul>
 
   <!-- Main Content -->
-  <section id="courses">
+  <section id="courses" class="courses-section">
     <header class="page-header">
       <h2>University &amp; Open Courses</h2>
     </header>
@@ -44,134 +46,121 @@ tab_active: "courses"
 
     <hr>
 
-    <div class="panel panel-default" style="border-radius:6px; border:1px solid #ddd;">
-        <div class="panel-heading" style="background:#f7f7f7; border-bottom:1px solid #ddd;">
-            <h3 class="panel-title" style="font-size:18px; font-weight:600;">
-            경상국립대학교 (Gyeongsang National University)
-            </h3>
-        </div>
-
-        <div class="panel-body" style="padding:20px;">
-
-            <p style="margin-bottom:8px;">
-            <strong>담당 교수:</strong> 김진현 교수 (Prof. Jin Hyun Kim)
-            </p>
-
-            <p style="margin-bottom:8px;">
-            <strong>강의명:</strong>
-            AI &amp; Robot Systems (RoboRacer / F1TENTH 기반 자율주행 시스템)
-            </p>
-
-            <hr style="margin:18px 0;">
-
-            <p style="margin-bottom:6px;"><strong>강의 소개 페이지:</strong></p>
-            <p style="margin-bottom:14px;">
-            <a href="https://jin-kim.net/classes/ai-robotsystems/" target="_blank">
-                https://jin-kim.net/classes/ai-robotsystems/
-            </a>
-            </p>
-
-            <p style="margin-bottom:6px;"><strong>GitHub 코스 저장소:</strong></p>
-            <p style="margin-bottom:18px;">
-            <a href="https://github.com/jinkimh/F1Tenth_Bootcamp_GNU" target="_blank">
-                https://github.com/jinkimh/F1Tenth_Bootcamp_GNU
-            </a>
-            </p>
-
-            <div style="background:#f5f5f5; border-left:4px solid #007bff; padding:12px 15px; border-radius:4px;">
-            <p class="small" style="margin:0; color:#555;">
-                이 강의는 RoboRacer/F1TENTH 차량을 활용하여  
-                ROS 기반 자율주행 스택, 센서 데이터 처리, 경진대회형 프로젝트 등을  
-                체계적으로 다루는 실습 중심 과목입니다.
-            </p>
-            </div>
-
-        </div>
-        </div>
-
-            <div class="panel panel-default" style="border-radius:6px; border:1px solid #ddd;">
-      <div class="panel-heading" style="background:#f7f7f7; border-bottom:1px solid #ddd;">
-        <h3 class="panel-title" style="font-size:18px; font-weight:600;">
-          🛠️ Steven Gong – F1TENTH Notes & Projects
+    <!-- 코스 카드 1: GNU -->
+    <article class="course-card">
+      <div class="course-card-header">
+        <h3 class="course-card-title">
+          경상국립대학교 (Gyeongsang National University)
         </h3>
+        <span class="course-tag course-tag--uni">University Course</span>
       </div>
 
-      <div class="panel-body" style="padding:20px;">
+      <p class="course-meta">
+        <strong>담당 교수:</strong> 김진현 교수 (Prof. Jin Hyun Kim)
+      </p>
 
-        <p style="margin-bottom:8px;">
-          <strong>작성자:</strong> Steven Gong<br>
-          <strong>주제:</strong> F1TENTH 기반 자율주행 연구 및 실습 기록
+      <p class="course-meta">
+        <strong>강의명:</strong>
+        AI &amp; Robot Systems (RoboRacer / F1TENTH 기반 자율주행 시스템)
+      </p>
+
+      <div class="course-links">
+        <p><strong>강의 소개 페이지:</strong></p>
+        <p>
+          <a href="https://jin-kim.net/classes/ai-robotsystems/" target="_blank">
+            https://jin-kim.net/classes/ai-robotsystems/
+          </a>
         </p>
 
-        <p style="margin-bottom:14px;">
-          Steven Gong은 F1TENTH 차량을 기반으로 연구를 수행하며,  
-          ROS2 기반 소프트웨어 스택(맵핑, 로컬라이제이션, 레이싱 라인 생성, Pure Pursuit, 장애물 회피 등)을  
-          직접 구현한 경험을 블로그 형태로 상세히 공유하고 있습니다.
+        <p><strong>GitHub 코스 저장소:</strong></p>
+        <p>
+          <a href="https://github.com/jinkimh/F1Tenth_Bootcamp_GNU" target="_blank">
+            https://github.com/jinkimh/F1Tenth_Bootcamp_GNU
+          </a>
         </p>
+      </div>
 
-        <p style="margin-bottom:8px;"><strong>블로그 링크:</strong></p>
-        <p style="margin-bottom:18px;">
+      <div class="course-highlight course-highlight--blue">
+        이 강의는 RoboRacer/F1TENTH 차량을 활용하여  
+        ROS 기반 자율주행 스택, 센서 데이터 처리, 경진대회형 프로젝트 등을  
+        체계적으로 다루는 실습 중심 과목입니다.
+      </div>
+    </article>
+
+    <!-- 코스 카드 2: Steven Gong Blog -->
+    <article class="course-card">
+      <div class="course-card-header">
+        <h3 class="course-card-title">
+          🛠️ Steven Gong – F1TENTH Notes &amp; Projects
+        </h3>
+        <span class="course-tag course-tag--blog">Learning Notes</span>
+      </div>
+
+      <p class="course-meta">
+        <strong>작성자:</strong> Steven Gong<br>
+        <strong>주제:</strong> F1TENTH 기반 자율주행 연구 및 실습 기록
+      </p>
+
+      <p>
+        Steven Gong은 F1TENTH 차량을 기반으로 연구를 수행하며,  
+        ROS2 기반 소프트웨어 스택(맵핑, 로컬라이제이션, 레이싱 라인 생성, Pure Pursuit, 장애물 회피 등)을  
+        직접 구현한 경험을 블로그 형태로 상세히 공유하고 있습니다.
+      </p>
+
+      <div class="course-links">
+        <p><strong>블로그 링크:</strong></p>
+        <p>
           <a href="https://stevengong.co/notes/F1TENTH" target="_blank">
             https://stevengong.co/notes/F1TENTH
           </a>
         </p>
-
-        <div style="background:#f5f5f5; border-left:4px solid #28a745; padding:12px 15px; border-radius:4px;">
-          <p class="small" style="margin:0; color:#555;">
-            이 블로그는 F1TENTH 플랫폼을 기반으로 실제 연구자가 경험한  
-            소프트웨어 스택 구현, 엔지니어링 교훈, 프로젝트 링크, 개념 요약 등  
-            고급 자율주행 학습 자료를 다루고 있어 학생과 연구자에게 매우 유용합니다.
-          </p>
-        </div>
-
       </div>
-    </div>
 
-    <div class="panel panel-default" style="border-radius:6px; border:1px solid #ddd;">
-  <div class="panel-heading" style="background:#f7f7f7; border-bottom:1px solid #ddd;">
-    <h3 class="panel-title" style="font-size:18px; font-weight:600;">
-      F1TENTH Software Stack – ESE 615 Team 6
-    </h3>
-  </div>
+      <div class="course-highlight course-highlight--green">
+        이 블로그는 F1TENTH 플랫폼을 기반으로 실제 연구자가 경험한  
+        소프트웨어 스택 구현, 엔지니어링 교훈, 프로젝트 링크, 개념 요약 등  
+        고급 자율주행 학습 자료를 다루고 있어 학생과 연구자에게 매우 유용합니다.
+      </div>
+    </article>
 
-  <div class="panel-body" style="padding:20px;">
+    <!-- 코스 카드 3: ESE 615 Team 6 Repo -->
+    <article class="course-card">
+      <div class="course-card-header">
+        <h3 class="course-card-title">
+          F1TENTH Software Stack – ESE 615 Team 6
+        </h3>
+        <span class="course-tag course-tag--repo">Reference Repo</span>
+      </div>
 
-    <p style="margin-bottom:8px;">
-      <strong>Repository:</strong>
-      <a href="https://github.com/derekhanbaliq/f1tenth-software-stack" target="_blank">
-        derekhanbaliq/f1tenth-software-stack
-      </a>
-    </p>
+      <p class="course-meta">
+        <strong>Repository:</strong>
+        <a href="https://github.com/derekhanbaliq/f1tenth-software-stack" target="_blank">
+          derekhanbaliq/f1tenth-software-stack
+        </a>
+      </p>
 
-    <p style="margin-bottom:10px;">
-      이 저장소는 <strong>UPenn ESE 615 (Spring 2023) Team 6</strong>이 구현한
-      통합 F1TENTH 소프트웨어 스택입니다. 실제 차량 및 시뮬레이터에서 사용 가능한
-      다양한 주행·제어 알고리즘 코드가 포함되어 있습니다.
-    </p>
+      <p>
+        이 저장소는 <strong>UPenn ESE 615 (Spring 2023) Team 6</strong>이 구현한
+        통합 F1TENTH 소프트웨어 스택입니다. 실제 차량 및 시뮬레이터에서 사용 가능한
+        다양한 주행·제어 알고리즘 코드가 포함되어 있습니다.
+      </p>
 
-    <hr style="margin:16px 0;">
+      <p><strong>포함된 주요 패키지/기능 예:</strong></p>
+      <ul>
+        <li><code>gap_follow</code> – Gap Follow, 브레이크 &amp; 조건부 갭 추종</li>
+        <li><code>pure_pursuit</code> – Pure Pursuit, RRT*와 통합된 레이싱 컨트롤</li>
+        <li><code>mpc</code>, <code>lqr</code> – MPC / LQR 기반 고급 제어기</li>
+        <li><code>rl_planner</code> – 강화학습 기반 플래너 노드</li>
+        <li><code>safety_node</code>, <code>wall_follow</code>, <code>lab*_pkg</code> – 안전 노드, 벽 추종, Lab 1~6 예제 코드 등</li>
+        <li><code>f1tenth_gym_ros</code> – F1TENTH Gym + ROS 통합 에이전트/설정</li>
+      </ul>
 
-    <p style="margin-bottom:6px;"><strong>포함된 주요 패키지/기능 예:</strong></p>
-    <ul style="margin-bottom:14px;">
-      <li><code>gap_follow</code> – Gap Follow, 브레이크 &amp; 조건부 갭 추종</li>
-      <li><code>pure_pursuit</code> – Pure Pursuit, RRT*와 통합된 레이싱 컨트롤</li>
-      <li><code>mpc</code>, <code>lqr</code> – MPC / LQR 기반 고급 제어기</li>
-      <li><code>rl_planner</code> – 강화학습 기반 플래너 노드</li>
-      <li><code>safety_node</code>, <code>wall_follow</code>, <code>lab*_pkg</code> – 안전 노드, 벽 추종, Lab 1~6 예제 코드 등</li>
-      <li><code>f1tenth_gym_ros</code> – F1TENTH Gym + ROS 통합 에이전트/설정</li>
-    </ul>
-
-    <div style="background:#f5f5f5; border-left:4px solid #ffc107; padding:12px 15px; border-radius:4px;">
-      <p class="small" style="margin:0; color:#555;">
+      <div class="course-highlight course-highlight--amber">
         교육용·연구용으로 F1TENTH 전체 스택 구조를 참고하기에 좋은 예시이며,  
         Gap Follow, Pure Pursuit, RRT*, MPC, RL 등의 구현을 한 번에 살펴볼 수 있는
         실전형 레퍼런스 코드베이스입니다.
-      </p>
-    </div>
-
-  </div>
-</div>
-
+      </div>
+    </article>
 
     <hr>
 
@@ -186,3 +175,5 @@ tab_active: "courses"
   </section>
 
 </div>
+
+</main>

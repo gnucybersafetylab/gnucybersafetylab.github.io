@@ -1226,173 +1226,482 @@ body {
     border-radius: 4px;
 }
 
-  <link rel="stylesheet" href="/assets/css/style.css">
+/* =========================================
+   Join Page Custom Styles
+   ========================================= */
+main.join-page #head.secondary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+  color: #f9fafb;
+}
+main.join-page #head.secondary .page-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+main.join-page #head.secondary .lead {
+  max-width: 960px;
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
 
-  <!-- Join page custom decoration -->
-  <style>
-    /* 이 페이지에만 적용되도록 main.join-page 아래로 스코프 */
-    main.join-page #head.secondary {
-      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
-      color: #f9fafb;
-    }
-    main.join-page #head.secondary .page-title {
-      font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-    main.join-page #head.secondary .lead {
-      max-width: 960px;
-      margin-top: 10px;
-      font-size: 16px;
-      opacity: 0.95;
-    }
+/* 공통 섹션 여백 */
+main.join-page .join-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
-    /* 공통 섹션 여백 */
-    main.join-page .join-section {
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
+/* 작은 섹션 라벨 */
+main.join-page .join-label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7280;
+  background: #e5e7eb;
+  border-radius: 999px;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+}
 
-    /* 작은 섹션 라벨 */
-    main.join-page .join-label {
-      display: inline-block;
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #6b7280;
-      background: #e5e7eb;
-      border-radius: 999px;
-      padding: 4px 10px;
-      margin-bottom: 8px;
-    }
+/* 인트로 박스 */
+main.join-page .join-intro-box {
+  background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-top: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+main.join-page .join-intro-box p {
+  margin-bottom: 0;
+}
 
-    /* 인트로 박스 */
-    main.join-page .join-intro-box {
-      background: linear-gradient(135deg, #eff6ff, #ecfdf5);
-      border-radius: 16px;
-      padding: 18px 22px;
-      margin-top: 10px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-    }
-    main.join-page .join-intro-box p {
-      margin-bottom: 0;
-    }
+/* 카드 스타일 공통 */
+main.join-page .join-card {
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+main.join-page .join-card .panel-heading {
+  background: #ffffff;
+  border-bottom: none;
+}
+main.join-page .join-card .panel-title {
+  font-weight: 600;
+}
+main.join-page .join-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+}
+main.join-page .join-card-blue {
+  border-top: 4px solid #2563eb;
+}
+main.join-page .join-card-emerald {
+  border-top: 4px solid #059669;
+}
+main.join-page .join-card-amber {
+  border-top: 4px solid #d97706;
+}
+main.join-page .join-card-fuchsia {
+  border-top: 4px solid #c026d3;
+}
+main.join-page .join-card ul {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+main.join-page .join-card ul li {
+  margin-bottom: 6px;
+}
 
-    /* 카드 스타일 공통 */
-    main.join-page .join-card {
-      border-radius: 14px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-      overflow: hidden;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    main.join-page .join-card .panel-heading {
-      background: #ffffff;
-      border-bottom: none;
-    }
-    main.join-page .join-card .panel-title {
-      font-weight: 600;
-    }
-    main.join-page .join-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
-    }
-    main.join-page .join-card-blue {
-      border-top: 4px solid #2563eb;
-    }
-    main.join-page .join-card-emerald {
-      border-top: 4px solid #059669;
-    }
-    main.join-page .join-card-amber {
-      border-top: 4px solid #d97706;
-    }
-    main.join-page .join-card-fuchsia {
-      border-top: 4px solid #c026d3;
-    }
-    main.join-page .join-card ul {
-      padding-left: 18px;
-      margin-bottom: 0;
-    }
-    main.join-page .join-card ul li {
-      margin-bottom: 6px;
-    }
+/* Why Join 영역 배경 박스 */
+main.join-page .join-features-wrap {
+  background:
+    radial-gradient(circle at top left, #eff6ff, transparent 55%),
+    radial-gradient(circle at bottom right, #ecfdf5, transparent 50%);
+  border-radius: 18px;
+  padding: 24px 24px 10px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+main.join-page .feature-item {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+main.join-page .feature-item .media-left {
+  padding-right: 10px;
+}
+main.join-page .feature-item i {
+  width: 36px;
+  text-align: center;
+}
+main.join-page .feature-item .media-heading {
+  font-weight: 600;
+}
 
-    /* Why Join 영역 배경 박스 */
-    main.join-page .join-features-wrap {
-      background:
-        radial-gradient(circle at top left, #eff6ff, transparent 55%),
-        radial-gradient(circle at bottom right, #ecfdf5, transparent 50%);
-      border-radius: 18px;
-      padding: 24px 24px 10px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-    }
-    main.join-page .feature-item {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 12px 14px;
-      margin-bottom: 14px;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
-    }
-    main.join-page .feature-item .media-left {
-      padding-right: 10px;
-    }
-    main.join-page .feature-item i {
-      width: 36px;
-      text-align: center;
-    }
-    main.join-page .feature-item .media-heading {
-      font-weight: 600;
-    }
+/* 가입 방법 단계 리스트 */
+main.join-page .join-steps {
+  max-width: 860px;
+  margin: 20px 0 10px;
+}
+main.join-page .join-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+main.join-page .join-step-number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+main.join-page .join-step-body strong {
+  display: block;
+  font-size: 14px;
+}
 
-    /* 가입 방법 단계 리스트 */
-    main.join-page .join-steps {
-      max-width: 860px;
-      margin: 20px 0 10px;
-    }
-    main.join-page .join-step {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 10px;
-    }
-    main.join-page .join-step-number {
-      flex-shrink: 0;
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      background: #2563eb;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 10px;
-    }
-    main.join-page .join-step-body strong {
-      display: block;
-      font-size: 14px;
-    }
+/* 하단 CTA 박스 */
+main.join-page .join-cta-box {
+  max-width: 860px;
+  background: linear-gradient(135deg, #1d4ed8, #0f766e);
+  color: #e5e7eb;
+  border-radius: 18px;
+  padding: 22px 24px;
+  margin-top: 20px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
+}
+main.join-page .join-cta-box p {
+  margin-bottom: 10px;
+}
+main.join-page .join-cta-box .btn {
+  margin-top: 8px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
+}
 
-    /* 하단 CTA 박스 */
-    main.join-page .join-cta-box {
-      max-width: 860px;
-      background: linear-gradient(135deg, #1d4ed8, #0f766e);
-      color: #e5e7eb;
-      border-radius: 18px;
-      padding: 22px 24px;
-      margin-top: 20px;
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
-    }
-    main.join-page .join-cta-box p {
-      margin-bottom: 10px;
-    }
-    main.join-page .join-cta-box .btn {
-      margin-top: 8px;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.35);
-    }
+@media (max-width: 767px) {
+  main.join-page .join-features-wrap {
+    padding: 18px 14px 6px;
+  }
+}
 
-    @media (max-width: 767px) {
-      main.join-page .join-features-wrap {
-        padding: 18px 14px 6px;
-      }
-    }
-  </style>
+/* =========================================
+   News Page Custom Styles
+   ========================================= */
+main.news-page #head.secondary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+  color: #f9fafb;
+}
+main.news-page #head.secondary .page-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+main.news-page #head.secondary .lead {
+  max-width: 960px;
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* 섹션 여백 */
+main.news-page .news-section {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+/* 작은 라벨 */
+main.news-page .news-label {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6b7280;
+  background: #e5e7eb;
+  border-radius: 999px;
+  padding: 4px 10px;
+  margin-bottom: 8px;
+}
+
+/* 설명 텍스트 좁게 */
+main.news-page #news-list .section-text {
+  max-width: 860px;
+  margin: 8px 0 24px;
+}
+
+/* News 카드 리스트 */
+main.news-page .news-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  background: #ffffff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+main.news-page .news-card:hover {
+  transform: translateY(-3px);
+  border-color: #2563eb;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+}
+
+/* 썸네일 영역 */
+main.news-page .news-thumb {
+  flex: 0 0 200px;
+  max-width: 220px;
+}
+main.news-page .news-thumb-placeholder {
+  height: 120px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+  color: #4b5563;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+main.news-page .news-thumb-placeholder .news-thumb-tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  margin-bottom: 4px;
+}
+
+/* 본문 영역 */
+main.news-page .news-body {
+  flex: 1;
+  min-width: 220px;
+}
+main.news-page .news-body h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+main.news-page .news-body .meta {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+main.news-page .news-body .meta .news-source {
+  font-weight: 500;
+}
+main.news-page .news-body p {
+  margin-bottom: 6px;
+}
+
+/* Coming Soon 뱃지 */
+main.news-page .news-badge {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.08);
+  color: #ea580c;
+  border: 1px solid rgba(234, 88, 12, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* 모바일 대응 */
+@media (max-width: 767px) {
+  main.news-page .news-card {
+    padding: 14px;
+  }
+  main.news-page .news-thumb {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  main.news-page .news-thumb-placeholder {
+    margin-bottom: 8px;
+  }
+}
+
+
+/* =========================================
+   Learn Page Custom Styles
+   ========================================= */
+main.learn-page #head.secondary {
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%);
+  color: #f9fafb;
+}
+main.learn-page #head.secondary .page-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+main.learn-page #head.secondary .lead {
+  max-width: 960px;
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+main.learn-page .learn-section {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+/* 탭 메뉴 스타일 강화 */
+main.learn-page .nav.nav-pills > li > a {
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #374151;
+}
+main.learn-page .nav.nav-pills > li.active > a {
+  background: #1d4ed8;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+}
+
+/* 설명 섹션 카드 */
+main.learn-page .section-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 26px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+}
+
+/* 목록 스타일 */
+main.learn-page ul li {
+  margin-bottom: 6px;
+}
+
+/* 강조 박스 (alert 개선 버전) */
+main.learn-page .learn-highlight {
+  background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+  padding: 18px 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  font-size: 14px;
+  margin-top: 18px;
+}
+main.learn-page .learn-highlight a {
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+/* 페이지 제목 */
+main.learn-page h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* 소제목 */
+main.learn-page h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* =========================================
+   Learn > Courses Page Styles
+   ========================================= */
+
+/* 섹션 여백 */
+main.learn-page .courses-section {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+/* 개별 코스 카드 */
+main.learn-page .course-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 22px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+}
+
+/* 카드 헤더 영역: 제목 + 태그 */
+main.learn-page .course-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+main.learn-page .course-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 코스 타입 태그 */
+main.learn-page .course-tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+main.learn-page .course-tag--uni {
+  background: rgba(37, 99, 235, 0.08);
+  color: #1d4ed8;
+}
+main.learn-page .course-tag--blog {
+  background: rgba(16, 185, 129, 0.08);
+  color: #059669;
+}
+main.learn-page .course-tag--repo {
+  background: rgba(234, 179, 8, 0.08);
+  color: #ca8a04;
+}
+
+/* 메타 정보 (교수명, 작성자 등) */
+main.learn-page .course-meta {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+main.learn-page .course-meta strong {
+  font-weight: 600;
+}
+
+/* 링크 블럭 간 여백 */
+main.learn-page .course-links {
+  margin: 10px 0 14px;
+}
+main.learn-page .course-links p {
+  margin-bottom: 4px;
+}
+
+/* 하이라이트 박스 (설명 부분) */
+main.learn-page .course-highlight {
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: #f9fafb;
+  font-size: 13px;
+  color: #4b5563;
+  border-left: 4px solid #2563eb;
+}
+main.learn-page .course-highlight--blue {
+  border-left-color: #2563eb;
+}
+main.learn-page .course-highlight--green {
+  border-left-color: #16a34a;
+}
+main.learn-page .course-highlight--amber {
+  border-left-color: #f59e0b;
+}
