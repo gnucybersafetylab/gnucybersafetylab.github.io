@@ -2269,3 +2269,62 @@ main.form-page .help-text {
 .org-page .org-partner-list li {
   margin-bottom: 14px;
 }
+
+/* ============================
+   Research Page Base
+=============================== */
+.research-page {
+  padding-bottom: 40px;
+}
+
+/* Section Styling */
+.research-section {
+  margin-bottom: 55px;
+}
+
+.research-section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-left: 5px solid #007bff;
+  padding-left: 12px;
+}
+
+.research-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* List Style */
+.research-list {
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+.research-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* Note Box (UPenn 링크 박스) */
+.research-note-box {
+  background: #f7f9fc;
+  border-left: 4px solid #007bff;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin: 15px 0;
+}
+
+.research-note-box a {
+  font-weight: 600;
+}
+
+/* Sub-lead text */
+.research-lead-text {
+  font-size: 15px;
+  color: #666;
+  margin-top: 15px;
+}
