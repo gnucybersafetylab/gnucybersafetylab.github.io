@@ -765,75 +765,141 @@ color: #ee0c45;
 }
 
 
-/* 카드 박스 – 각 Upcoming Event 하나 */
+/* =========================================
+   Race Events - Upcoming Events Cards
+   ========================================= */
+/* Upcoming Events 카드 스타일 - 통일된 디자인 */
 .race-card {
-  background: linear-gradient(135deg, #ffe4ff, #d3b5ff); /* 기존보다 조금 밝은 톤 */
-  color: #262626;
-  border-radius: 16px;
-  padding: 18px 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  background: var(--bg-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  padding: 20px 22px;
+  margin-bottom: 0;
+  box-shadow: var(--shadow-sm);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 카드 상단에 색상 강조 바 추가 */
+.race-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
 }
 
 .race-card h4 {
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+  line-height: 1.4;
 }
 
 .race-card .race-date,
 .race-card .race-location {
-  font-size: 13px;
-  margin-bottom: 4px;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.race-card .race-date {
+  font-weight: 600;
+  color: var(--color-primary);
 }
 
 .race-card .race-link {
-  font-size: 13px;
-  margin-top: 10px;
+  font-size: var(--font-size-sm);
+  margin-top: 14px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--transition-fast);
+}
+
+.race-card .race-link:hover {
+  color: var(--color-primary-dark);
   text-decoration: underline;
-  color: #4b0082;
 }
 
 .race-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 26px rgba(0,0,0,0.22);
-  transition: all 0.18s ease-out;
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-light);
 }
 
-/* Past Events – 태그형 박스 */
-.race-tag {
-  background: linear-gradient(135deg, #fdf2ff, #e0c3ff);
-  color: #262626;
-  border-radius: 999px;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 13px;
+/* Placeholder 카드 스타일 */
+.race-card-placeholder {
+  background: var(--bg-gray-lighter);
+  border-style: dashed;
+  border-color: var(--color-gray-300);
+}
+
+.race-card-placeholder h4 {
+  color: var(--color-gray-500);
   font-weight: 600;
-  margin-bottom: 15px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-  border: 1px solid rgba(255,255,255,0.7);
+}
+
+/* =========================================
+   Race Events - Past Events Tags
+   ========================================= */
+/* Past Events 태그 스타일 - 통일된 디자인 */
+.race-tag {
+  background: var(--bg-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  padding: 16px 20px;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: 0;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.race-tag strong {
+  display: block;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  margin-bottom: 6px;
+  line-height: 1.4;
 }
 
 .race-tag-sub {
-  font-size: 11px;
-  opacity: 0.8;
-  line-height: 1.3em;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .race-tag-link {
   text-decoration: none;
   color: inherit;
+  display: block;
+  height: 100%;
 }
 
 .race-tag-link:hover .race-tag {
   transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
-  transition: all 0.16s ease-out;
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+  background: var(--bg-gray-lighter);
 }
 
   .community-section {
@@ -2134,13 +2200,43 @@ main.race-events-page .race-subtitle {
 }
 
 /* 카드 그리드 간격 정리 */
+/* =========================================
+   Race Events - Grid Layouts
+   ========================================= */
+/* Upcoming Events 그리드 - CSS Grid로 개선 */
 main.race-events-page .race-cards-grid {
-  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-/* Past Events 태그 그리드 */
+main.race-events-page .race-cards-grid > [class*="col-"] {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Past Events 그리드 - CSS Grid로 개선 */
 main.race-events-page .race-tags-grid {
-  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+main.race-events-page .race-tags-grid > [class*="col-"] {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  main.race-events-page .race-cards-grid,
+  main.race-events-page .race-tags-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 /* 구분선 */
