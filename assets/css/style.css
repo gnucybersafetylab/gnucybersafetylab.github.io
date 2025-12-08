@@ -1692,6 +1692,10 @@ main.join-page .join-features-wrap {
   border-radius: var(--radius-xl);
   padding: 24px 24px 10px;
   border: 1px solid var(--color-gray-200);
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 /* Features 그리드 - CSS Grid로 개선 */
@@ -1700,6 +1704,9 @@ main.join-page .join-features-grid {
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 16px;
   margin-top: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 main.join-page .join-features-grid > [class*="col-"] {
@@ -1719,6 +1726,8 @@ main.join-page .feature-item {
   height: 100%;
   display: flex;
   align-items: flex-start;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 main.join-page .feature-item:hover {
