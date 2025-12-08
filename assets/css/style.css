@@ -1334,11 +1334,11 @@ body {
     padding-right: 0;
   }
 
-  /* 로고: 왼쪽 끝에 배치, 로고 크기 20% 감소 */
+  /* 로고: 완전 왼쪽 끝에 배치, 로고 크기 20% 감소 */
   .navbar-brand {
     float: none;
     order: 1;              /* flexbox order로 왼쪽 배치 */
-    padding: 0 0 0 15px;   /* 왼쪽만 최소 패딩, 오른쪽 패딩 제거 */
+    padding: 0;            /* 모든 패딩 제거하여 완전 왼쪽 배치 */
     height: auto;
     display: flex;
     align-items: center;
@@ -1399,10 +1399,10 @@ body {
     padding-bottom: 6px;
   }
 
-  /* 모바일에서 풀다운 메뉴를 왼쪽 정렬 */
+  /* 모바일에서 풀다운 메뉴를 오른쪽 정렬 */
   .navbar-nav {
     float: none !important;
-    text-align: left;
+    text-align: right;
   }
 
   .navbar-nav > li {
@@ -1411,7 +1411,8 @@ body {
   }
 
   .navbar-nav > li > a {
-    text-align: left;
+    text-align: right;
+    padding-right: 15px;
     padding-left: 15px;
   }
 }
