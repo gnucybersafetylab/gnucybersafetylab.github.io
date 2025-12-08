@@ -1306,15 +1306,10 @@ body {
 }
 
 /* =========================================
-   공통: Secondary Header with Gradient
+   공통: Secondary Header with Gradient (Join, Form 페이지만)
    ========================================= */
-/* 여러 페이지에서 공통으로 사용되는 그라디언트 헤더 스타일 */
+/* Join, Form 페이지에서만 사용되는 그라디언트 헤더 스타일 */
 main.join-page #head.secondary,
-main.news-page #head.secondary,
-main.learn-page #head.secondary,
-main.edu-page #head.secondary,
-main.race-rules-page #head.secondary,
-main.race-events-page #head.secondary,
 main.form-page #head.secondary {
   background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 40%, var(--color-secondary) 100%);
   color: var(--color-text-white);
@@ -1324,27 +1319,55 @@ main.form-page #head.secondary {
 }
 
 main.join-page #head.secondary .page-title,
-main.news-page #head.secondary .page-title,
-main.learn-page #head.secondary .page-title,
-main.edu-page #head.secondary .page-title,
-main.race-rules-page #head.secondary .page-title,
-main.race-events-page #head.secondary .page-title,
 main.form-page #head.secondary .page-title {
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 
 main.join-page #head.secondary .lead,
-main.news-page #head.secondary .lead,
-main.learn-page #head.secondary .lead,
-main.edu-page #head.secondary .lead,
-main.race-rules-page #head.secondary .lead,
-main.race-events-page #head.secondary .lead,
 main.form-page #head.secondary .lead {
   max-width: var(--container-max-width);
   margin-top: 10px;
   font-size: var(--font-size-md);
   opacity: 0.95;
+}
+
+/* =========================================
+   공통: Secondary Header (Organization 스타일)
+   ========================================= */
+/* learn, race, news, edu 페이지에서 organization과 동일한 헤더 스타일 사용 */
+main.news-page #head.secondary,
+main.learn-page #head.secondary,
+main.edu-page #head.secondary,
+main.race-rules-page #head.secondary,
+main.race-events-page #head.secondary {
+  background: var(--bg-gray-light);
+  padding-top: 16px;
+  padding-bottom: 20px;
+  min-height: 0px;
+  text-align: left;
+  color: var(--color-text-primary);
+}
+
+main.news-page #head.secondary .page-title,
+main.learn-page #head.secondary .page-title,
+main.edu-page #head.secondary .page-title,
+main.race-rules-page #head.secondary .page-title,
+main.race-events-page #head.secondary .page-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--color-accent-alt);
+}
+
+main.news-page #head.secondary .lead,
+main.learn-page #head.secondary .lead,
+main.edu-page #head.secondary .lead,
+main.race-rules-page #head.secondary .lead,
+main.race-events-page #head.secondary .lead {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
 }
 
 /* =========================================
