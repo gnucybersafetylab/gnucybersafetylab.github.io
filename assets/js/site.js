@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
         title: 'Race', 
         titleKo: '레이스', 
         url: '/race/', 
-        keywords: '경진대회, 레이스, 규칙, 이벤트, race, 대회, 경주' 
+        keywords: '경진대회, 레이스, 규칙, 룰, 규정, 이벤트, race, 대회, 경주' 
       },
       { 
         title: 'Events', 
