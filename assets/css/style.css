@@ -3211,10 +3211,17 @@ main.form-page .help-text {
   padding: 5px 0;
 }
 
-/* Right-aligned dropdown menus */
+/* Right-aligned dropdown menus - 오른쪽 끝 정렬 */
 .navbar-nav .dropdown-menu-right {
-  right: 0;
-  left: auto;
+  right: 0 !important;
+  left: auto !important;
+  transform: none;
+}
+
+/* 드롭다운 메뉴가 부모 요소의 오른쪽 끝에 정확히 맞도록 */
+.navbar-nav > .dropdown > .dropdown-menu-right {
+  right: 0 !important;
+  left: auto !important;
 }
 
 .navbar-nav .dropdown-menu > li > a {
