@@ -16,6 +16,18 @@ nav_active: "join"
 
   <div class="container">
     <!-- =========================== -->
+    <!-- 탭 메뉴 -->
+    <!-- =========================== -->
+    <ul class="nav nav-pills org-nav-tabs" role="tablist" aria-label="Join 섹션 메뉴">
+      <li role="presentation" class="active">
+        <a href="{{ '/join/' | relative_url }}" role="tab" aria-selected="true" aria-controls="join-overview" id="tab-join-overview">가입 안내 (Overview)</a>
+      </li>
+      <li role="presentation">
+        <a href="{{ '/join/apply.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="join-apply" id="tab-join-apply">가입 신청서 (Application Form)</a>
+      </li>
+    </ul>
+
+    <!-- =========================== -->
     <!-- 1. 누구를 초대하나요? -->
     <!-- =========================== -->
     <section id="who-can-join" class="section appear clearfix join-section">
