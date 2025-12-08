@@ -162,17 +162,72 @@ document.addEventListener("DOMContentLoaded", function () {
   // Build search index from page content
   function buildSearchIndex() {
     var pages = [
-      { title: 'About', url: '/', keywords: 'RoboRacer Korea, 자율주행, 교육, 레이스, 연구' },
-      { title: 'Organization', url: '/organization/', keywords: '조직, 구조, 비전, 규정' },
-      { title: 'Build', url: '/build/', keywords: '차량 제작, Jetson, 드라이버, 설정' },
-      { title: 'Learn', url: '/learn/', keywords: '교육, 강의, 리소스, 커리큘럼' },
-      { title: 'Race', url: '/race/', keywords: '경진대회, 레이스, 규칙, 이벤트' },
-      { title: 'Events', url: '/events/', keywords: '학술행사, 컨퍼런스, 워크숍' },
-      { title: 'Research', url: '/research.html', keywords: '연구, 논문, 데이터셋' },
-      { title: 'Community', url: '/community.html', keywords: '커뮤니티, 네트워크, 교수진' },
-      { title: 'News', url: '/news/', keywords: '뉴스, 공지사항, 소식' },
-      { title: 'Record', url: '/record.html', keywords: '기록, 영상, 사진, 대회' },
-      { title: 'Join', url: '/join/', keywords: '가입, 신청, 참여' }
+      { 
+        title: 'About', 
+        titleKo: '소개', 
+        url: '/', 
+        keywords: 'RoboRacer Korea, 자율주행, 교육, 레이스, 연구, 소개, about' 
+      },
+      { 
+        title: 'Organization', 
+        titleKo: '조직 소개', 
+        url: '/organization/', 
+        keywords: '조직, 구조, 비전, 규정, organization, 조직 소개' 
+      },
+      { 
+        title: 'Build', 
+        titleKo: '차량 제작', 
+        url: '/build/', 
+        keywords: '차량 제작, Jetson, 드라이버, 설정, build, 빌드, 제작' 
+      },
+      { 
+        title: 'Learn', 
+        titleKo: '학습', 
+        url: '/learn/', 
+        keywords: '교육, 강의, 리소스, 커리큘럼, learn, 학습, 배우기' 
+      },
+      { 
+        title: 'Race', 
+        titleKo: '레이스', 
+        url: '/race/', 
+        keywords: '경진대회, 레이스, 규칙, 이벤트, race, 대회, 경주' 
+      },
+      { 
+        title: 'Events', 
+        titleKo: '학술행사', 
+        url: '/events/', 
+        keywords: '학술행사, 컨퍼런스, 워크숍, events, 행사, 학회' 
+      },
+      { 
+        title: 'Research', 
+        titleKo: '연구', 
+        url: '/research.html', 
+        keywords: '연구, 논문, 데이터셋, research, 연구 활동' 
+      },
+      { 
+        title: 'Community', 
+        titleKo: '커뮤니티', 
+        url: '/community.html', 
+        keywords: '커뮤니티, 네트워크, 교수진, community, 학술 네트워크' 
+      },
+      { 
+        title: 'News', 
+        titleKo: '뉴스', 
+        url: '/news/', 
+        keywords: '뉴스, 공지사항, 소식, news, 최신 소식' 
+      },
+      { 
+        title: 'Record', 
+        titleKo: '기록', 
+        url: '/record.html', 
+        keywords: '기록, 영상, 사진, 대회, record, 기록 보관' 
+      },
+      { 
+        title: 'Join', 
+        titleKo: '가입', 
+        url: '/join/', 
+        keywords: '가입, 신청, 참여, join, 회원 가입, 참여 신청' 
+      }
     ];
     
     var mainContent = document.querySelector('main');
@@ -197,28 +252,70 @@ document.addEventListener("DOMContentLoaded", function () {
     
     var index = buildSearchIndex();
     var results = [];
-    var queryLower = query.toLowerCase().trim();
+    var queryTrimmed = query.trim();
+    var queryLower = queryTrimmed.toLowerCase();
     var queryTerms = queryLower.split(/\s+/);
+    
+    // 한글 검색을 위한 정규화 함수 (띄어쓰기 무시)
+    function normalizeForSearch(text) {
+      if (!text) return '';
+      return text.toLowerCase().replace(/\s+/g, '');
+    }
     
     index.forEach(function(page) {
       var score = 0;
       var title = (page.title || '').toLowerCase();
+      var titleKo = (page.titleKo || '').toLowerCase();
       var keywords = (page.keywords || '').toLowerCase();
       var content = (page.content || '').toLowerCase();
       var url = page.url || '';
       
+      // 검색어 정규화
+      var queryNormalized = normalizeForSearch(queryTrimmed);
+      
       queryTerms.forEach(function(term) {
+        var termNormalized = normalizeForSearch(term);
+        
+        // 영어 제목 매칭
         if (title.indexOf(term) !== -1) score += 10;
+        
+        // 한글 제목 매칭 (정확한 매칭)
+        if (titleKo.indexOf(term) !== -1) score += 10;
+        
+        // 한글 제목 부분 매칭 (띄어쓰기 무시)
+        if (normalizeForSearch(titleKo).indexOf(termNormalized) !== -1) score += 8;
+        
+        // 키워드 매칭
         if (keywords.indexOf(term) !== -1) score += 5;
+        if (normalizeForSearch(keywords).indexOf(termNormalized) !== -1) score += 4;
+        
+        // 본문 내용 매칭
         if (content.indexOf(term) !== -1) score += 1;
+        if (normalizeForSearch(content).indexOf(termNormalized) !== -1) score += 1;
       });
+      
+      // 전체 검색어가 한글 제목에 포함되는 경우 추가 점수
+      if (titleKo && normalizeForSearch(titleKo).indexOf(queryNormalized) !== -1) {
+        score += 15;
+      }
       
       if (score > 0) {
         var snippet = '';
         var contentIndex = content.indexOf(queryLower);
+        if (contentIndex === -1) {
+          // 한글 검색어의 경우 정규화된 검색 시도
+          var contentNormalized = normalizeForSearch(content);
+          var queryIndex = contentNormalized.indexOf(queryNormalized);
+          if (queryIndex !== -1) {
+            // 원본 텍스트에서 대략적인 위치 찾기
+            var originalIndex = Math.floor(queryIndex * (content.length / contentNormalized.length));
+            contentIndex = originalIndex;
+          }
+        }
+        
         if (contentIndex !== -1) {
           var start = Math.max(0, contentIndex - 50);
-          var end = Math.min(content.length, contentIndex + query.length + 50);
+          var end = Math.min(content.length, contentIndex + queryTrimmed.length + 50);
           snippet = content.substring(start, end);
           if (start > 0) snippet = '...' + snippet;
           if (end < content.length) snippet = snippet + '...';
@@ -227,8 +324,13 @@ document.addEventListener("DOMContentLoaded", function () {
           if (content.length > 150) snippet += '...';
         }
         
+        // 한글 제목이 있으면 표시, 없으면 영어 제목
+        var displayTitle = page.titleKo ? page.titleKo + ' (' + page.title + ')' : page.title;
+        
         results.push({
           title: page.title,
+          titleKo: page.titleKo || '',
+          displayTitle: displayTitle,
           url: url,
           snippet: snippet,
           score: score
@@ -254,13 +356,19 @@ document.addEventListener("DOMContentLoaded", function () {
     
     var html = '<div class="search-results-list">';
     results.forEach(function(result) {
-      var highlightedTitle = result.title;
+      var displayTitle = result.displayTitle || result.title;
+      var highlightedTitle = displayTitle;
       var highlightedSnippet = result.snippet;
       
+      // 검색어 하이라이트 (대소문자 구분 없이, 한글도 포함)
       query.split(/\s+/).forEach(function(term) {
-        var regex = new RegExp('(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-        highlightedTitle = highlightedTitle.replace(regex, '<span class="search-highlight">$1</span>');
-        highlightedSnippet = highlightedSnippet.replace(regex, '<span class="search-highlight">$1</span>');
+        if (term.length > 0) {
+          // 특수문자 이스케이프
+          var escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          var regex = new RegExp('(' + escapedTerm + ')', 'gi');
+          highlightedTitle = highlightedTitle.replace(regex, '<span class="search-highlight">$1</span>');
+          highlightedSnippet = highlightedSnippet.replace(regex, '<span class="search-highlight">$1</span>');
+        }
       });
       
       html += '<div class="search-result-item">';
