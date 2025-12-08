@@ -121,16 +121,11 @@
         <a class="navbar-brand" href="{{ '/' | relative_url }}" aria-label="RoboRacer Korea 홈페이지로 이동">
           <img src="{{ '/assets/images/logo_korea.png' | relative_url }}" alt="RoboRacer Korea 로고" width="150" height="50">
         </a>
-        <!-- Search Toggle Button (로고 옆) -->
-        <a href="#" class="navbar-search-toggle" id="search-toggle-btn" aria-label="검색 열기" title="검색">
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <span class="sr-only">검색</span>
-        </a>
       </div>
 
         <div class="navbar-collapse collapse" id="main-navigation">
-    <!-- Search Form (로고 옆에 표시) -->
-    <form class="navbar-form navbar-left navbar-search-form" role="search" id="site-search-form" style="display: none;">
+    <!-- Search Form -->
+    <form class="navbar-form navbar-right" role="search" id="site-search-form" style="display: none;">
       <div class="form-group">
         <input type="text" class="form-control" id="site-search-input" placeholder="검색..." aria-label="사이트 검색">
         <button type="submit" class="btn btn-default sr-only">검색</button>
@@ -202,7 +197,7 @@
         </ul>
       </li>
 
-      <!-- Search Toggle Button (맨 뒤로 이동) -->
+      <!-- Search Toggle Button (맨 뒤) -->
       <li role="none" class="search-toggle">
         <a href="#" role="menuitem" id="search-toggle-btn" aria-label="검색 열기" title="검색">
           <i class="fa fa-search" aria-hidden="true"></i>
