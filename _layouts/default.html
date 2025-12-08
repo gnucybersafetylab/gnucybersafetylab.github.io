@@ -133,50 +133,68 @@
     </form>
     
     <ul class="nav navbar-nav pull-right" role="menubar">
+      <!-- About -->
       <li role="none" {% if page.nav_active == 'home' %}class="active"{% endif %}>
         <a href="{{ '/' | relative_url }}" role="menuitem" {% if page.nav_active == 'home' %}aria-current="page"{% endif %}>About</a>
       </li>
 
+      <!-- Organization (About 하위) -->
       <li role="none" {% if page.nav_active == 'organization' %}class="active"{% endif %}>
         <a href="{{ '/organization' | relative_url }}" role="menuitem" {% if page.nav_active == 'organization' %}aria-current="page"{% endif %}>Organization</a>
       </li>
 
-      <!-- 🔹 Build 메뉴 추가 -->
-      <li role="none" {% if page.nav_active == 'build' %}class="active"{% endif %}>
-        <a href="{{ '/build' | relative_url }}" role="menuitem" {% if page.nav_active == 'build' %}aria-current="page"{% endif %}>Build</a>
+      <!-- Programs Dropdown -->
+      <li class="dropdown {% if page.nav_active == 'build' or page.nav_active == 'learn' or page.nav_active == 'race' or page.nav_active == 'events' %}active{% endif %}">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Programs <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li {% if page.nav_active == 'build' %}class="active"{% endif %}>
+            <a href="{{ '/build' | relative_url }}" {% if page.nav_active == 'build' %}aria-current="page"{% endif %}>Build</a>
+          </li>
+          <li {% if page.nav_active == 'learn' %}class="active"{% endif %}>
+            <a href="{{ '/learn' | relative_url }}" {% if page.nav_active == 'learn' %}aria-current="page"{% endif %}>Learn</a>
+          </li>
+          <li {% if page.nav_active == 'race' %}class="active"{% endif %}>
+            <a href="{{ '/race' | relative_url }}" {% if page.nav_active == 'race' %}aria-current="page"{% endif %}>Race</a>
+          </li>
+          <li {% if page.nav_active == 'events' %}class="active"{% endif %}>
+            <a href="{{ '/events' | relative_url }}" {% if page.nav_active == 'events' %}aria-current="page"{% endif %}>Events</a>
+          </li>
+        </ul>
       </li>
 
-      <li role="none" {% if page.nav_active == 'learn' %}class="active"{% endif %}>
-        <a href="{{ '/learn' | relative_url }}" role="menuitem" {% if page.nav_active == 'learn' %}aria-current="page"{% endif %}>Learn</a>
+      <!-- Research & Community Dropdown -->
+      <li class="dropdown {% if page.nav_active == 'research' or page.nav_active == 'community' or page.nav_active == 'news' %}active{% endif %}">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Research & Community <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li {% if page.nav_active == 'research' %}class="active"{% endif %}>
+            <a href="{{ '/research.html' | relative_url }}" {% if page.nav_active == 'research' %}aria-current="page"{% endif %}>Research</a>
+          </li>
+          <li {% if page.nav_active == 'community' %}class="active"{% endif %}>
+            <a href="{{ '/community.html' | relative_url }}" {% if page.nav_active == 'community' %}aria-current="page"{% endif %}>Community</a>
+          </li>
+          <li {% if page.nav_active == 'news' %}class="active"{% endif %}>
+            <a href="{{ '/news' | relative_url }}" {% if page.nav_active == 'news' %}aria-current="page"{% endif %}>News</a>
+          </li>
+        </ul>
       </li>
 
-      <li role="none" {% if page.nav_active == 'race' %}class="active"{% endif %}>
-        <a href="{{ '/race' | relative_url }}" role="menuitem" {% if page.nav_active == 'race' %}aria-current="page"{% endif %}>Race</a>
-      </li>
-
-      <li role="none" {% if page.nav_active == 'events' %}class="active"{% endif %}>
-        <a href="{{ '/events' | relative_url }}" role="menuitem" {% if page.nav_active == 'events' %}aria-current="page"{% endif %}>Events</a>
-      </li>
-
-      <li role="none" {% if page.nav_active == 'research' %}class="active"{% endif %}>
-        <a href="{{ '/research.html' | relative_url }}" role="menuitem" {% if page.nav_active == 'research' %}aria-current="page"{% endif %}>Research</a>
-      </li>
-
-      <li role="none" {% if page.nav_active == 'community' %}class="active"{% endif %}>
-        <a href="{{ '/community.html' | relative_url }}" role="menuitem" {% if page.nav_active == 'community' %}aria-current="page"{% endif %}>Community</a>
-      </li>
-
-      <!-- 🔹 News 메뉴 추가 -->
-      <li role="none" {% if page.nav_active == 'news' %}class="active"{% endif %}>
-        <a href="{{ '/news' | relative_url }}" role="menuitem" {% if page.nav_active == 'news' %}aria-current="page"{% endif %}>News</a>
-      </li>
-
-      <li role="none" {% if page.nav_active == 'record' %}class="active"{% endif %}>
-        <a href="{{ '/record.html' | relative_url }}" role="menuitem" {% if page.nav_active == 'record' %}aria-current="page"{% endif %}>Record</a>
-      </li>
-
-      <li role="none" {% if page.nav_active == 'join' %}class="active"{% endif %}>
-        <a href="{{ '/join' | relative_url }}" role="menuitem" {% if page.nav_active == 'join' %}aria-current="page"{% endif %}>Join</a>
+      <!-- Records & Join Dropdown -->
+      <li class="dropdown {% if page.nav_active == 'record' or page.nav_active == 'join' %}active{% endif %}">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Records & Join <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li {% if page.nav_active == 'record' %}class="active"{% endif %}>
+            <a href="{{ '/record.html' | relative_url }}" {% if page.nav_active == 'record' %}aria-current="page"{% endif %}>Record</a>
+          </li>
+          <li {% if page.nav_active == 'join' %}class="active"{% endif %}>
+            <a href="{{ '/join' | relative_url }}" {% if page.nav_active == 'join' %}aria-current="page"{% endif %}>Join</a>
+          </li>
+        </ul>
       </li>
 
       <!-- Search Toggle Button (맨 뒤로 이동) -->
