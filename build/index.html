@@ -16,27 +16,23 @@ tab_active: "home"
   <div class="container">
 
     <!-- 🔹 Build 상단 서브 탭 -->
-    <ul class="nav nav-pills org-nav-tabs" role="tablist" aria-label="Build 섹션 메뉴">
-      <li role="presentation" class="active">
-        <a href="{{ '/build/' | relative_url }}" role="tab" aria-selected="true" aria-controls="build-overview" id="tab-build-overview">Build Overview</a>
+    <ul class="nav nav-pills org-nav-tabs">
+      <li class="active">
+        <a href="{{ '/build/' | relative_url }}">Build Overview</a>
       </li>
-      <li role="presentation">
-        <a href="{{ '/build/car_build.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="build-car" id="tab-build-car">Car Build</a>
+      <li>
+        <a href="{{ '/build/car_build.html' | relative_url }}">Car Build</a>
       </li>
-      <li role="presentation">
-        <a href="{{ '/build/jetson_setup.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="build-jetson" id="tab-build-jetson">Jetson Setup</a>
+      <li>
+        <a href="{{ '/build/jetson_setup.html' | relative_url }}">Jetson Setup</a>
       </li>
-      <li role="presentation">
-        <a href="{{ '/build/driver_stack.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="build-driver" id="tab-build-driver">Driver Stack</a>
+      <li>
+        <a href="{{ '/build/driver_stack.html' | relative_url }}">Driver Stack</a>
       </li>
-      <li role="presentation">
-        <a href="{{ '/build/drive.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="build-drive" id="tab-build-drive">Drive</a>
+      <li>
+        <a href="{{ '/build/drive.html' | relative_url }}">Drive</a>
       </li>
     </ul>
-
-    <div class="row">
-      <!-- Main Content -->
-      <article class="col-sm-8 maincontent">
 
         <!-- =============================== -->
         <!-- 0. Introduction                -->
@@ -141,16 +137,8 @@ tab_active: "home"
             필요하다면 파라미터를 조정하면서 안정적인 주행을 만들어 가는 것이 중요합니다.
           </p>
 
-          <p class="text-right">
-            <a class="btn btn-primary btn-sm" href="#">
-              빌드 &amp; 설정 상세 문서 보기 &raquo;
-            </a>
-          </p>
         </section>
 
-      </article>
-
-    </div><!-- /.row -->
   </div><!-- /.container -->
 
 </main>

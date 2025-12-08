@@ -1138,6 +1138,10 @@ p {
 /* 전체 조직도 래퍼 */
 .org-chart {
   margin: 40px 0;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
 }
 
 /* 각 레벨(위/아래)을 가로로 가운데 정렬 */
@@ -1145,44 +1149,55 @@ p {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 24px;            /* 박스 사이 간격 */
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 /* 위쪽 레벨(위원장)은 아래와 간격 조금 더 */
 .level-top {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 /* 조직도 박스(위원장 / 부위원장 / 자문위원단) */
 .org-node {
-  min-width: 160px;
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #f9f9f9;
+  min-width: 180px;
+  padding: 16px 24px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
   text-align: center;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.1);
+  transition: all 0.3s ease;
+}
+
+.org-node:hover {
+  border-color: #0ea5e9;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.2);
+  transform: translateY(-2px);
 }
 
 .org-node .title {
   display: block;
   font-weight: 700;
-  margin-bottom: 4px;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #1e293b;
 }
 
 .org-node .desc {
   display: block;
   font-size: 13px;
-  color: #666;
+  color: #64748b;
+  line-height: 1.4;
 }
 
 /* 위원장과 아래 박스들 사이 선 */
 .org-connector {
   position: relative;
   width: 100%;
-  max-width: 420px;
-  height: 30px;
-  margin: 0 auto 10px;  /* 가운데 정렬 + 아래쪽 여백 */
+  max-width: 500px;
+  height: 40px;
+  margin: 0 auto 16px;
 }
 
 /* 위원장에서 내려오는 세로선 */
@@ -1192,7 +1207,7 @@ p {
   left: 50%;
   top: 0;
   bottom: 50%;
-  border-left: 1px solid #ccc;
+  border-left: 2px solid #94a3b8;
   transform: translateX(-50%);
 }
 
@@ -1202,8 +1217,8 @@ p {
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 260px;         /* 가로선 길이. 필요하면 숫자만 조절 */
-  border-top: 1px solid #ccc;
+  width: 320px;
+  border-top: 2px solid #94a3b8;
   transform: translateX(-50%);
 }
 
@@ -1215,7 +1230,16 @@ p {
   }
 
   .org-connector::after {
-    width: 80%;         /* 모바일에서 가로선 길이 줄이기 */
+    width: 80%;
+  }
+  
+  .org-chart {
+    padding: 20px 15px;
+  }
+  
+  .org-node {
+    min-width: 140px;
+    padding: 12px 18px;
   }
 }
 
@@ -2070,6 +2094,8 @@ main.edu-page .edu-schedule-card,
 main.edu-page .edu-table-card {
   padding: 20px 22px;
   margin-bottom: 26px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 main.edu-page .edu-form-card {
@@ -2112,7 +2138,6 @@ main.form-page .form-section-card {
 /* 여러 페이지에서 공통으로 사용되는 CTA 박스 스타일 */
 main.join-page .join-cta-box,
 main.edu-page .edu-cta-box {
-  max-width: var(--container-max-width-narrow);
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary-dark));
   color: var(--color-gray-200);
   border-radius: var(--radius-2xl);
@@ -2126,6 +2151,8 @@ main.join-page .join-cta-box {
 
 main.edu-page .edu-cta-box {
   margin: 10px 0 var(--spacing-xl);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 main.join-page .join-cta-box p,
@@ -2745,30 +2772,109 @@ main.form-page .form-consent label {
 
 .org-page .org-card {
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
-  padding: 22px 22px 26px;
-  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.04);
+  padding: 28px 30px 32px;
+  margin-bottom: 28px;
+  transition: all 0.3s ease;
+}
+
+.org-page .org-card:hover {
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12), 0 2px 6px rgba(15, 23, 42, 0.06);
+  transform: translateY(-2px);
 }
 
 .org-page .org-section-title {
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.org-page .org-subtitle {
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: #334155;
+  line-height: 1.4;
 }
 
 .org-page .org-list {
-  padding-left: 18px;
+  padding-left: 22px;
+  margin-top: 8px;
+  margin-bottom: 12px;
 }
 
 .org-page .org-list li {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.org-page .org-list li strong {
+  color: #1e293b;
+  font-weight: 600;
 }
 
 .org-page .org-help-text {
-  font-size: 13px;
-  color: #6b7280;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.org-page .org-highlight {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-left: 4px solid #0ea5e9;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #0c4a6e;
+}
+
+.org-page .org-highlight strong {
+  color: #075985;
+  font-weight: 700;
+}
+
+.org-page .org-highlight em {
+  font-style: italic;
+  color: #0369a1;
+}
+
+/* 규정 섹션 스타일 개선 */
+.org-page .org-card hr {
+  border: none;
+  border-top: 2px solid #e2e8f0;
+  margin: 28px 0;
+}
+
+.org-page .org-card p strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.org-page .org-card p {
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.org-page .org-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+.org-page .org-card h4 + p {
+  margin-top: 0;
 }
 
 /* CI 섹션 */
@@ -2777,44 +2883,100 @@ main.form-page .form-consent label {
 }
 
 .org-page .org-ci-grid {
-  margin-top: 18px;
+  margin-top: 24px;
 }
 
 .org-page .org-ci-item {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.org-page .org-ci-item:hover {
+  transform: translateY(-4px);
 }
 
 .org-page .org-ci-thumb {
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #e5e7eb;
   background: #f9fafb;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.org-page .org-ci-item:hover .org-ci-thumb {
+  border-color: #0ea5e9;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.2);
 }
 
 .org-page .org-ci-thumb img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.org-page .org-ci-item:hover .org-ci-thumb img {
+  transform: scale(1.05);
 }
 
 .org-page .org-ci-caption {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #6b7280;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+  text-align: center;
 }
 
-/* Sidebar 약간만 정리 */
+/* Sidebar 개선 */
 .org-page .org-sidebar .org-panel {
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #e5e7eb;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  padding: 20px;
+  margin-bottom: 24px;
 }
 
 .org-page .org-sidebar .org-panel h4 {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1e293b;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.org-page .org-partner-list {
+  list-style: none;
+  padding-left: 0;
 }
 
 .org-page .org-partner-list li {
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.org-page .org-partner-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.org-page .org-partner-list li strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.org-page .org-partner-list li .small {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #64748b;
+  display: block;
 }
 
 /* ============================
