@@ -3128,6 +3128,40 @@ main.form-page .help-text {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
+/* Search toggle button next to logo */
+.navbar-search-toggle {
+  display: inline-block;
+  padding: 15px 10px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  vertical-align: middle;
+  line-height: 20px;
+  transition: color var(--transition-base);
+}
+
+.navbar-search-toggle:hover,
+.navbar-search-toggle:focus {
+  color: #0ecfec;
+  background: transparent;
+  text-decoration: none;
+}
+
+.navbar-search-toggle .fa-search {
+  font-size: 18px;
+}
+
+/* Search form next to logo */
+.navbar-search-form {
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.navbar-search-form .form-control {
+  width: 250px;
+}
+
+/* Legacy search-toggle (for backward compatibility) */
 .search-toggle a {
   padding: 15px;
   color: #fff;
@@ -3144,6 +3178,23 @@ main.form-page .help-text {
   font-size: 16px;
 }
 
+@media (max-width: 767px) {
+  .navbar-search-toggle {
+    margin-left: 5px;
+    padding: 15px 5px;
+  }
+  
+  .navbar-search-form {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .navbar-search-form .form-control {
+    width: 100%;
+  }
+}
+
 /* =========================================
    Dropdown Menu Styling
    ========================================= */
@@ -3155,6 +3206,12 @@ main.form-page .help-text {
   margin-top: 0;
   min-width: 200px;
   padding: 5px 0;
+}
+
+/* Right-aligned dropdown menus */
+.navbar-nav .dropdown-menu-right {
+  right: 0;
+  left: auto;
 }
 
 .navbar-nav .dropdown-menu > li > a {
