@@ -92,6 +92,100 @@ Licence: Creative Commons Attribution 3.0** - http://creativecommons.org/license
 }
 
 /* =========================================
+   Performance: Lazy Loading Images
+   ========================================= */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Prevent layout shift for images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   Accessibility Styles
+   ========================================= */
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Enhanced focus styles for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* Tab navigation focus */
+[role="tab"]:focus {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 2px;
+  border-radius: var(--radius-full);
+}
+
+/* Menu item focus */
+[role="menuitem"]:focus {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 2px;
+  background-color: rgba(29, 78, 216, 0.1);
+}
+
+/* Form input focus */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* =========================================
    General Styles
    ========================================= */
 h1, h2, h3, h4, h5, h6 {

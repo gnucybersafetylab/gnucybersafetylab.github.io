@@ -16,12 +16,12 @@ nav_active: "join"
   <div class="container form-container">
 
     <!-- 탭 메뉴 -->
-    <ul class="nav nav-pills org-nav-tabs">
-      <li>
-        <a href="{{ '/join/' | relative_url }}">가입 안내 (Overview)</a>
+    <ul class="nav nav-pills org-nav-tabs" role="tablist" aria-label="Join 섹션 메뉴">
+      <li role="presentation">
+        <a href="{{ '/join/' | relative_url }}" role="tab" aria-selected="false" aria-controls="join-overview" id="tab-join-overview">가입 안내 (Overview)</a>
       </li>
-      <li class="active">
-        <a href="{{ '/join/apply/' | relative_url }}">가입 신청서 (Application Form)</a>
+      <li role="presentation" class="active">
+        <a href="{{ '/join/apply/' | relative_url }}" role="tab" aria-selected="true" aria-controls="join-apply" id="tab-join-apply">가입 신청서 (Application Form)</a>
       </li>
     </ul>
 
@@ -55,9 +55,9 @@ nav_active: "join"
 
           <div class="form-group">
             <label for="member-type">
-              <strong>신청자 유형 (Applicant Type) <span style="color:#d9534f;">*</span></strong>
+              <strong>신청자 유형 (Applicant Type) <span style="color:#d9534f;" aria-label="필수 항목">*</span></strong>
             </label>
-            <select id="member-type" name="member_type" class="form-control" required>
+            <select id="member-type" name="member_type" class="form-control" required aria-required="true" aria-describedby="member-type-help">
               <option value="">-- 선택하세요 (Please select) --</option>
               <option value="professor">교수 / 연구자 (Professor / Researcher)</option>
               <option value="student">학생 / 동아리 (Student / Club)</option>
@@ -65,28 +65,35 @@ nav_active: "join"
               <option value="institute">연구소 / 공공기관 (Research Institute / Public Institution)</option>
               <option value="other">기타 (Other)</option>
             </select>
+            <span id="member-type-help" class="sr-only">신청자 유형을 선택해주세요</span>
           </div>
 
           <div class="row">
             <!-- 성명 / 단체명 (KO) -->
             <div class="col-sm-6">
               <div class="form-group">
-                <label>
-                  <strong>성명 또는 단체명 (Korean) <span style="color:#d9534f;">*</span></strong>
+                <label for="name-ko">
+                  <strong>성명 또는 단체명 (Korean) <span style="color:#d9534f;" aria-label="필수 항목">*</span></strong>
                 </label>
-                <input type="text" class="form-control"
+                <input type="text" id="name-ko" class="form-control"
                        name="name_ko"
-                       placeholder="한글 이름 또는 기관명" required>
+                       placeholder="한글 이름 또는 기관명" 
+                       required
+                       aria-required="true"
+                       aria-describedby="name-ko-help">
+                <span id="name-ko-help" class="sr-only">한글 이름 또는 기관명을 입력해주세요</span>
               </div>
             </div>
 
             <!-- 성명 / 단체명 (EN) -->
             <div class="col-sm-6">
               <div class="form-group">
-                <label>영문 이름 또는 단체명 (optional)</label>
-                <input type="text" class="form-control"
+                <label for="name-en">영문 이름 또는 단체명 (optional)</label>
+                <input type="text" id="name-en" class="form-control"
                        name="name_en"
-                       placeholder="English name">
+                       placeholder="English name"
+                       aria-describedby="name-en-help">
+                <span id="name-en-help" class="sr-only">영문 이름 또는 단체명을 입력해주세요 (선택사항)</span>
               </div>
             </div>
           </div>
@@ -95,22 +102,28 @@ nav_active: "join"
             <!-- 소속 -->
             <div class="col-sm-6">
               <div class="form-group">
-                <label>
-                  <strong>소속 (Affiliation) <span style="color:#d9534f;">*</span></strong>
+                <label for="affiliation">
+                  <strong>소속 (Affiliation) <span style="color:#d9534f;" aria-label="필수 항목">*</span></strong>
                 </label>
-                <input type="text" class="form-control"
+                <input type="text" id="affiliation" class="form-control"
                        name="affiliation"
-                       placeholder="예: 경상국립대 AI정보공학과 / ○○기업" required>
+                       placeholder="예: 경상국립대 AI정보공학과 / ○○기업" 
+                       required
+                       aria-required="true"
+                       aria-describedby="affiliation-help">
+                <span id="affiliation-help" class="sr-only">소속 기관을 입력해주세요</span>
               </div>
             </div>
 
             <!-- 직위 -->
             <div class="col-sm-6">
               <div class="form-group">
-                <label>직위/학년 (Position / Year)</label>
-                <input type="text" class="form-control"
+                <label for="position">직위/학년 (Position / Year)</label>
+                <input type="text" id="position" class="form-control"
                        name="position"
-                       placeholder="예: 교수, 박사과정, 3학년 등">
+                       placeholder="예: 교수, 박사과정, 3학년 등"
+                       aria-describedby="position-help">
+                <span id="position-help" class="sr-only">직위 또는 학년을 입력해주세요 (선택사항)</span>
               </div>
             </div>
           </div>
@@ -119,22 +132,28 @@ nav_active: "join"
             <!-- 이메일 -->
             <div class="col-sm-6">
               <div class="form-group">
-                <label>
-                  <strong>이메일 (Email) <span style="color:#d9534f;">*</span></strong>
+                <label for="email">
+                  <strong>이메일 (Email) <span style="color:#d9534f;" aria-label="필수 항목">*</span></strong>
                 </label>
-                <input type="email" class="form-control"
+                <input type="email" id="email" class="form-control"
                        name="email"
-                       placeholder="name@example.com" required>
+                       placeholder="name@example.com" 
+                       required
+                       aria-required="true"
+                       aria-describedby="email-help">
+                <span id="email-help" class="sr-only">이메일 주소를 입력해주세요</span>
               </div>
             </div>
 
             <!-- 연락처 -->
             <div class="col-sm-6">
               <div class="form-group">
-                <label>연락처 (Phone)</label>
-                <input type="text" class="form-control"
+                <label for="phone">연락처 (Phone)</label>
+                <input type="tel" id="phone" class="form-control"
                        name="phone"
-                       placeholder="+82-10-0000-0000">
+                       placeholder="+82-10-0000-0000"
+                       aria-describedby="phone-help">
+                <span id="phone-help" class="sr-only">연락처를 입력해주세요 (선택사항)</span>
               </div>
             </div>
           </div>

@@ -16,21 +16,21 @@ tab_active: "home"
   <div class="container">
 
     <!-- 🔹 Build 상단 서브 탭 -->
-    <ul class="nav nav-pills org-nav-tabs">
-      <li class="active">
-        <a href="{{ '/build/' | relative_url }}">Build Overview</a>
+    <ul class="nav nav-pills org-nav-tabs" role="tablist" aria-label="Build 섹션 메뉴">
+      <li role="presentation" class="active">
+        <a href="{{ '/build/' | relative_url }}" role="tab" aria-selected="true" aria-controls="build-overview" id="tab-build-overview">Build Overview</a>
       </li>
-      <li>
-        <a href="{{ '/build/car_build.html' | relative_url }}">Car Build</a>
+      <li role="presentation">
+        <a href="{{ '/build/car_build.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="build-car" id="tab-build-car">Car Build</a>
       </li>
-      <li>
-        <a href="{{ '/build/jetson_setup.html' | relative_url }}">Jetson Setup</a>
+      <li role="presentation">
+        <a href="{{ '/build/jetson_setup.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="build-jetson" id="tab-build-jetson">Jetson Setup</a>
       </li>
-      <li>
-        <a href="{{ '/build/driver_stack.html' | relative_url }}">Driver Stack</a>
+      <li role="presentation">
+        <a href="{{ '/build/driver_stack.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="build-driver" id="tab-build-driver">Driver Stack</a>
       </li>
-      <li>
-        <a href="{{ '/build/drive.html' | relative_url }}">Drive</a>
+      <li role="presentation">
+        <a href="{{ '/build/drive.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="build-drive" id="tab-build-drive">Drive</a>
       </li>
     </ul>
 

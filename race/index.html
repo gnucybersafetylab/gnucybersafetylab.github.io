@@ -15,12 +15,12 @@ nav_active: "race"
   <div class="container race-page-container">
 
     <!-- Tabs -->
-    <ul class="nav nav-pills org-nav-tabs">
-      <li class="active">
-        <a href="{{ '/race/' | relative_url }}">Races</a>
+    <ul class="nav nav-pills org-nav-tabs" role="tablist" aria-label="Race 섹션 메뉴">
+      <li role="presentation" class="active">
+        <a href="{{ '/race/' | relative_url }}" role="tab" aria-selected="true" aria-controls="race-events" id="tab-race-events">Races</a>
       </li>
-      <li>
-        <a href="{{ '/race/rules/' | relative_url }}">Race Rules</a>
+      <li role="presentation">
+        <a href="{{ '/race/rules/' | relative_url }}" role="tab" aria-selected="false" aria-controls="race-rules" id="tab-race-rules">Race Rules</a>
       </li>
     </ul>
 

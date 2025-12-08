@@ -21,15 +21,15 @@ tab_active: "home"
   <!-- =========================== -->
   <!-- 상단 탭 메뉴 -->
   <!-- =========================== -->
-  <ul class="nav nav-pills org-nav-tabs">
-    <li class="active">
-      <a href="{{ '/learn/' | relative_url }}">Learn Overview</a>
+  <ul class="nav nav-pills org-nav-tabs" role="tablist" aria-label="Learn 섹션 메뉴">
+    <li role="presentation" class="active">
+      <a href="{{ '/learn/' | relative_url }}" role="tab" aria-selected="true" aria-controls="learn-overview" id="tab-learn-overview">Learn Overview</a>
     </li>
-    <li>
-      <a href="{{ '/learn/courses.html' | relative_url }}">Course & Resource</a>
+    <li role="presentation">
+      <a href="{{ '/learn/courses.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="learn-courses" id="tab-learn-courses">Course & Resource</a>
     </li>
-    <li>
-      <a href="{{ '/learn/edu' | relative_url }}">Edu</a>
+    <li role="presentation">
+      <a href="{{ '/learn/edu' | relative_url }}" role="tab" aria-selected="false" aria-controls="learn-edu" id="tab-learn-edu">Edu</a>
     </li>
   </ul>
 

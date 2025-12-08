@@ -1,31 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta name="description" content="RoboRacer Korea — 자율주행 교육·연구·경진대회 커뮤니티">
-  <meta name="keywords" content="RoboRacer, F1TENTH, 자율주행, ROS2, SLAM, 레이싱, Korea">
-  <meta name="author" content="RoboRacer Korea">
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Roboracer Foundation – Education, Racing, and Research for autonomous driving with 1/10-scale platforms.">
-  <meta name="author" content="Roboracer Foundation">
-
+  
+  <!-- Primary Meta Tags -->
   <title>
     {% if page.title %}
-      {{ page.title }} | Roboracer Foundation
+      {{ page.title }} | RoboRacer Korea
     {% else %}
-      Roboracer Foundation
+      RoboRacer Korea — 자율주행 교육·연구·경진대회 커뮤니티
     {% endif %}
   </title>
-
+  
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% else %}
+    <meta name="description" content="RoboRacer Korea는 1/10 스케일 자율주행 플랫폼을 기반으로 교육, 경진대회, 연구 활동을 지원하는 비영리 협력 조직입니다. F1TENTH, ROS2, SLAM 등 자율주행 기술을 배우고 실전 경험을 쌓을 수 있습니다.">
+  {% endif %}
+  
+  <meta name="keywords" content="RoboRacer, F1TENTH, 자율주행, ROS2, SLAM, 레이싱, Korea, autonomous driving, robotics, education, research">
+  <meta name="author" content="RoboRacer Korea">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url | relative_url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | RoboRacer Korea{% else %}RoboRacer Korea — 자율주행 교육·연구·경진대회 커뮤니티{% endif %}">
+  {% if page.description %}
+    <meta property="og:description" content="{{ page.description }}">
+  {% else %}
+    <meta property="og:description" content="RoboRacer Korea는 1/10 스케일 자율주행 플랫폼을 기반으로 교육, 경진대회, 연구 활동을 지원하는 비영리 협력 조직입니다.">
+  {% endif %}
+  <meta property="og:image" content="{{ site.url }}{{ '/assets/images/logo_korea.png' | relative_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="RoboRacer Korea">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url | relative_url }}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | RoboRacer Korea{% else %}RoboRacer Korea{% endif %}">
+  {% if page.description %}
+    <meta name="twitter:description" content="{{ page.description }}">
+  {% else %}
+    <meta name="twitter:description" content="RoboRacer Korea는 1/10 스케일 자율주행 플랫폼을 기반으로 교육, 경진대회, 연구 활동을 지원하는 비영리 협력 조직입니다.">
+  {% endif %}
+  <meta name="twitter:image" content="{{ site.url }}{{ '/assets/images/logo_korea.png' | relative_url }}">
+  
+  <!-- Favicon -->
   <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
-  <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/logo_korea.png' | relative_url }}">
+  
+  <!-- Performance: Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://code.jquery.com">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/bootstrap-theme.css' | relative_url }}" media="screen">
   <link rel="stylesheet" href="{{ '/assets/css/da-slider.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RoboRacer Korea",
+    "alternateName": "F1TENTH Korea",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}{{ '/assets/images/logo_korea.png' | relative_url }}",
+    "description": "RoboRacer Korea는 1/10 스케일 자율주행 플랫폼을 기반으로 교육, 경진대회, 연구 활동을 지원하는 비영리 협력 조직입니다.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "경남 진주시 진주대로 501, 경상국립대 ICT융합센터 313호",
+      "addressLocality": "진주시",
+      "addressRegion": "경상남도",
+      "postalCode": "52828",
+      "addressCountry": "KR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+82-55-772-9174",
+      "contactType": "customer service",
+      "email": "roboracer.korea@gmail.com",
+      "availableLanguage": ["ko", "en"]
+    },
+    "sameAs": [
+      "https://github.com/gnucybersafetylab"
+    ]
+  }
+  </script>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -34,68 +104,72 @@
   <![endif]-->
 </head>
 <body>
+  <!-- Skip to main content link for screen readers -->
+  <a href="#main-content" class="sr-only sr-only-focusable skip-link">본문으로 바로가기</a>
+  
   <!-- Fixed navbar -->
-  <div class="navbar navbar-inverse navbar-fixed-top headroom">
+  <nav class="navbar navbar-inverse navbar-fixed-top headroom" role="navigation" aria-label="주요 메뉴">
     <div class="container">
       <div class="navbar-header">
         <!-- Button for smallest screens -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span> 
-          <span class="icon-bar"></span> 
-          <span class="icon-bar"></span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-label="메뉴 열기" aria-expanded="false" aria-controls="main-navigation">
+          <span class="icon-bar" aria-hidden="true"></span> 
+          <span class="icon-bar" aria-hidden="true"></span> 
+          <span class="icon-bar" aria-hidden="true"></span>
+          <span class="sr-only">메뉴 토글</span>
         </button>
-        <a class="navbar-brand" href="{{ '/' | relative_url }}">
-          <img src="{{ '/assets/images/logo_korea.png' | relative_url }}" alt="Roboracer Foundation logo">
+        <a class="navbar-brand" href="{{ '/' | relative_url }}" aria-label="RoboRacer Korea 홈페이지로 이동">
+          <img src="{{ '/assets/images/logo_korea.png' | relative_url }}" alt="RoboRacer Korea 로고" width="150" height="50">
         </a>
       </div>
 
-        <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav pull-right">
+        <div class="navbar-collapse collapse" id="main-navigation">
+    <ul class="nav navbar-nav pull-right" role="menubar">
 
-      <li {% if page.nav_active == 'home' %}class="active"{% endif %}>
-        <a href="{{ '/' | relative_url }}">About</a>
+      <li role="none" {% if page.nav_active == 'home' %}class="active"{% endif %}>
+        <a href="{{ '/' | relative_url }}" role="menuitem" {% if page.nav_active == 'home' %}aria-current="page"{% endif %}>About</a>
       </li>
 
-      <li {% if page.nav_active == 'organization' %}class="active"{% endif %}>
-        <a href="{{ '/organization' | relative_url }}">Organization</a>
+      <li role="none" {% if page.nav_active == 'organization' %}class="active"{% endif %}>
+        <a href="{{ '/organization' | relative_url }}" role="menuitem" {% if page.nav_active == 'organization' %}aria-current="page"{% endif %}>Organization</a>
       </li>
 
       <!-- 🔹 Build 메뉴 추가 -->
-      <li {% if page.nav_active == 'build' %}class="active"{% endif %}>
-        <a href="{{ '/build' | relative_url }}">Build</a>
+      <li role="none" {% if page.nav_active == 'build' %}class="active"{% endif %}>
+        <a href="{{ '/build' | relative_url }}" role="menuitem" {% if page.nav_active == 'build' %}aria-current="page"{% endif %}>Build</a>
       </li>
 
-      <li {% if page.nav_active == 'learn' %}class="active"{% endif %}>
-        <a href="{{ '/learn' | relative_url }}">Learn</a>
+      <li role="none" {% if page.nav_active == 'learn' %}class="active"{% endif %}>
+        <a href="{{ '/learn' | relative_url }}" role="menuitem" {% if page.nav_active == 'learn' %}aria-current="page"{% endif %}>Learn</a>
       </li>
 
-      <li {% if page.nav_active == 'race' %}class="active"{% endif %}>
-        <a href="{{ '/race' | relative_url }}">Race</a>
+      <li role="none" {% if page.nav_active == 'race' %}class="active"{% endif %}>
+        <a href="{{ '/race' | relative_url }}" role="menuitem" {% if page.nav_active == 'race' %}aria-current="page"{% endif %}>Race</a>
       </li>
 
-      <li {% if page.nav_active == 'events' %}class="active"{% endif %}>
-        <a href="{{ '/events' | relative_url }}">Events</a>
+      <li role="none" {% if page.nav_active == 'events' %}class="active"{% endif %}>
+        <a href="{{ '/events' | relative_url }}" role="menuitem" {% if page.nav_active == 'events' %}aria-current="page"{% endif %}>Events</a>
       </li>
 
-      <li {% if page.nav_active == 'research' %}class="active"{% endif %}>
-        <a href="{{ '/research.html' | relative_url }}">Research</a>
+      <li role="none" {% if page.nav_active == 'research' %}class="active"{% endif %}>
+        <a href="{{ '/research.html' | relative_url }}" role="menuitem" {% if page.nav_active == 'research' %}aria-current="page"{% endif %}>Research</a>
       </li>
 
-      <li {% if page.nav_active == 'community' %}class="active"{% endif %}>
-        <a href="{{ '/community.html' | relative_url }}">Community</a>
+      <li role="none" {% if page.nav_active == 'community' %}class="active"{% endif %}>
+        <a href="{{ '/community.html' | relative_url }}" role="menuitem" {% if page.nav_active == 'community' %}aria-current="page"{% endif %}>Community</a>
       </li>
 
       <!-- 🔹 News 메뉴 추가 -->
-      <li {% if page.nav_active == 'news' %}class="active"{% endif %}>
-        <a href="{{ '/news' | relative_url }}">News</a>
+      <li role="none" {% if page.nav_active == 'news' %}class="active"{% endif %}>
+        <a href="{{ '/news' | relative_url }}" role="menuitem" {% if page.nav_active == 'news' %}aria-current="page"{% endif %}>News</a>
       </li>
 
-      <li {% if page.nav_active == 'record' %}class="active"{% endif %}>
-        <a href="{{ '/record.html' | relative_url }}">Record</a>
+      <li role="none" {% if page.nav_active == 'record' %}class="active"{% endif %}>
+        <a href="{{ '/record.html' | relative_url }}" role="menuitem" {% if page.nav_active == 'record' %}aria-current="page"{% endif %}>Record</a>
       </li>
 
-      <li {% if page.nav_active == 'join' %}class="active"{% endif %}>
-        <a href="{{ '/join' | relative_url }}">Join</a>
+      <li role="none" {% if page.nav_active == 'join' %}class="active"{% endif %}>
+        <a href="{{ '/join' | relative_url }}" role="menuitem" {% if page.nav_active == 'join' %}aria-current="page"{% endif %}>Join</a>
       </li>
 
     </ul>
@@ -103,11 +177,11 @@
 
 
     </div>
-  </div> 
+  </nav> 
   <!-- /.navbar -->
 
   <!-- 메인 콘텐츠 -->
-  <main role="main">
+  <main role="main" id="main-content" tabindex="-1">
     {{ content }}
   </main>
 
@@ -149,11 +223,11 @@
           <h3 class="panel-title">Follow us</h3>
           <div class="panel-body">
             <p class="follow-me-icons">
-              <a href=""><i class="fa fa-twitter fa-2"></i></a>
-              <a href=""><i class="fa fa-github fa-2"></i></a>
-              <a href=""><i class="fa fa-facebook fa-2"></i></a>
-              <a href=""><i class="fa fa-youtube fa-2"></i></a>
-              <a href=""><i class="fa fa-pinterest fa-2"></i></a>
+              <a href="" aria-label="Twitter에서 RoboRacer Korea 팔로우"><i class="fa fa-twitter fa-2" aria-hidden="true"></i></a>
+              <a href="" aria-label="GitHub에서 RoboRacer Korea 팔로우"><i class="fa fa-github fa-2" aria-hidden="true"></i></a>
+              <a href="" aria-label="Facebook에서 RoboRacer Korea 팔로우"><i class="fa fa-facebook fa-2" aria-hidden="true"></i></a>
+              <a href="" aria-label="YouTube에서 RoboRacer Korea 팔로우"><i class="fa fa-youtube fa-2" aria-hidden="true"></i></a>
+              <a href="" aria-label="Pinterest에서 RoboRacer Korea 팔로우"><i class="fa fa-pinterest fa-2" aria-hidden="true"></i></a>
             </p> 
           </div>
         </div>
@@ -201,7 +275,7 @@
 <!-- JS (필수 순서 유지) -->
 <script src="{{ '/assets/js/modernizr-latest.js' | relative_url }}"></script>
 
-<!-- jQuery -->
+<!-- jQuery (must load before dependent scripts) -->
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <!-- Bootstrap JS (로컬 버전 사용) -->
@@ -217,6 +291,37 @@
 
   <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Lazy loading images: Add loaded class when image loads
+    var lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    if ('loading' in HTMLImageElement.prototype) {
+      // Native lazy loading supported
+      lazyImages.forEach(function(img) {
+        img.addEventListener('load', function() {
+          img.classList.add('loaded');
+        });
+        // If already loaded (cached), add class immediately
+        if (img.complete) {
+          img.classList.add('loaded');
+        }
+      });
+    } else {
+      // Fallback for browsers without native lazy loading
+      var imageObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var img = entry.target;
+            img.src = img.dataset.src || img.src;
+            img.classList.add('loaded');
+            observer.unobserve(img);
+          }
+        });
+      });
+      lazyImages.forEach(function(img) {
+        imageObserver.observe(img);
+      });
+    }
+    
+    // Sidebar menu toggles
     var toggles = document.querySelectorAll(".sidebar-menu .toggle");
 
     toggles.forEach(function (t) {
@@ -224,10 +329,98 @@
         var next = t.nextElementSibling;
         if (next && next.classList.contains("sub-items")) {
           // 접힘/펼침 토글
-          next.style.display = (next.style.display === "block") ? "none" : "block";
+          var isExpanded = next.style.display === "block";
+          next.style.display = isExpanded ? "none" : "block";
+          t.setAttribute("aria-expanded", !isExpanded);
+        }
+      });
+      
+      // 키보드 접근성: Enter와 Space 키 지원
+      t.addEventListener("keydown", function(e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          t.click();
         }
       });
     });
+    
+    // Navigation menu toggle accessibility
+    var navToggle = document.querySelector(".navbar-toggle");
+    var navCollapse = document.querySelector(".navbar-collapse");
+    
+    if (navToggle && navCollapse) {
+      navCollapse.addEventListener("show.bs.collapse", function() {
+        navToggle.setAttribute("aria-expanded", "true");
+        navToggle.setAttribute("aria-label", "메뉴 닫기");
+      });
+      
+      navCollapse.addEventListener("hide.bs.collapse", function() {
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "메뉴 열기");
+      });
+    }
+    
+    // Tab navigation keyboard support
+    var tabLists = document.querySelectorAll('.org-nav-tabs[role="tablist"]');
+    tabLists.forEach(function(tabList) {
+      var tabs = tabList.querySelectorAll('[role="tab"]');
+      
+      tabs.forEach(function(tab, index) {
+        // Set initial aria-selected state
+        var isActive = tab.parentElement.classList.contains('active') || tab.classList.contains('active');
+        tab.setAttribute('aria-selected', isActive);
+        
+        tab.addEventListener("keydown", function(e) {
+          var currentIndex = Array.from(tabs).indexOf(tab);
+          var nextIndex;
+          
+          switch(e.key) {
+            case "ArrowRight":
+              e.preventDefault();
+              nextIndex = (currentIndex + 1) % tabs.length;
+              tabs[nextIndex].focus();
+              tabs[nextIndex].click();
+              break;
+            case "ArrowLeft":
+              e.preventDefault();
+              nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+              tabs[nextIndex].focus();
+              tabs[nextIndex].click();
+              break;
+            case "Home":
+              e.preventDefault();
+              tabs[0].focus();
+              tabs[0].click();
+              break;
+            case "End":
+              e.preventDefault();
+              tabs[tabs.length - 1].focus();
+              tabs[tabs.length - 1].click();
+              break;
+          }
+        });
+        
+        // Update aria-selected when tab is clicked
+        tab.addEventListener("click", function() {
+          tabs.forEach(function(t) {
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.setAttribute('aria-selected', 'true');
+        });
+      });
+    });
+    
+    // Bootstrap tab events - update aria-selected for Bootstrap tabs
+    if (typeof jQuery !== 'undefined') {
+      jQuery('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var target = jQuery(e.target);
+        var tabList = target.closest('[role="tablist"]');
+        if (tabList.length) {
+          tabList.find('[role="tab"]').attr('aria-selected', 'false');
+          target.attr('aria-selected', 'true');
+        }
+      });
+    }
   });
   </script>
 

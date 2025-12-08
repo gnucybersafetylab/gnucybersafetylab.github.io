@@ -16,15 +16,15 @@ org_tab: "home"
   <div class="container">
 
     <!-- ⬇️ 상단 탭 메뉴 -->
-    <ul class="nav nav-pills org-nav-tabs">
-      <li class="active">
-        <a href="{{ '/organization/' | relative_url }}">조직 소개</a>
+    <ul class="nav nav-pills org-nav-tabs" role="tablist" aria-label="Organization 섹션 메뉴">
+      <li role="presentation" class="active">
+        <a href="{{ '/organization/' | relative_url }}" role="tab" aria-selected="true" aria-controls="org-intro" id="tab-org-intro">조직 소개</a>
       </li>
-      <li>
-        <a href="{{ '/organization/vision/' | relative_url }}">비전</a>
+      <li role="presentation">
+        <a href="{{ '/organization/vision/' | relative_url }}" role="tab" aria-selected="false" aria-controls="org-vision" id="tab-org-vision">비전</a>
       </li>
-      <li>
-        <a href="{{ '/organization/structure/' | relative_url }}">조직 구조 및 규정</a>
+      <li role="presentation">
+        <a href="{{ '/organization/structure/' | relative_url }}" role="tab" aria-selected="false" aria-controls="org-structure" id="tab-org-structure">조직 구조 및 규정</a>
       </li>
     </ul>
 
@@ -86,7 +86,10 @@ org_tab: "home"
               <div class="org-ci-thumb">
                 <img src="/assets/images/bg_header.jpg"
                      class="img-responsive"
-                     alt="RoboRacer BG Header">
+                     alt="RoboRacer BG Header"
+                     loading="lazy"
+                     width="300"
+                     height="200">
               </div>
               <p class="org-ci-caption">Header Background</p>
             </div>
@@ -95,7 +98,10 @@ org_tab: "home"
               <div class="org-ci-thumb">
                 <img src="/assets/images/logo_korea.png"
                      class="img-responsive"
-                     alt="RoboRacer Korea Logo">
+                     alt="RoboRacer Korea Logo"
+                     loading="lazy"
+                     width="300"
+                     height="200">
               </div>
               <p class="org-ci-caption">Main Logo</p>
             </div>
@@ -104,7 +110,10 @@ org_tab: "home"
               <div class="org-ci-thumb">
                 <img src="/assets/images/roboracer_korea.png"
                      class="img-responsive"
-                     alt="RoboRacer Korea White Logo">
+                     alt="RoboRacer Korea White Logo"
+                     loading="lazy"
+                     width="300"
+                     height="200">
               </div>
               <p class="org-ci-caption">White Logo</p>
             </div>
@@ -113,7 +122,10 @@ org_tab: "home"
               <div class="org-ci-thumb">
                 <img src="/assets/images/roboracer_korea_black.png"
                      class="img-responsive"
-                     alt="RoboRacer Korea Black Logo">
+                     alt="RoboRacer Korea Black Logo"
+                     loading="lazy"
+                     width="300"
+                     height="200">
               </div>
               <p class="org-ci-caption">Black Logo</p>
             </div>
