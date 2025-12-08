@@ -215,39 +215,6 @@
 
   <!-- 메인 콘텐츠 -->
   <main role="main" id="main-content" tabindex="-1">
-    <!-- Breadcrumb Navigation -->
-    {% unless page.breadcrumb == false %}
-    {% if page.url != '/' %}
-    <nav aria-label="breadcrumb" class="breadcrumb-nav">
-      <div class="container">
-        <ol class="breadcrumb">
-          {% assign path_parts = page.url | split: '/' %}
-          {% assign current_path = '' %}
-          {% for part in path_parts %}
-            {% if part != '' %}
-              {% assign current_path = current_path | append: '/' | append: part %}
-              {% if forloop.last %}
-                <li class="active" aria-current="page">
-                  {% if page.breadcrumb_title %}
-                    {{ page.breadcrumb_title }}
-                  {% elsif page.title %}
-                    {{ page.title }}
-                  {% else %}
-                    {{ part | replace: '.html', '' | capitalize }}
-                  {% endif %}
-                </li>
-              {% else %}
-                {% assign part_url = current_path | append: '/' %}
-                <li><a href="{{ part_url | relative_url }}">{{ part | capitalize }}</a></li>
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-        </ol>
-      </div>
-    </nav>
-    {% endif %}
-    {% endunless %}
-    
     {{ content }}
   </main>
   

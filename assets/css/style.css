@@ -741,7 +741,7 @@ color: #ee0c45;
 #head.secondary {
   background: #f5f5f5;        /* 연한 회색 배경 (원하면 변경 가능) */
   padding-top: 0;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
   min-height: 0px;
   text-align: left;           /* 원래 about 페이지처럼 왼쪽 정렬 */
   color: #333;                /* 🔥 여기서 글자색을 다시 어두운 색으로 */
@@ -1615,7 +1615,7 @@ main.join-page #head.secondary,
 main.events-page #head.secondary {
   background: var(--bg-gray-light);
   padding-top: 0;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
   min-height: 0px;
   text-align: left;
   color: var(--color-text-primary);
