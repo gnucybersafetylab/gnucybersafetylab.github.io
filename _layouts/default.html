@@ -144,7 +144,7 @@
       </li>
 
       <!-- Programs Dropdown -->
-      <li class="dropdown {% if page.nav_active == 'build' or page.nav_active == 'learn' or page.nav_active == 'race' or page.nav_active == 'events' or page.nav_active == 'research' %}active{% endif %}">
+      <li class="dropdown {% if page.nav_active == 'build' or page.nav_active == 'learn' or page.nav_active == 'race' or page.nav_active == 'events' or page.nav_active == 'research' or page.nav_active == 'education' %}active{% endif %}">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
           Programs <span class="caret"></span>
         </a>
@@ -158,11 +158,14 @@
           <li {% if page.nav_active == 'race' %}class="active"{% endif %}>
             <a href="{{ '/race' | relative_url }}" {% if page.nav_active == 'race' %}aria-current="page"{% endif %}>Race</a>
           </li>
+          <li {% if page.nav_active == 'research' %}class="active"{% endif %}>
+            <a href="{{ '/research.html' | relative_url }}" {% if page.nav_active == 'research' %}aria-current="page"{% endif %}>Research</a>
+          </li>
           <li {% if page.nav_active == 'events' %}class="active"{% endif %}>
             <a href="{{ '/events' | relative_url }}" {% if page.nav_active == 'events' %}aria-current="page"{% endif %}>Events</a>
           </li>
-          <li {% if page.nav_active == 'research' %}class="active"{% endif %}>
-            <a href="{{ '/research.html' | relative_url }}" {% if page.nav_active == 'research' %}aria-current="page"{% endif %}>Research</a>
+          <li {% if page.nav_active == 'education' %}class="active"{% endif %}>
+            <a href="{{ '/learn/edu' | relative_url }}" {% if page.nav_active == 'education' %}aria-current="page"{% endif %}>Education</a>
           </li>
         </ul>
       </li>

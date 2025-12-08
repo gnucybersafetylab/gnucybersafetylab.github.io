@@ -205,6 +205,12 @@ document.addEventListener("DOMContentLoaded", function () {
         keywords: '연구, 논문, 데이터셋, research, 연구 활동' 
       },
       { 
+        title: 'Education', 
+        titleKo: '교육 프로그램', 
+        url: '/learn/edu/', 
+        keywords: '교육, 교육 프로그램, 초급 과정, 중급 과정, 교육 신청, education, edu, 교육 과정' 
+      },
+      { 
         title: 'Community', 
         titleKo: '커뮤니티', 
         url: '/community.html', 
