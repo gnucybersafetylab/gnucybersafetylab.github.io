@@ -1611,13 +1611,9 @@ main.news-page .news-badge {
 
 
 /* =========================================
-   공통: Navigation Pills (탭 메뉴)
+   공통: Navigation Pills (탭 메뉴) - Form 페이지 전용
    ========================================= */
-/* 여러 페이지에서 공통으로 사용되는 탭 메뉴 스타일 */
-main.learn-page .nav.nav-pills > li > a,
-main.edu-page .nav.nav-pills > li > a,
-main.race-rules-page .nav.nav-pills > li > a,
-main.race-events-page .race-nav-tabs > li > a,
+/* form 페이지에서만 사용되는 탭 메뉴 스타일 (org-nav-tabs와 다른 스타일) */
 main.form-page .form-nav-tabs > li > a {
   border-radius: var(--radius-full);
   padding: var(--spacing-sm) var(--spacing-md);
@@ -1625,10 +1621,6 @@ main.form-page .form-nav-tabs > li > a {
   color: var(--color-gray-700);
 }
 
-main.learn-page .nav.nav-pills > li.active > a,
-main.edu-page .nav.nav-pills > li.active > a,
-main.race-rules-page .nav.nav-pills > li.active > a,
-main.race-events-page .race-nav-tabs > li.active > a,
 main.form-page .form-nav-tabs > li.active > a {
   background: var(--color-primary);
   color: var(--color-text-white) !important;
@@ -2046,9 +2038,6 @@ main.race-rules-page .rules-footer {
 /* =========================================
    Race Events Page (Events 리스트 공통 스타일)
    ========================================= */
-main.race-events-page .race-nav-tabs {
-  margin-bottom: 24px;
-}
 
 /* 섹션 공통 */
 main.race-events-page .race-page-container {
@@ -2156,14 +2145,20 @@ main.form-page .help-text {
 /* =========================================
    공통: Organization Style Navigation Tabs
    ========================================= */
-/* organization 페이지와 build 페이지에서 공통으로 사용되는 탭 메뉴 스타일 */
+/* organization, build, learn, race 페이지에서 공통으로 사용되는 탭 메뉴 스타일 */
 .org-page .org-nav-tabs,
-.build-page .org-nav-tabs {
+.build-page .org-nav-tabs,
+.learn-page .org-nav-tabs,
+.race-events-page .org-nav-tabs,
+.race-rules-page .org-nav-tabs {
   margin-bottom: 15px;
 }
 
 .org-page .org-nav-tabs > li > a,
-.build-page .org-nav-tabs > li > a {
+.build-page .org-nav-tabs > li > a,
+.learn-page .org-nav-tabs > li > a,
+.race-events-page .org-nav-tabs > li > a,
+.race-rules-page .org-nav-tabs > li > a {
   border-radius: var(--radius-full);
   padding: 6px 14px;
   font-weight: 600;
@@ -2171,7 +2166,10 @@ main.form-page .help-text {
 }
 
 .org-page .org-nav-tabs > li.active > a,
-.build-page .org-nav-tabs > li.active > a {
+.build-page .org-nav-tabs > li.active > a,
+.learn-page .org-nav-tabs > li.active > a,
+.race-events-page .org-nav-tabs > li.active > a,
+.race-rules-page .org-nav-tabs > li.active > a {
   background: var(--color-primary-dark);
   color: var(--color-text-white) !important;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
