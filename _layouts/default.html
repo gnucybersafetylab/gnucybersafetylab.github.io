@@ -73,6 +73,10 @@
         <a href="{{ '/race' | relative_url }}">Race</a>
       </li>
 
+      <li {% if page.nav_active == 'events' %}class="active"{% endif %}>
+        <a href="{{ '/events' | relative_url }}">Events</a>
+      </li>
+
       <li {% if page.nav_active == 'research' %}class="active"{% endif %}>
         <a href="{{ '/research.html' | relative_url }}">Research</a>
       </li>

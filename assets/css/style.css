@@ -126,12 +126,6 @@ label {
     font-weight: 300;
 }
 
-#head.secondary {
-    height: 100px;
-    min-height: 100px;
-    padding-top: 0px;
-}
-
 #head .lead {
     font-family: "Open sans", Helvetica, Arial;
     font-size: 44px;
@@ -160,7 +154,6 @@ label {
     -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.5);
     -moz-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.5);
     box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.5);
-    background: transparent;
 }
 
 #head .btn-default:hover,
@@ -240,8 +233,6 @@ label {
     margin-bottom: 20px;
 }
 
-.h-body {
-}
 
 .jumbotron {
     background-color: #E0E0E0;
@@ -355,7 +346,6 @@ img.pull-left {
     margin: 0 0 35px 0;
     padding: 2px 0;
     color: #888888;
-    font-size: 12px;
     font-size: 0.75rem;
 }
 
@@ -486,8 +476,6 @@ list-style: none;
     margin-bottom: 30px;
 }
 
-#portfolio {
-}
 
     #portfolio img {
         width: 100%;
@@ -1240,13 +1228,6 @@ body {
   padding-top: 60px;
 }
 
-/* 모바일에서는 조금 더 낮게 */
-@media (max-width: 767px) {
-  body {
-    padding-top: 60px;
-  }
-}
-
 /* ===================================== */
 /*  공통 Navbar 기본 스타일               */
 /* ===================================== */
@@ -1280,7 +1261,6 @@ body {
   }
 
   .navbar-brand img {
-   
     min-height: 40px;
   }
 
@@ -1513,6 +1493,26 @@ main.form-page #head.secondary .lead {
   margin-top: 10px;
   font-size: var(--font-size-md);
   opacity: 0.95;
+}
+
+/* =========================================
+   Events Page Styles
+   ========================================= */
+main.events-page {
+  /* Race 페이지와 동일한 스타일 사용 */
+}
+
+main.events-page .race-description {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+main.events-page .events-page-container {
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 /* =========================================
@@ -2786,9 +2786,6 @@ main.form-page .help-text {
    Home Page Base
    ========================================= */
 
-.home-page {
-  /* 필요시 홈 전용 전역 스타일을 넣을 수 있는 훅 */
-}
 
 /* Hero 영역 (메인 슬라이더) 조금 더 읽기 좋게 정리 */
 .home-hero {
