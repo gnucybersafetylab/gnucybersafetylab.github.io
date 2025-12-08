@@ -2168,10 +2168,11 @@ main.form-page .help-text {
 /* =========================================
    공통: Organization Style Navigation Tabs
    ========================================= */
-/* organization, build, learn, race 페이지에서 공통으로 사용되는 탭 메뉴 스타일 */
+/* organization, build, learn, race, edu 페이지에서 공통으로 사용되는 탭 메뉴 스타일 */
 .org-page .org-nav-tabs,
 .build-page .org-nav-tabs,
 .learn-page .org-nav-tabs,
+.edu-page .org-nav-tabs,
 .race-events-page .org-nav-tabs,
 .race-rules-page .org-nav-tabs {
   margin-bottom: 15px;
@@ -2180,6 +2181,7 @@ main.form-page .help-text {
 .org-page .org-nav-tabs > li > a,
 .build-page .org-nav-tabs > li > a,
 .learn-page .org-nav-tabs > li > a,
+.edu-page .org-nav-tabs > li > a,
 .race-events-page .org-nav-tabs > li > a,
 .race-rules-page .org-nav-tabs > li > a {
   border-radius: var(--radius-full);
@@ -2191,6 +2193,7 @@ main.form-page .help-text {
 .org-page .org-nav-tabs > li.active > a,
 .build-page .org-nav-tabs > li.active > a,
 .learn-page .org-nav-tabs > li.active > a,
+.edu-page .org-nav-tabs > li.active > a,
 .race-events-page .org-nav-tabs > li.active > a,
 .race-rules-page .org-nav-tabs > li.active > a {
   background: var(--color-primary-dark);
