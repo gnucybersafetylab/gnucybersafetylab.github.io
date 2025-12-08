@@ -133,14 +133,6 @@
     </form>
     
     <ul class="nav navbar-nav pull-right" role="menubar">
-      <!-- Search Toggle Button -->
-      <li role="none" class="search-toggle">
-        <a href="#" role="menuitem" id="search-toggle-btn" aria-label="검색 열기" title="검색">
-          <i class="fa fa-search" aria-hidden="true"></i>
-          <span class="sr-only">검색</span>
-        </a>
-      </li>
-
       <li role="none" {% if page.nav_active == 'home' %}class="active"{% endif %}>
         <a href="{{ '/' | relative_url }}" role="menuitem" {% if page.nav_active == 'home' %}aria-current="page"{% endif %}>About</a>
       </li>
@@ -187,6 +179,14 @@
         <a href="{{ '/join' | relative_url }}" role="menuitem" {% if page.nav_active == 'join' %}aria-current="page"{% endif %}>Join</a>
       </li>
 
+      <!-- Search Toggle Button (맨 뒤로 이동) -->
+      <li role="none" class="search-toggle">
+        <a href="#" role="menuitem" id="search-toggle-btn" aria-label="검색 열기" title="검색">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="sr-only">검색</span>
+        </a>
+      </li>
+
     </ul>
         </div><!--/.nav-collapse -->
 
@@ -199,36 +199,35 @@
   <main role="main" id="main-content" tabindex="-1">
     <!-- Breadcrumb Navigation -->
     {% unless page.breadcrumb == false %}
+    {% if page.url != '/' %}
     <nav aria-label="breadcrumb" class="breadcrumb-nav">
       <div class="container">
         <ol class="breadcrumb">
-          <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          {% if page.url != '/' %}
-            {% assign path_parts = page.url | split: '/' %}
-            {% assign current_path = '' %}
-            {% for part in path_parts %}
-              {% if part != '' %}
-                {% assign current_path = current_path | append: '/' | append: part %}
-                {% if forloop.last %}
-                  <li class="active" aria-current="page">
-                    {% if page.breadcrumb_title %}
-                      {{ page.breadcrumb_title }}
-                    {% elsif page.title %}
-                      {{ page.title }}
-                    {% else %}
-                      {{ part | replace: '.html', '' | capitalize }}
-                    {% endif %}
-                  </li>
-                {% else %}
-                  {% assign part_url = current_path | append: '/' %}
-                  <li><a href="{{ part_url | relative_url }}">{{ part | capitalize }}</a></li>
-                {% endif %}
+          {% assign path_parts = page.url | split: '/' %}
+          {% assign current_path = '' %}
+          {% for part in path_parts %}
+            {% if part != '' %}
+              {% assign current_path = current_path | append: '/' | append: part %}
+              {% if forloop.last %}
+                <li class="active" aria-current="page">
+                  {% if page.breadcrumb_title %}
+                    {{ page.breadcrumb_title }}
+                  {% elsif page.title %}
+                    {{ page.title }}
+                  {% else %}
+                    {{ part | replace: '.html', '' | capitalize }}
+                  {% endif %}
+                </li>
+              {% else %}
+                {% assign part_url = current_path | append: '/' %}
+                <li><a href="{{ part_url | relative_url }}">{{ part | capitalize }}</a></li>
               {% endif %}
-            {% endfor %}
-          {% endif %}
+            {% endif %}
+          {% endfor %}
         </ol>
       </div>
     </nav>
+    {% endif %}
     {% endunless %}
     
     {{ content }}
