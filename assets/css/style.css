@@ -3180,6 +3180,134 @@ main.form-page .form-consent label {
   display: block;
 }
 
+/* Hero Banner Section */
+.org-hero-banner {
+  margin: 24px 0 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
+  background: #f9fafb;
+}
+
+.org-hero-banner img {
+  width: 33.33%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.org-hero-banner:hover img {
+  transform: scale(1.02);
+}
+
+/* Intro Header with Logo */
+.org-intro-header,
+.org-vision-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.org-logo-intro {
+  flex-shrink: 0;
+}
+
+.org-logo-img {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+.org-intro-text {
+  flex: 1;
+}
+
+.org-intro-text .org-section-title {
+  margin-bottom: 0;
+}
+
+/* Member Image Section */
+.org-member-image {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.org-member-image:hover {
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
+  transform: translateY(-2px);
+}
+
+.org-member-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Vision Items */
+.org-vision-item {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.org-vision-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.org-vision-image {
+  margin-top: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+}
+
+.org-vision-image:hover {
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
+  transform: translateY(-2px);
+}
+
+.org-vision-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .org-intro-header,
+  .org-vision-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .org-logo-img {
+    width: 100px;
+  }
+
+  .org-hero-banner {
+    margin: 16px 0 24px;
+  }
+
+  .org-vision-item .row {
+    flex-direction: column;
+  }
+
+  .org-vision-item .col-md-4 {
+    order: -1;
+    margin-bottom: 16px;
+  }
+}
+
 /* ============================
    Research Page Base
 =============================== */
