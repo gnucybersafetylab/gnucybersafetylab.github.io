@@ -1,0 +1,196 @@
+---
+layout: default
+title: "Bill of Materials"
+nav_active: "build"
+tab_active: "car"
+---
+
+<main role="main" class="build-page">
+
+  <header id="head" class="secondary">
+    <div class="container">
+      <h1 class="page-title">Bill of Materials (BOM)</h1>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- 🔹 Build 상단 서브 탭 -->
+    <ul class="nav nav-pills org-nav-tabs">
+      <li>
+        <a href="{{ '/build/' | relative_url }}">Build Overview</a>
+      </li>
+      <li class="active">
+        <a href="{{ '/build/car_build/' | relative_url }}">Car Build</a>
+      </li>
+      <li>
+        <a href="{{ '/build/jetson_setup/' | relative_url }}">Jetson Setup</a>
+      </li>
+      <li>
+        <a href="{{ '/build/driver_stack/' | relative_url }}">Driver Stack</a>
+      </li>
+      <li>
+        <a href="{{ '/build/drive/' | relative_url }}">Drive</a>
+      </li>
+    </ul>
+
+    <!-- =============================== -->
+    <!-- BOM Content with Supplier Tabs  -->
+    <!-- =============================== -->
+    <div class="row" style="margin-top: 30px;">
+      <div class="col-md-12">
+        
+        <div class="bom-page">
+          <h2 class="build-section-title">RoboRacer 차량 제작 부품 목록</h2>
+          
+          <p class="lead">
+            RoboRacer 차량 제작에 필요한 모든 부품과 재료 목록입니다. 
+            각 공급처별로 부품을 구매할 수 있습니다.
+          </p>
+
+          <!-- 공급처 탭 -->
+          <ul class="nav nav-tabs bom-supplier-tabs" role="tablist" style="margin-top: 30px; margin-bottom: 20px;">
+            <li role="presentation" class="active">
+              <a href="#supplier1" aria-controls="supplier1" role="tab" data-toggle="tab" data-supplier="supplier1">
+                공급처 1
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#supplier2" aria-controls="supplier2" role="tab" data-toggle="tab" data-supplier="supplier2">
+                공급처 2
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#supplier3" aria-controls="supplier3" role="tab" data-toggle="tab" data-supplier="supplier3">
+                공급처 3
+              </a>
+            </li>
+          </ul>
+
+          <!-- 탭 콘텐츠 -->
+          <div class="tab-content bom-content">
+            <div role="tabpanel" class="tab-pane active" id="supplier1">
+              <div id="supplier1-content" class="supplier-content">
+                <!-- 공급처 1 콘텐츠가 여기에 로드됩니다 -->
+                <div class="text-center" style="padding: 40px;">
+                  <i class="fa fa-spinner fa-spin fa-3x" style="color: #0ecfec;"></i>
+                  <p style="margin-top: 20px;">로딩 중...</p>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="supplier2">
+              <div id="supplier2-content" class="supplier-content">
+                <!-- 공급처 2 콘텐츠가 여기에 로드됩니다 -->
+                <div class="text-center" style="padding: 40px;">
+                  <i class="fa fa-spinner fa-spin fa-3x" style="color: #0ecfec;"></i>
+                  <p style="margin-top: 20px;">로딩 중...</p>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="supplier3">
+              <div id="supplier3-content" class="supplier-content">
+                <!-- 공급처 3 콘텐츠가 여기에 로드됩니다 -->
+                <div class="text-center" style="padding: 40px;">
+                  <i class="fa fa-spinner fa-spin fa-3x" style="color: #0ecfec;"></i>
+                  <p style="margin-top: 20px;">로딩 중...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 공급처 파일 경로
+  var supplierFiles = {
+    'supplier1': '{{ "/build/car_build/supplier1.html" | relative_url }}',
+    'supplier2': '{{ "/build/car_build/supplier2.html" | relative_url }}',
+    'supplier3': '{{ "/build/car_build/supplier3.html" | relative_url }}'
+  };
+  
+  // 로드된 공급처 추적
+  var loadedSuppliers = {};
+  
+  // 공급처 콘텐츠 로드 함수
+  function loadSupplierContent(supplierId, filePath, targetDiv) {
+    targetDiv.innerHTML = '<div class="text-center" style="padding: 40px;"><i class="fa fa-spinner fa-spin fa-3x" style="color: #0ecfec;"></i><p style="margin-top: 20px;">로딩 중...</p></div>';
+    
+    fetch(filePath)
+      .then(function(response) {
+        if (!response.ok) {
+          throw new Error('파일을 찾을 수 없습니다.');
+        }
+        return response.text();
+      })
+      .then(function(html) {
+        // HTML에서 supplier-data 클래스 내용 추출
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(html, 'text/html');
+        var content = doc.querySelector('.supplier-data');
+        
+        if (content) {
+          targetDiv.innerHTML = content.innerHTML;
+        } else {
+          // supplier-data 클래스가 없으면 body 전체 내용 사용
+          targetDiv.innerHTML = doc.body.innerHTML;
+        }
+        loadedSuppliers[supplierId] = true;
+      })
+      .catch(function(error) {
+        targetDiv.innerHTML = '<div class="alert alert-warning" style="margin: 20px;"><strong>오류:</strong> ' + error.message + '<br>파일 경로: ' + filePath + '</div>';
+      });
+  }
+  
+  // Bootstrap 탭 이벤트 리스너
+  if (typeof jQuery !== 'undefined') {
+    jQuery('.bom-supplier-tabs a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+      var supplierId = jQuery(e.target).data('supplier');
+      var contentDiv = document.getElementById(supplierId + '-content');
+      
+      // 이미 로드된 경우 다시 로드하지 않음
+      if (loadedSuppliers[supplierId]) {
+        return;
+      }
+      
+      // 공급처 파일 로드
+      if (supplierFiles[supplierId] && contentDiv) {
+        loadSupplierContent(supplierId, supplierFiles[supplierId], contentDiv);
+      }
+    });
+  } else {
+    // jQuery가 없는 경우 폴백
+    var supplierTabs = document.querySelectorAll('.bom-supplier-tabs a[data-toggle="tab"]');
+    supplierTabs.forEach(function(tab) {
+      tab.addEventListener('click', function(e) {
+        var supplierId = tab.getAttribute('data-supplier');
+        var contentDiv = document.getElementById(supplierId + '-content');
+        
+        if (loadedSuppliers[supplierId]) {
+          return;
+        }
+        
+        if (supplierFiles[supplierId] && contentDiv) {
+          loadSupplierContent(supplierId, supplierFiles[supplierId], contentDiv);
+        }
+      });
+    });
+  }
+  
+  // 초기 로드: 첫 번째 탭 (공급처 1) 로드
+  if (supplierFiles['supplier1']) {
+    var firstContent = document.getElementById('supplier1-content');
+    if (firstContent) {
+      loadSupplierContent('supplier1', supplierFiles['supplier1'], firstContent);
+    }
+  }
+});
+</script>
+
