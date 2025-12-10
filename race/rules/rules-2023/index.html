@@ -6,63 +6,60 @@ nav_active: "race"
 
 <main role="main" class="race-rules-page">
 
-  <header id="head" class="secondary">
-    <div class="container">
-      <h1 class="page-title">F1TENTH Race Rules</h1>
-    </div>
-  </header>
-
+<header id="head" class="secondary">
   <div class="container">
+    <h1 class="page-title">F1TENTH Race Rules</h1>
+  </div>
+</header>
 
-    <!-- 상단 탭 메뉴 -->
-    <ul class="nav nav-pills org-nav-tabs">
-      <li>
-        <a href="{{ '/race/' | relative_url }}">Races</a>
-      </li>
-      <li class="active">
-        <a href="{{ '/race/rules' | relative_url }}">Race Rules</a>
-      </li>
-    </ul>
+<div class="container rules-main-section">
 
-    <div class="row rules-layout">
+  <!-- 상단 탭 메뉴 -->
+  <ul class="nav nav-pills org-nav-tabs">
+    <li><a href="{{ '/race/' | relative_url }}">Races</a></li>
+    <li class="active"><a href="{{ '/race/rules' | relative_url }}">Race Rules</a></li>
+  </ul>
 
-      <!-- ⬅️ 왼쪽 연도별 메뉴 -->
-      <aside class="col-md-3 col-sm-4 rules-sidebar">
-        <div class="year-menu">
-          <h4>Race Rules by Year</h4>
-          <ul class="nav nav-pills nav-stacked">
-            <li>
-              <a href="{{ '/race/rules/rules-2023/' | relative_url }}">2022 Rules</a>
-            </li>
-            <li class="active">
-              <a href="{{ '/race/rules/rules-2023/' | relative_url }}">2023 Rules (ICCAS)</a>
-            </li>
-            <li>
-              <a href="{{ '/race/rules/rules-2023/' | relative_url }}">2024 Rules (ICCAS)</a>
-            </li>
-            <li>
-              <a href="{{ '/race/rules/rules-2025/' | relative_url }}">2025 Rules (ICCAS)</a>
-            </li>
-          </ul>
+  <div class="row">
 
-          <p class="small text-muted year-menu-note">
-            ※ 이 페이지는 F1TENTH Foundation의 국제 규칙(영문)을 기반으로 한 <strong>참고용 정리본</strong>입니다.<br>
-            실제 대회에서는 반드시 해당 연도 규칙 및 운영위 공지를 우선적으로 확인하세요.
-          </p>
-        </div>
-      </aside>
+    <!-- ⬅️ 왼쪽 연도별 메뉴 -->
+    <aside class="col-md-3 col-sm-4">
+      <div class="year-menu-card">
+        <h4>Race Rules by Year</h4>
+        <ul class="nav nav-pills nav-stacked">
+          <li>
+            <a href="{{ '/race/rules/rules-2023/' | relative_url }}">2022 Rules</a>
+          </li>
+          <li class="active">
+            <a href="{{ '/race/rules/rules-2023/' | relative_url }}">2023 Rules (ICCAS)</a>
+          </li>
+          <li>
+            <a href="{{ '/race/rules/rules-2023/' | relative_url }}">2024 Rules (ICCAS)</a>
+          </li>
+          <li>
+            <a href="{{ '/race/rules/rules-2025/' | relative_url }}">2025 Rules (ICCAS)</a>
+          </li>
+        </ul>
 
+        <p class="year-menu-meta">
+          ※ 이 페이지는 F1TENTH Foundation의 국제 규칙(영문)을 기반으로 한 <strong>참고용 정리본</strong>입니다.<br>
+          실제 대회에서는 반드시 해당 연도 규칙 및 운영위 공지를 우선적으로 확인하세요.
+        </p>
+      </div>
+    </aside>
+
+    <!-- ➡️ 오른쪽 규칙 본문 -->
+    <div class="col-md-9 col-sm-8">
+      
       <p class="lead">
         자율주행 레이싱의 공정성과 안전을 위한 공식 규정 문서입니다.  
         RoboRacer Korea 및 국제 F1TENTH 대회에서 사용되는 표준 규칙(국제 버전)을 정리한 페이지입니다.
       </p>
-      <!-- ➡️ 오른쪽 규칙 본문 -->
-      <div class="col-md-9 col-sm-8 rules-content">
 
-        <!-- Table of Contents -->
-        <h2 class="rules-section-title">📘 Table of Contents</h2>
+      <!-- Table of Contents -->
+      <h2 class="rules-section-title">📘 Table of Contents</h2>
 
-        <div class="toc-box">
+      <div class="rules-toc-card">
           <ol>
             <li>General</li>
             <li>In-person (Physical) Competition
@@ -92,8 +89,8 @@ nav_active: "race"
           </ol>
         </div>
 
-        <!-- 1. General -->
-        <div class="rule-block">
+      <!-- 1. General -->
+      <div class="rule-block">
           <h2 class="rules-section-title">1. General</h2>
           <p>
             International F1TENTH Autonomous Racing Competition is open to teams of all skill levels.
@@ -110,8 +107,8 @@ nav_active: "race"
           </div>
         </div>
 
-        <!-- 2. In-person -->
-        <div class="rule-block">
+      <!-- 2. In-person -->
+      <div class="rule-block">
           <h2 class="rules-section-title">2. In-Person Competition</h2>
           <p>
             The competition consists of three stages:  
@@ -259,14 +256,14 @@ nav_active: "race"
 
         </div>
 
-        <div class="rules-footer">
-          &copy; 2022 F1TENTH Foundation — All rights reserved.
-        </div>
+      <div class="rules-footer">
+        &copy; 2022 F1TENTH Foundation — All rights reserved.
+      </div>
 
-      </div><!-- /.col-md-9 -->
+    </div><!-- /.col-md-9 -->
 
-    </div><!-- /.row -->
+  </div><!-- /.row -->
 
-  </div><!-- /.container -->
+</div><!-- /.container -->
 
 </main>

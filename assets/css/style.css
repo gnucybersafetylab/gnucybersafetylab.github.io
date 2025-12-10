@@ -2189,6 +2189,7 @@ main.edu-page .edu-info-card {
 main.race-rules-page .year-menu-card {
   padding: var(--spacing-md) 18px;
   margin-bottom: 20px;
+  margin-top: 25px;
 }
 
 main.race-rules-page .rules-toc-card {
