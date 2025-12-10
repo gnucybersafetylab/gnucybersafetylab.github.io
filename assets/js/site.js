@@ -61,52 +61,70 @@ document.addEventListener("DOMContentLoaded", function () {
   var navToggle = document.querySelector(".navbar-toggle");
   var navCollapse = document.querySelector(".navbar-collapse");
   
-  // 아이폰 사파리 등에서 메뉴가 열린 채로 시작하는 문제 해결
-  if (navCollapse) {
-    // 강제로 메뉴 닫기 (모바일에서만)
+  if (navToggle && navCollapse) {
+    // 초기 상태 설정
     var isMobile = window.innerWidth <= 767;
-    if (isMobile) {
-      // Bootstrap collapse가 로드되기 전에 강제로 닫기
-      navCollapse.classList.remove('in');
-      navCollapse.classList.add('collapse');
-      navCollapse.style.display = 'none';
-      
-      // Bootstrap이 로드된 후에도 확실하게 닫기
-      if (typeof jQuery !== 'undefined' && jQuery(navCollapse).length) {
-        jQuery(navCollapse).collapse('hide');
+    
+    // Bootstrap이 로드된 후에만 초기화 (Bootstrap의 동작을 존중)
+    function initializeMenu() {
+      if (isMobile) {
+        // Bootstrap API를 사용하여 메뉴 닫기
+        if (typeof jQuery !== 'undefined' && jQuery(navCollapse).length) {
+          // Bootstrap이 로드되었는지 확인
+          if (jQuery.fn.collapse) {
+            // 메뉴가 열려있으면 닫기
+            if (navCollapse.classList.contains('in')) {
+              jQuery(navCollapse).collapse('hide');
+            }
+          }
+        } else {
+          // Bootstrap이 아직 로드되지 않았으면 클래스만 제거
+          navCollapse.classList.remove('in');
+        }
       }
     }
-  }
-  
-  if (navToggle && navCollapse) {
+    
+    // DOMContentLoaded 시점에 초기화
+    initializeMenu();
+    
+    // Bootstrap이 로드될 때까지 기다렸다가 다시 초기화
+    if (typeof jQuery !== 'undefined') {
+      jQuery(document).ready(function() {
+        setTimeout(initializeMenu, 100);
+      });
+    }
+    
     // 초기 상태 설정
     navToggle.setAttribute("aria-expanded", "false");
     navToggle.setAttribute("aria-label", "메뉴 열기");
     
-    navCollapse.addEventListener("show.bs.collapse", function() {
-      navToggle.setAttribute("aria-expanded", "true");
-      navToggle.setAttribute("aria-label", "메뉴 닫기");
-      navToggle.classList.add('active');
-    });
-    
-    navCollapse.addEventListener("hide.bs.collapse", function() {
-      navToggle.setAttribute("aria-expanded", "false");
-      navToggle.setAttribute("aria-label", "메뉴 열기");
-      navToggle.classList.remove('active');
-    });
-    
-    // 페이지 로드 시에도 확실하게 닫기
-    window.addEventListener('load', function() {
-      var isMobile = window.innerWidth <= 767;
-      if (isMobile && navCollapse) {
-        if (typeof jQuery !== 'undefined' && jQuery(navCollapse).length) {
-          jQuery(navCollapse).collapse('hide');
-        } else {
-          navCollapse.classList.remove('in');
-          navCollapse.style.display = 'none';
-        }
-      }
-    });
+    // Bootstrap collapse 이벤트 리스너
+    if (typeof jQuery !== 'undefined' && jQuery(navCollapse).length) {
+      jQuery(navCollapse).on('show.bs.collapse', function() {
+        navToggle.setAttribute("aria-expanded", "true");
+        navToggle.setAttribute("aria-label", "메뉴 닫기");
+        navToggle.classList.add('active');
+      });
+      
+      jQuery(navCollapse).on('hide.bs.collapse', function() {
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "메뉴 열기");
+        navToggle.classList.remove('active');
+      });
+    } else {
+      // Bootstrap이 없을 경우를 위한 폴백
+      navCollapse.addEventListener("show.bs.collapse", function() {
+        navToggle.setAttribute("aria-expanded", "true");
+        navToggle.setAttribute("aria-label", "메뉴 닫기");
+        navToggle.classList.add('active');
+      });
+      
+      navCollapse.addEventListener("hide.bs.collapse", function() {
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "메뉴 열기");
+        navToggle.classList.remove('active');
+      });
+    }
   }
   
   // Tab navigation keyboard support
