@@ -23,6 +23,9 @@ breadcrumb_title: "Races"
       <li role="presentation">
         <a href="{{ '/race/rules/' | relative_url }}" role="tab" aria-selected="false" aria-controls="race-rules" id="tab-race-rules">Race Rules</a>
       </li>
+      <li role="presentation">
+        <a href="{{ '/race/apply.html' | relative_url }}" role="tab" aria-selected="false" aria-controls="race-apply" id="tab-race-apply">Race Proposal</a>
+      </li>
     </ul>
 
     <!-- ========================= -->
@@ -108,7 +111,7 @@ breadcrumb_title: "Races"
           <h4>More events coming soon</h4>
           <p class="race-date">TBA</p>
           <p class="race-location">To be announced</p>
-          <a href="#" class="race-link">Propose a new race</a>
+          <a href="{{ '/race/apply.html' | relative_url }}" class="race-link">Propose a new race</a>
         </div>
 
       </div><!-- race-cards-grid -->
