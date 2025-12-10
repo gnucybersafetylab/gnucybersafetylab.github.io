@@ -1485,6 +1485,9 @@ body {
   /* collapse 메뉴가 navbar 아래에서 펼쳐지도록 */
   .navbar-collapse {
     border-top: 1px solid #444;
+    /* 모바일에서 flexbox로 검색 폼을 상단에 배치 */
+    display: flex;
+    flex-direction: column;
   }
 
   /* 모바일 메뉴 항목 줄 간격 */
@@ -3620,6 +3623,20 @@ main.form-page .form-consent label {
 .navbar-form {
   margin: 8px 15px;
   padding: 0;
+  /* 애니메이션을 위한 기본 스타일 */
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* 검색 폼이 표시될 때 */
+.navbar-form.show {
+  max-height: 100px;
+  opacity: 1;
+  margin: 8px 15px;
 }
 
 .navbar-form .form-group {
@@ -3633,6 +3650,7 @@ main.form-page .form-consent label {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   padding: 6px 15px;
+  transition: all 0.2s ease;
 }
 
 .navbar-form .form-control::placeholder {
@@ -3912,17 +3930,53 @@ main.form-page .form-consent label {
 }
 
 @media (max-width: 767px) {
+  /* 모바일에서 navbar-right 클래스 오버라이드 */
+  .navbar-form.navbar-right {
+    float: none !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  
+  /* 검색 폼 모바일 레이아웃 개선 */
   .navbar-form {
-    margin: 10px 0;
     width: 100%;
+    margin: 0;
+    padding: 10px 15px;
+    /* collapsed 메뉴 상단에 배치 */
+    order: -1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 검색 폼이 표시될 때 모바일 스타일 */
+  .navbar-form.show {
+    max-height: 80px;
+    opacity: 1;
+    margin: 0;
+    padding: 10px 15px;
+  }
+  
+  .navbar-form .form-group {
+    width: 100%;
+    margin: 0;
   }
   
   .navbar-form .form-control {
     width: 100%;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px; /* iOS 줌 방지 */
   }
   
   .search-toggle {
-    float: right;
+    float: none;
+    display: block;
+  }
+  
+  /* 모바일에서 검색 폼이 collapsed 메뉴 내부에 있을 때 */
+  .navbar-collapse .navbar-form {
+    display: block;
+    width: 100%;
   }
 }
 

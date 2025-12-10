@@ -142,18 +142,61 @@ document.addEventListener("DOMContentLoaded", function () {
   var searchResultsModal = document.getElementById('search-results-modal');
   var searchResultsBody = document.getElementById('search-results-body');
   
-  // Toggle search form
+  // 초기 상태 설정: 검색 폼 숨김
+  if (searchForm) {
+    searchForm.classList.remove('show');
+    searchForm.style.display = 'none';
+  }
+  
+  // Toggle search form with animation and accessibility
   if (searchToggle && searchForm) {
     searchToggle.addEventListener('click', function(e) {
       e.preventDefault();
-      var isVisible = searchForm.style.display !== 'none';
-      searchForm.style.display = isVisible ? 'none' : 'block';
-      if (!isVisible && searchInput) {
+      var isExpanded = searchForm.classList.contains('show');
+      
+      // 모바일에서 검색 폼을 열 때 collapsed 메뉴도 함께 열기
+      var isMobile = window.innerWidth <= 767;
+      var navCollapse = document.querySelector('.navbar-collapse');
+      var navToggle = document.querySelector('.navbar-toggle');
+      
+      if (isExpanded) {
+        // 폼 숨기기
+        searchForm.classList.remove('show');
+        // 애니메이션 완료 후 display: none 설정
         setTimeout(function() {
-          searchInput.focus();
-        }, 100);
+          searchForm.style.display = 'none';
+        }, 300); // CSS transition 시간과 일치
+        searchToggle.setAttribute('aria-expanded', 'false');
+        searchToggle.setAttribute('aria-label', '검색 열기');
+      } else {
+        // 폼 표시하기
+        searchForm.style.display = 'block';
+        
+        // 모바일에서 collapsed 메뉴가 닫혀있으면 열기
+        if (isMobile && navCollapse && navCollapse.classList.contains('collapse') && !navCollapse.classList.contains('in')) {
+          // Bootstrap collapse를 jQuery로 열기
+          if (typeof jQuery !== 'undefined' && jQuery(navCollapse).length) {
+            jQuery(navCollapse).collapse('show');
+          }
+        }
+        
+        // 다음 프레임에서 show 클래스 추가하여 애니메이션 트리거
+        setTimeout(function() {
+          searchForm.classList.add('show');
+          if (searchInput) {
+            searchInput.focus();
+          }
+        }, 10);
+        searchToggle.setAttribute('aria-expanded', 'true');
+        searchToggle.setAttribute('aria-label', '검색 닫기');
       }
     });
+    
+    // 초기 aria-expanded 상태 설정
+    searchToggle.setAttribute('aria-expanded', 'false');
+    if (!searchToggle.getAttribute('aria-label')) {
+      searchToggle.setAttribute('aria-label', '검색 열기');
+    }
   }
   
   // Search functionality
