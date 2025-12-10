@@ -1,0 +1,311 @@
+---
+layout: default
+title: "Drive"
+nav_active: "build"
+tab_active: "drive"
+---
+
+<main role="main" class="build-page">
+
+  <header id="head" class="secondary">
+    <div class="container">
+      <h1 class="page-title">Step 4: Drive</h1>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- 🔹 Build 상단 서브 탭 -->
+    <ul class="nav nav-pills org-nav-tabs">
+      <li>
+        <a href="{{ '/build/' | relative_url }}">Build Overview</a>
+      </li>
+      <li>
+        <a href="{{ '/build/car_build/' | relative_url }}">Car Build</a>
+      </li>
+      <li>
+        <a href="{{ '/build/jetson_setup/' | relative_url }}">Jetson Setup</a>
+      </li>
+      <li>
+        <a href="{{ '/build/driver_stack/' | relative_url }}">Driver Stack</a>
+      </li>
+      <li class="active">
+        <a href="{{ '/build/drive/' | relative_url }}">Drive</a>
+      </li>
+    </ul>
+
+    <!-- =============================== -->
+    <!-- Documentation Layout            -->
+    <!-- =============================== -->
+    <div class="row car-build-layout" style="margin-top: 30px;">
+
+      <!-- ⬅️ 왼쪽 사이드바 메뉴 -->
+      <aside class="col-md-3 col-sm-4 car-build-sidebar">
+        <div class="build-menu">
+          <h4>Driving the RoboRacer Car</h4>
+          <ul class="nav nav-pills nav-stacked build-menu-list">
+            
+            <!-- Manual Control -->
+            <li class="build-menu-parent">
+              <a href="#" class="build-menu-item build-menu-l1 build-menu-toggle" data-toggle="submenu-1">
+                Manual Control
+                <span class="build-menu-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+              </a>
+              <ul class="build-submenu" id="submenu-1">
+                <li>
+                  <a href="#" data-content="manual-overview" class="build-menu-item build-menu-l2">
+                    Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="manual-1" class="build-menu-item build-menu-l2">
+                    1. Vehicle Inspection
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="manual-2" class="build-menu-item build-menu-l2">
+                    2. Driving the Car
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="manual-troubleshooting" class="build-menu-item build-menu-l2">
+                    Troubleshooting
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Calibrating the Odometry -->
+            <li class="build-menu-parent">
+              <a href="#" class="build-menu-item build-menu-l1 build-menu-toggle" data-toggle="submenu-2">
+                Calibrating the Odometry
+                <span class="build-menu-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+              </a>
+              <ul class="build-submenu" id="submenu-2">
+                <li>
+                  <a href="#" data-content="calib-steering" class="build-menu-item build-menu-l2">
+                    Calibrating the steering and odometry
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="calib-speed" class="build-menu-item build-menu-l2">
+                    Changing the software speed limit
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Autonomous Control -->
+            <li class="build-menu-parent">
+              <a href="#" class="build-menu-item build-menu-l1 build-menu-toggle" data-toggle="submenu-3">
+                Autonomous Control
+                <span class="build-menu-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+              </a>
+              <ul class="build-submenu" id="submenu-3">
+                <li>
+                  <a href="#" data-content="autonomous-sensor" class="build-menu-item build-menu-l2">
+                    Sensor Topics
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="autonomous-drive" class="build-menu-item build-menu-l2">
+                    Drive Topic
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="autonomous-bringup" class="build-menu-item build-menu-l2">
+                    Bringup and Deadman's Switch
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="autonomous-develop" class="build-menu-item build-menu-l2">
+                    Developing your own Node for Autonomous Control
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </aside>
+
+      <!-- ➡️ 오른쪽 메인 콘텐츠 -->
+      <div class="col-md-9 col-sm-8 car-build-content">
+        
+        <!-- Manual Control 콘텐츠들 -->
+        <div id="content-manual-overview" class="build-content-section active">
+          <h2 class="build-section-title">Overview</h2>
+          <div class="build-content-body">
+            <p class="lead">Manual Control 개요입니다.</p>
+            <!-- 콘텐츠는 나중에 추가 -->
+          </div>
+        </div>
+
+        <div id="content-manual-1" class="build-content-section">
+          <h2 class="build-section-title">1. Vehicle Inspection</h2>
+          <div class="build-content-body">
+            <p class="lead">차량 점검 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-manual-2" class="build-content-section">
+          <h2 class="build-section-title">2. Driving the Car</h2>
+          <div class="build-content-body">
+            <p class="lead">차량 주행 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-manual-troubleshooting" class="build-content-section">
+          <h2 class="build-section-title">Troubleshooting</h2>
+          <div class="build-content-body">
+            <p class="lead">문제 해결 가이드입니다.</p>
+          </div>
+        </div>
+
+        <!-- Calibrating the Odometry 콘텐츠들 -->
+        <div id="content-calib-steering" class="build-content-section">
+          <h2 class="build-section-title">Calibrating the steering and odometry</h2>
+          <div class="build-content-body">
+            <p class="lead">조향 및 주행 거리 측정 캘리브레이션 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-calib-speed" class="build-content-section">
+          <h2 class="build-section-title">Changing the software speed limit</h2>
+          <div class="build-content-body">
+            <p class="lead">소프트웨어 속도 제한 변경 가이드입니다.</p>
+          </div>
+        </div>
+
+        <!-- Autonomous Control 콘텐츠들 -->
+        <div id="content-autonomous-sensor" class="build-content-section">
+          <h2 class="build-section-title">Sensor Topics</h2>
+          <div class="build-content-body">
+            <p class="lead">센서 토픽 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-autonomous-drive" class="build-content-section">
+          <h2 class="build-section-title">Drive Topic</h2>
+          <div class="build-content-body">
+            <p class="lead">Drive 토픽 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-autonomous-bringup" class="build-content-section">
+          <h2 class="build-section-title">Bringup and Deadman's Switch</h2>
+          <div class="build-content-body">
+            <p class="lead">Bringup 및 Deadman's Switch 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-autonomous-develop" class="build-content-section">
+          <h2 class="build-section-title">Developing your own Node for Autonomous Control</h2>
+          <div class="build-content-body">
+            <p class="lead">자율주행 제어를 위한 자체 노드 개발 가이드입니다.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 하위 메뉴 토글 기능
+  var menuToggles = document.querySelectorAll('.build-menu-toggle');
+  
+  menuToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      var submenuId = toggle.getAttribute('data-toggle');
+      var submenu = document.getElementById(submenuId);
+      var arrow = toggle.querySelector('.build-menu-arrow i');
+      var parent = toggle.closest('.build-menu-parent');
+      
+      if (submenu) {
+        var isOpen = submenu.classList.contains('open');
+        
+        // 모든 하위 메뉴 닫기
+        document.querySelectorAll('.build-submenu').forEach(function(menu) {
+          menu.classList.remove('open');
+        });
+        document.querySelectorAll('.build-menu-arrow i').forEach(function(icon) {
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        });
+        document.querySelectorAll('.build-menu-parent').forEach(function(p) {
+          p.classList.remove('open');
+        });
+        
+        // 클릭한 메뉴만 열기/닫기
+        if (!isOpen) {
+          submenu.classList.add('open');
+          arrow.classList.remove('fa-chevron-down');
+          arrow.classList.add('fa-chevron-up');
+          parent.classList.add('open');
+        }
+      }
+    });
+  });
+  
+  // 하위 메뉴 아이템 클릭 이벤트
+  var menuItems = document.querySelectorAll('.build-menu-item[data-content]');
+  var contentSections = document.querySelectorAll('.build-content-section');
+  
+  menuItems.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // 모든 메뉴 아이템에서 active 클래스 제거
+      document.querySelectorAll('.build-menu-item').forEach(function(mi) {
+        mi.classList.remove('active');
+      });
+      
+      // 클릭된 메뉴 아이템에 active 클래스 추가
+      item.classList.add('active');
+      
+      // 모든 콘텐츠 섹션 숨기기
+      contentSections.forEach(function(section) {
+        section.classList.remove('active');
+      });
+      
+      // 선택된 콘텐츠 섹션 표시
+      var contentId = 'content-' + item.getAttribute('data-content');
+      var targetSection = document.getElementById(contentId);
+      if (targetSection) {
+        targetSection.classList.add('active');
+        
+        // 부드러운 스크롤
+        setTimeout(function() {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    });
+  });
+  
+  // URL 해시로 초기 콘텐츠 로드
+  if (window.location.hash) {
+    var hash = window.location.hash.substring(1);
+    var hashItem = document.querySelector('.build-menu-item[data-content="' + hash + '"]');
+    if (hashItem) {
+      // 상위 메뉴 열기
+      var parent = hashItem.closest('.build-menu-parent');
+      if (parent) {
+        var toggle = parent.querySelector('.build-menu-toggle');
+        if (toggle) {
+          toggle.click();
+        }
+      }
+      hashItem.click();
+    }
+  }
+});
+</script>
+

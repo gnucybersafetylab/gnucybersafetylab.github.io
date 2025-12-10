@@ -1,0 +1,314 @@
+---
+layout: default
+title: "Jetson Setup"
+nav_active: "build"
+tab_active: "jetson"
+---
+
+<main role="main" class="build-page">
+
+  <header id="head" class="secondary">
+    <div class="container">
+      <h1 class="page-title">Step 2: Jetson Setup</h1>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- 🔹 Build 상단 서브 탭 -->
+    <ul class="nav nav-pills org-nav-tabs">
+      <li><a href="{{ '/build/' | relative_url }}">Build Overview</a></li>
+      <li><a href="{{ '/build/car_build/' | relative_url }}">Car Build</a></li>
+      <li class="active"><a href="{{ '/build/jetson_setup/' | relative_url }}">Jetson Setup</a></li>
+      <li><a href="{{ '/build/driver_stack/' | relative_url }}">Driver Stack</a></li>
+      <li><a href="{{ '/build/drive/' | relative_url }}">Drive</a></li>
+    </ul>
+
+    <!-- =============================== -->
+    <!-- Documentation Layout            -->
+    <!-- =============================== -->
+    <div class="row car-build-layout" style="margin-top: 30px;">
+
+      <!-- ⬅️ 왼쪽 사이드바 메뉴 -->
+      <aside class="col-md-3 col-sm-4 car-build-sidebar">
+        <div class="build-menu">
+          <h4>Configure Jetson and Peripherals</h4>
+          <ul class="nav nav-pills nav-stacked build-menu-list">
+            
+            <!-- 1. Configuring the NVIDIA Jetson NX -->
+            <li class="build-menu-parent">
+              <a href="#" class="build-menu-item build-menu-l1 build-menu-toggle" data-toggle="submenu-1">
+                1. Configuring the NVIDIA Jetson NX
+                <span class="build-menu-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+              </a>
+              <ul class="build-submenu" id="submenu-1">
+                <li>
+                  <a href="#" data-content="jetson-nx-1" class="build-menu-item build-menu-l2">
+                    1. Flash Jetson NX with Software
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="jetson-nx-2" class="build-menu-item build-menu-l2">
+                    2. Run Jetson NX from SSD
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="jetson-nx-3" class="build-menu-item build-menu-l2">
+                    3. Configuring WiFi and SSH
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="jetson-nx-4" class="build-menu-item build-menu-l2">
+                    4. Updating Packages
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="jetson-nx-5" class="build-menu-item build-menu-l2">
+                    5. Creating a Swapfile
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="jetson-nx-6" class="build-menu-item build-menu-l2">
+                    6. Install the Logitech F710 driver on the Jetson.
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- 2. Connecting the Pit/Host and the NVIDIA Jetson NX -->
+            <li class="build-menu-parent">
+              <a href="#" class="build-menu-item build-menu-l1 build-menu-toggle" data-toggle="submenu-2">
+                2. Connecting the Pit/Host and the NVIDIA Jetson NX
+                <span class="build-menu-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+              </a>
+              <ul class="build-submenu" id="submenu-2">
+                <li>
+                  <a href="#" data-content="pit-host-overview" class="build-menu-item build-menu-l2">
+                    Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="pit-host-1" class="build-menu-item build-menu-l2">
+                    1. Vehicle Hardware Setup
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="pit-host-2" class="build-menu-item build-menu-l2">
+                    2. Connecting the NVIDIA Jetson NX to WiFi
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="pit-host-3" class="build-menu-item build-menu-l2">
+                    3. Connecting the Pit/Host Computer to WiFi
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="pit-host-4" class="build-menu-item build-menu-l2">
+                    4. Connecting to the Pit/Host to the NVIDIA Jetson NX
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="pit-host-5" class="build-menu-item build-menu-l2">
+                    5. Using a Remote Desktop
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </aside>
+
+      <!-- ➡️ 오른쪽 메인 콘텐츠 -->
+      <div class="col-md-9 col-sm-8 car-build-content">
+        
+        <!-- 1. Configuring the NVIDIA Jetson NX 콘텐츠들 -->
+        <div id="content-jetson-nx-1" class="build-content-section active">
+          <h2 class="build-section-title">1. Flash Jetson NX with Software</h2>
+          <div class="build-content-body">
+            <p class="lead">Jetson NX에 소프트웨어를 플래시하는 가이드입니다.</p>
+            <!-- 콘텐츠는 나중에 추가 -->
+          </div>
+        </div>
+
+        <div id="content-jetson-nx-2" class="build-content-section">
+          <h2 class="build-section-title">2. Run Jetson NX from SSD</h2>
+          <div class="build-content-body">
+            <p class="lead">SSD에서 Jetson NX를 실행하는 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-jetson-nx-3" class="build-content-section">
+          <h2 class="build-section-title">3. Configuring WiFi and SSH</h2>
+          <div class="build-content-body">
+            <p class="lead">WiFi 및 SSH 설정 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-jetson-nx-4" class="build-content-section">
+          <h2 class="build-section-title">4. Updating Packages</h2>
+          <div class="build-content-body">
+            <p class="lead">패키지 업데이트 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-jetson-nx-5" class="build-content-section">
+          <h2 class="build-section-title">5. Creating a Swapfile</h2>
+          <div class="build-content-body">
+            <p class="lead">스왑 파일 생성 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-jetson-nx-6" class="build-content-section">
+          <h2 class="build-section-title">6. Install the Logitech F710 driver on the Jetson.</h2>
+          <div class="build-content-body">
+            <p class="lead">Jetson에 Logitech F710 드라이버를 설치하는 가이드입니다.</p>
+          </div>
+        </div>
+
+        <!-- 2. Connecting the Pit/Host and the NVIDIA Jetson NX 콘텐츠들 -->
+        <div id="content-pit-host-overview" class="build-content-section">
+          <h2 class="build-section-title">Overview</h2>
+          <div class="build-content-body">
+            <p class="lead">Pit/Host 컴퓨터와 NVIDIA Jetson NX 연결 개요입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-pit-host-1" class="build-content-section">
+          <h2 class="build-section-title">1. Vehicle Hardware Setup</h2>
+          <div class="build-content-body">
+            <p class="lead">차량 하드웨어 설정 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-pit-host-2" class="build-content-section">
+          <h2 class="build-section-title">2. Connecting the NVIDIA Jetson NX to WiFi</h2>
+          <div class="build-content-body">
+            <p class="lead">NVIDIA Jetson NX를 WiFi에 연결하는 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-pit-host-3" class="build-content-section">
+          <h2 class="build-section-title">3. Connecting the Pit/Host Computer to WiFi</h2>
+          <div class="build-content-body">
+            <p class="lead">Pit/Host 컴퓨터를 WiFi에 연결하는 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-pit-host-4" class="build-content-section">
+          <h2 class="build-section-title">4. Connecting to the Pit/Host to the NVIDIA Jetson NX</h2>
+          <div class="build-content-body">
+            <p class="lead">Pit/Host 컴퓨터를 NVIDIA Jetson NX에 연결하는 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-pit-host-5" class="build-content-section">
+          <h2 class="build-section-title">5. Using a Remote Desktop</h2>
+          <div class="build-content-body">
+            <p class="lead">원격 데스크톱 사용 가이드입니다.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 하위 메뉴 토글 기능
+  var menuToggles = document.querySelectorAll('.build-menu-toggle');
+  
+  menuToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      var submenuId = toggle.getAttribute('data-toggle');
+      var submenu = document.getElementById(submenuId);
+      var arrow = toggle.querySelector('.build-menu-arrow i');
+      var parent = toggle.closest('.build-menu-parent');
+      
+      if (submenu) {
+        var isOpen = submenu.classList.contains('open');
+        
+        // 모든 하위 메뉴 닫기
+        document.querySelectorAll('.build-submenu').forEach(function(menu) {
+          menu.classList.remove('open');
+        });
+        document.querySelectorAll('.build-menu-arrow i').forEach(function(icon) {
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        });
+        document.querySelectorAll('.build-menu-parent').forEach(function(p) {
+          p.classList.remove('open');
+        });
+        
+        // 클릭한 메뉴만 열기/닫기
+        if (!isOpen) {
+          submenu.classList.add('open');
+          arrow.classList.remove('fa-chevron-down');
+          arrow.classList.add('fa-chevron-up');
+          parent.classList.add('open');
+        }
+      }
+    });
+  });
+  
+  // 하위 메뉴 아이템 클릭 이벤트
+  var menuItems = document.querySelectorAll('.build-menu-item[data-content]');
+  var contentSections = document.querySelectorAll('.build-content-section');
+  
+  menuItems.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // 모든 메뉴 아이템에서 active 클래스 제거
+      document.querySelectorAll('.build-menu-item').forEach(function(mi) {
+        mi.classList.remove('active');
+      });
+      
+      // 클릭된 메뉴 아이템에 active 클래스 추가
+      item.classList.add('active');
+      
+      // 모든 콘텐츠 섹션 숨기기
+      contentSections.forEach(function(section) {
+        section.classList.remove('active');
+      });
+      
+      // 선택된 콘텐츠 섹션 표시
+      var contentId = 'content-' + item.getAttribute('data-content');
+      var targetSection = document.getElementById(contentId);
+      if (targetSection) {
+        targetSection.classList.add('active');
+        
+        // 부드러운 스크롤
+        setTimeout(function() {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    });
+  });
+  
+  // URL 해시로 초기 콘텐츠 로드
+  if (window.location.hash) {
+    var hash = window.location.hash.substring(1);
+    var hashItem = document.querySelector('.build-menu-item[data-content="' + hash + '"]');
+    if (hashItem) {
+      // 상위 메뉴 열기
+      var parent = hashItem.closest('.build-menu-parent');
+      if (parent) {
+        var toggle = parent.querySelector('.build-menu-toggle');
+        if (toggle) {
+          toggle.click();
+        }
+      }
+      hashItem.click();
+    }
+  }
+});
+</script>
+

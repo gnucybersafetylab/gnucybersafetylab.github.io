@@ -1,0 +1,412 @@
+---
+layout: default
+title: "Driver Stack"
+nav_active: "build"
+tab_active: "driver"
+---
+
+<main role="main" class="build-page">
+
+  <header id="head" class="secondary">
+    <div class="container">
+      <h1 class="page-title">Step 3: Driver Stack</h1>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- 🔹 Build 상단 서브 탭 -->
+    <ul class="nav nav-pills org-nav-tabs">
+      <li><a href="{{ '/build/' | relative_url }}">Build Overview</a></li>
+      <li><a href="{{ '/build/car_build/' | relative_url }}">Car Build</a></li>
+      <li><a href="{{ '/build/jetson_setup/' | relative_url }}">Jetson Setup</a></li>
+      <li class="active"><a href="{{ '/build/driver_stack/' | relative_url }}">Driver Stack</a></li>
+      <li><a href="{{ '/build/drive/' | relative_url }}">Drive</a></li>
+    </ul>
+
+    <!-- =============================== -->
+    <!-- Documentation Layout            -->
+    <!-- =============================== -->
+    <div class="row car-build-layout" style="margin-top: 30px;">
+
+      <!-- ⬅️ 왼쪽 사이드바 메뉴 -->
+      <aside class="col-md-3 col-sm-4 car-build-sidebar">
+        <div class="build-menu">
+          <h4>Install RoboRacer Driver Stack</h4>
+          <ul class="nav nav-pills nav-stacked build-menu-list">
+            
+            <!-- 1. Configuring the VESC -->
+            <li class="build-menu-parent">
+              <a href="#" class="build-menu-item build-menu-l1 build-menu-toggle" data-toggle="submenu-1">
+                1. Configuring the VESC
+                <span class="build-menu-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+              </a>
+              <ul class="build-submenu" id="submenu-1">
+                <li>
+                  <a href="#" data-content="vesc-1" class="build-menu-item build-menu-l2">
+                    1. Installing the VESC Tool
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="vesc-2" class="build-menu-item build-menu-l2">
+                    2. Powering the VESC
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="vesc-3" class="build-menu-item build-menu-l2">
+                    3. Connecting the VESC to Your Laptop
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="vesc-4" class="build-menu-item build-menu-l2">
+                    4. Updating the Firmware on the VESC
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="vesc-5" class="build-menu-item build-menu-l2">
+                    5. Uploading the Motor Configuration XML
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="vesc-6" class="build-menu-item build-menu-l2">
+                    6. Detecting and Calculating Motor Parameters
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="vesc-7" class="build-menu-item build-menu-l2">
+                    7. Changing the Openloop Hysteresis and Openloop Time
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="vesc-8" class="build-menu-item build-menu-l2">
+                    8. Tuning the PID controller
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="vesc-9" class="build-menu-item build-menu-l2">
+                    9. Changing the hardware speed limit
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- 2. Hokuyo 10LX Ethernet Connection Setup -->
+            <li>
+              <a href="#" data-content="hokuyo" class="build-menu-item build-menu-l1">
+                2. Hokuyo 10LX Ethernet Connection Setup
+              </a>
+            </li>
+
+            <!-- 3. RoboRacer Driver Stack Setup -->
+            <li class="build-menu-parent">
+              <a href="#" class="build-menu-item build-menu-l1 build-menu-toggle" data-toggle="submenu-3">
+                3. RoboRacer Driver Stack Setup
+                <span class="build-menu-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+              </a>
+              <ul class="build-submenu" id="submenu-3">
+                <li>
+                  <a href="#" data-content="driver-stack-overview" class="build-menu-item build-menu-l2">
+                    Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="driver-stack-1" class="build-menu-item build-menu-l2">
+                    1. udev Rules Setup
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="driver-stack-2" class="build-menu-item build-menu-l2">
+                    2. Installing ROS 2 and its Utilities
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="driver-stack-3" class="build-menu-item build-menu-l2">
+                    3. Setting up the Driver Stack
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="driver-stack-4" class="build-menu-item build-menu-l2">
+                    4. Launching Teleop and Testing the LiDAR
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- 3. RoboRacer Driver Stack Setup with Docker Containers -->
+            <li class="build-menu-parent">
+              <a href="#" class="build-menu-item build-menu-l1 build-menu-toggle" data-toggle="submenu-4">
+                3. RoboRacer Driver Stack Setup with Docker Containers
+                <span class="build-menu-arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+              </a>
+              <ul class="build-submenu" id="submenu-4">
+                <li>
+                  <a href="#" data-content="docker-overview" class="build-menu-item build-menu-l2">
+                    Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="docker-1" class="build-menu-item build-menu-l2">
+                    1. udev Rules Setup
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="docker-2" class="build-menu-item build-menu-l2">
+                    2. Setting up the Driver Stack inside a Container
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-content="docker-3" class="build-menu-item build-menu-l2">
+                    3. Launching Teleop and Testing the LiDAR
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+      </aside>
+
+      <!-- ➡️ 오른쪽 메인 콘텐츠 -->
+      <div class="col-md-9 col-sm-8 car-build-content">
+        
+        <!-- 1. Configuring the VESC 콘텐츠들 -->
+        <div id="content-vesc-1" class="build-content-section active">
+          <h2 class="build-section-title">1. Installing the VESC Tool</h2>
+          <div class="build-content-body">
+            <p class="lead">VESC Tool 설치 가이드입니다.</p>
+            <!-- 콘텐츠는 나중에 추가 -->
+          </div>
+        </div>
+
+        <div id="content-vesc-2" class="build-content-section">
+          <h2 class="build-section-title">2. Powering the VESC</h2>
+          <div class="build-content-body">
+            <p class="lead">VESC 전원 공급 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-vesc-3" class="build-content-section">
+          <h2 class="build-section-title">3. Connecting the VESC to Your Laptop</h2>
+          <div class="build-content-body">
+            <p class="lead">VESC를 노트북에 연결하는 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-vesc-4" class="build-content-section">
+          <h2 class="build-section-title">4. Updating the Firmware on the VESC</h2>
+          <div class="build-content-body">
+            <p class="lead">VESC 펌웨어 업데이트 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-vesc-5" class="build-content-section">
+          <h2 class="build-section-title">5. Uploading the Motor Configuration XML</h2>
+          <div class="build-content-body">
+            <p class="lead">모터 설정 XML 업로드 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-vesc-6" class="build-content-section">
+          <h2 class="build-section-title">6. Detecting and Calculating Motor Parameters</h2>
+          <div class="build-content-body">
+            <p class="lead">모터 파라미터 감지 및 계산 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-vesc-7" class="build-content-section">
+          <h2 class="build-section-title">7. Changing the Openloop Hysteresis and Openloop Time</h2>
+          <div class="build-content-body">
+            <p class="lead">Openloop Hysteresis 및 Openloop Time 변경 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-vesc-8" class="build-content-section">
+          <h2 class="build-section-title">8. Tuning the PID controller</h2>
+          <div class="build-content-body">
+            <p class="lead">PID 컨트롤러 튜닝 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-vesc-9" class="build-content-section">
+          <h2 class="build-section-title">9. Changing the hardware speed limit</h2>
+          <div class="build-content-body">
+            <p class="lead">하드웨어 속도 제한 변경 가이드입니다.</p>
+          </div>
+        </div>
+
+        <!-- 2. Hokuyo 10LX Ethernet Connection Setup -->
+        <div id="content-hokuyo" class="build-content-section">
+          <h2 class="build-section-title">2. Hokuyo 10LX Ethernet Connection Setup</h2>
+          <div class="build-content-body">
+            <p class="lead">Hokuyo 10LX 이더넷 연결 설정 가이드입니다.</p>
+          </div>
+        </div>
+
+        <!-- 3. RoboRacer Driver Stack Setup 콘텐츠들 -->
+        <div id="content-driver-stack-overview" class="build-content-section">
+          <h2 class="build-section-title">Overview</h2>
+          <div class="build-content-body">
+            <p class="lead">RoboRacer Driver Stack Setup 개요입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-driver-stack-1" class="build-content-section">
+          <h2 class="build-section-title">1. udev Rules Setup</h2>
+          <div class="build-content-body">
+            <p class="lead">udev 규칙 설정 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-driver-stack-2" class="build-content-section">
+          <h2 class="build-section-title">2. Installing ROS 2 and its Utilities</h2>
+          <div class="build-content-body">
+            <p class="lead">ROS 2 및 유틸리티 설치 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-driver-stack-3" class="build-content-section">
+          <h2 class="build-section-title">3. Setting up the Driver Stack</h2>
+          <div class="build-content-body">
+            <p class="lead">Driver Stack 설정 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-driver-stack-4" class="build-content-section">
+          <h2 class="build-section-title">4. Launching Teleop and Testing the LiDAR</h2>
+          <div class="build-content-body">
+            <p class="lead">Teleop 실행 및 LiDAR 테스트 가이드입니다.</p>
+          </div>
+        </div>
+
+        <!-- 3. RoboRacer Driver Stack Setup with Docker Containers 콘텐츠들 -->
+        <div id="content-docker-overview" class="build-content-section">
+          <h2 class="build-section-title">Overview</h2>
+          <div class="build-content-body">
+            <p class="lead">Docker 컨테이너를 사용한 RoboRacer Driver Stack Setup 개요입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-docker-1" class="build-content-section">
+          <h2 class="build-section-title">1. udev Rules Setup</h2>
+          <div class="build-content-body">
+            <p class="lead">udev 규칙 설정 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-docker-2" class="build-content-section">
+          <h2 class="build-section-title">2. Setting up the Driver Stack inside a Container</h2>
+          <div class="build-content-body">
+            <p class="lead">컨테이너 내부에서 Driver Stack 설정 가이드입니다.</p>
+          </div>
+        </div>
+
+        <div id="content-docker-3" class="build-content-section">
+          <h2 class="build-section-title">3. Launching Teleop and Testing the LiDAR</h2>
+          <div class="build-content-body">
+            <p class="lead">Teleop 실행 및 LiDAR 테스트 가이드입니다.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 하위 메뉴 토글 기능
+  var menuToggles = document.querySelectorAll('.build-menu-toggle');
+  
+  menuToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      var submenuId = toggle.getAttribute('data-toggle');
+      var submenu = document.getElementById(submenuId);
+      var arrow = toggle.querySelector('.build-menu-arrow i');
+      var parent = toggle.closest('.build-menu-parent');
+      
+      if (submenu) {
+        var isOpen = submenu.classList.contains('open');
+        
+        // 모든 하위 메뉴 닫기
+        document.querySelectorAll('.build-submenu').forEach(function(menu) {
+          menu.classList.remove('open');
+        });
+        document.querySelectorAll('.build-menu-arrow i').forEach(function(icon) {
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        });
+        document.querySelectorAll('.build-menu-parent').forEach(function(p) {
+          p.classList.remove('open');
+        });
+        
+        // 클릭한 메뉴만 열기/닫기
+        if (!isOpen) {
+          submenu.classList.add('open');
+          arrow.classList.remove('fa-chevron-down');
+          arrow.classList.add('fa-chevron-up');
+          parent.classList.add('open');
+        }
+      }
+    });
+  });
+  
+  // 하위 메뉴 아이템 클릭 이벤트
+  var menuItems = document.querySelectorAll('.build-menu-item[data-content]');
+  var contentSections = document.querySelectorAll('.build-content-section');
+  
+  menuItems.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // 모든 메뉴 아이템에서 active 클래스 제거
+      document.querySelectorAll('.build-menu-item').forEach(function(mi) {
+        mi.classList.remove('active');
+      });
+      
+      // 클릭된 메뉴 아이템에 active 클래스 추가
+      item.classList.add('active');
+      
+      // 모든 콘텐츠 섹션 숨기기
+      contentSections.forEach(function(section) {
+        section.classList.remove('active');
+      });
+      
+      // 선택된 콘텐츠 섹션 표시
+      var contentId = 'content-' + item.getAttribute('data-content');
+      var targetSection = document.getElementById(contentId);
+      if (targetSection) {
+        targetSection.classList.add('active');
+        
+        // 부드러운 스크롤
+        setTimeout(function() {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    });
+  });
+  
+  // URL 해시로 초기 콘텐츠 로드
+  if (window.location.hash) {
+    var hash = window.location.hash.substring(1);
+    var hashItem = document.querySelector('.build-menu-item[data-content="' + hash + '"]');
+    if (hashItem) {
+      // 상위 메뉴 열기
+      var parent = hashItem.closest('.build-menu-parent');
+      if (parent) {
+        var toggle = parent.querySelector('.build-menu-toggle');
+        if (toggle) {
+          toggle.click();
+        }
+      }
+      hashItem.click();
+    }
+  }
+});
+</script>
+

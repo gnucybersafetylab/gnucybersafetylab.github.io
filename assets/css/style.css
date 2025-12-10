@@ -4078,6 +4078,252 @@ main.form-page .form-consent label {
 }
 
 /* =========================================
+   Car Build Documentation Layout
+   ========================================= */
+.car-build-layout {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+/* 왼쪽 사이드바 */
+.car-build-sidebar {
+  padding-right: 20px;
+}
+
+.build-menu {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d4a6e 100%);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 80px;
+}
+
+.build-menu h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.build-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.build-menu-list li {
+  margin-bottom: 8px;
+}
+
+.build-menu-item {
+  display: block;
+  padding: 12px 16px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  border-left: 3px solid transparent;
+  position: relative;
+}
+
+.build-menu-item:hover,
+.build-menu-item:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-decoration: none;
+  border-left-color: #0ecfec;
+  padding-left: 20px;
+}
+
+.build-menu-list li.active .build-menu-item,
+.build-menu-item.active {
+  background-color: rgba(14, 207, 236, 0.2);
+  color: #0ecfec;
+  border-left-color: #0ecfec;
+  font-weight: 600;
+}
+
+/* 계층별 스타일 */
+.build-menu-l1 {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.build-menu-l2 {
+  font-weight: 400;
+  font-size: 13px;
+  padding-left: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* 하위 메뉴 토글 버튼 */
+.build-menu-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.build-menu-arrow {
+  float: right;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.build-menu-parent.open .build-menu-arrow {
+  transform: rotate(0deg);
+}
+
+.build-menu-parent.open .build-menu-arrow i.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* 하위 메뉴 */
+.build-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 6px 6px;
+}
+
+.build-submenu.open {
+  max-height: 1000px;
+}
+
+.build-submenu li {
+  margin: 0;
+}
+
+.build-submenu .build-menu-item {
+  border-left: 2px solid transparent;
+  margin-left: 0;
+}
+
+.build-submenu .build-menu-item:hover {
+  border-left-color: #0ecfec;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.build-submenu .build-menu-item.active {
+  border-left-color: #0ecfec;
+  background-color: rgba(14, 207, 236, 0.15);
+}
+
+/* DEPRECATED 메뉴 스타일 */
+.build-menu-deprecated {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-style: italic;
+}
+
+.build-menu-deprecated:hover {
+  color: rgba(255, 200, 0, 0.8) !important;
+}
+
+/* 오른쪽 메인 콘텐츠 */
+.car-build-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-height: 500px;
+}
+
+.build-content-section {
+  display: none;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.build-content-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.build-section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #0ecfec;
+}
+
+.build-content-body {
+  line-height: 1.8;
+  color: #334155;
+}
+
+.build-content-body h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.build-content-body h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #334155;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.build-content-body ul,
+.build-content-body ol {
+  margin-bottom: 20px;
+  padding-left: 25px;
+}
+
+.build-content-body li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+
+.build-content-body .lead {
+  font-size: 18px;
+  color: #475569;
+  margin-bottom: 25px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 767px) {
+  .car-build-sidebar {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  
+  .build-menu {
+    position: static;
+    border-radius: 8px;
+  }
+  
+  .car-build-content {
+    padding: 20px 15px;
+  }
+  
+  .build-section-title {
+    font-size: 24px;
+  }
+}
+
+/* =========================================
    Breadcrumb Navigation
    ========================================= */
 .breadcrumb-nav {
