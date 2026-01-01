@@ -514,5 +514,23 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+  
+  // Show poster popup modal on homepage
+  var posterModal = document.getElementById('poster-popup-modal');
+  if (posterModal && typeof jQuery !== 'undefined') {
+    var currentPath = window.location.pathname;
+    // Check if we're on the homepage (root path or index.html)
+    var isHomepage = currentPath === '/' || currentPath === '/index.html';
+    
+    if (isHomepage) {
+      // Wait for jQuery and Bootstrap to be fully loaded
+      jQuery(document).ready(function() {
+        // Small delay to ensure page is fully loaded
+        setTimeout(function() {
+          jQuery(posterModal).modal('show');
+        }, 500);
+      });
+    }
+  }
 });
 
