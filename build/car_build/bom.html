@@ -193,10 +193,36 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function supplierLabel(definition) {
-    if (!definition.href) {
-      return definition.name;
+    return definition.name;
+  }
+
+  function renderSupplierLinks() {
+    var links = supplierDefinitions.filter(function(definition) {
+      return definition.href;
+    });
+
+    if (links.length === 0) {
+      return '';
     }
-    return '<a href="' + definition.href + '" target="_blank" rel="noopener noreferrer">' + definition.name + '</a>';
+
+    return [
+      '<div class="alert alert-info" style="margin-top: 20px;">',
+      '<strong>공급처 웹 주소:</strong>',
+      '<ul style="margin: 10px 0 0; padding-left: 20px;">',
+      links.map(function(definition) {
+        return [
+          '<li>',
+          definition.name,
+          ' - ',
+          '<a href="', definition.href, '" target="_blank" rel="noopener noreferrer">',
+          definition.href,
+          '</a>',
+          '</li>'
+        ].join('');
+      }).join(''),
+      '</ul>',
+      '</div>'
+    ].join('');
   }
 
   function mapSupplierRow(definition, row) {
@@ -262,7 +288,8 @@ document.addEventListener("DOMContentLoaded", function() {
       '</tr></thead>',
       '<tbody>', body, '</tbody>',
       '</table>',
-      '</div>'
+      '</div>',
+      renderSupplierLinks()
     ].join('');
   }
 
