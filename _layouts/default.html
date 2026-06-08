@@ -233,25 +233,6 @@
     </div>
   </div>
 
-  <!-- Poster Popup Modal -->
-  <div class="modal fade" id="poster-popup-modal" tabindex="-1" role="dialog" aria-labelledby="poster-popup-title" aria-hidden="true">
-    <div class="modal-dialog" role="document" style="max-width: 50%; margin: 30px auto;">
-      <div class="modal-content">
-        <div class="modal-header" style="border-bottom: none; padding-bottom: 0;">
-          <button type="button" class="close" id="poster-popup-close" data-dismiss="modal" aria-label="닫기" style="font-size: 28px; opacity: 0.8; z-index: 1050;">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" style="padding: 10px; text-align: center;">
-          <img src="{{ '/race/events/2026_1/poster-race26-pnu.jpeg' | relative_url }}" 
-               alt="RoboRacer 26 포스터" 
-               class="img-responsive" 
-               style="max-width: 100%; height: auto; margin: 0 auto; display: block;">
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- 공통 푸터 (원하면 여기서 나중에 재단 소개/저작권 등 통일) -->
 <footer id="footer" class="top-space">
   <div class="footer1">
@@ -358,64 +339,6 @@
 
 <!-- Site-specific JS -->
 <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
-
-<!-- Show poster popup modal on homepage -->
-<script>
-(function() {
-  var currentPath = window.location.pathname;
-  var isHomepage = currentPath === '/' || currentPath === '/index.html' || (currentPath.endsWith('/') && currentPath.split('/').filter(function(p) { return p; }).length <= 1);
-  
-  if (isHomepage) {
-    function showPosterModal() {
-      if (typeof jQuery === 'undefined' || !jQuery.fn || !jQuery.fn.modal) {
-        return false;
-      }
-      
-      var $modal = jQuery('#poster-popup-modal');
-      if ($modal.length === 0) {
-        return false;
-      }
-      
-      // Ensure close button works
-      jQuery('#poster-popup-close').off('click').on('click', function(e) {
-        e.preventDefault();
-        $modal.modal('hide');
-      });
-      
-      // Also handle data-dismiss
-      $modal.find('[data-dismiss="modal"]').off('click').on('click', function(e) {
-        e.preventDefault();
-        $modal.modal('hide');
-      });
-      
-      // Show the modal
-      $modal.modal('show');
-      
-      return true;
-    }
-    
-    // Wait for all scripts to load
-    function initModal() {
-      setTimeout(function() {
-        var attempts = 0;
-        var interval = setInterval(function() {
-          attempts++;
-          if (showPosterModal() || attempts >= 50) {
-            clearInterval(interval);
-          }
-        }, 100);
-      }, 500);
-    }
-    
-    if (document.readyState === 'complete') {
-      initModal();
-    } else {
-      window.addEventListener('load', initModal);
-    }
-  }
-})();
-</script>
-
 
 </body>
 </html>
