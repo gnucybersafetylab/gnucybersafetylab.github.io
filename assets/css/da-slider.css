@@ -184,6 +184,43 @@
 	left: 60%;
 	opacity: 1;
 }
+
+@media (max-width: 767px) {
+	.da-slider {
+		min-width: 0;
+		height: 330px;
+	}
+
+	.da-slide h2 {
+		width: calc(100% - 48px);
+		top: 0;
+		font-size: 38px;
+		line-height: 1.12;
+		white-space: normal;
+	}
+
+	.da-slide p {
+		width: calc(100% - 48px);
+		top: 108px;
+		height: auto;
+		max-height: 112px;
+		font-size: 18px;
+		line-height: 1.45;
+	}
+
+	.da-slide-current h2,
+	.da-slide-current p,
+	.da-slide-current .da-link,
+	.da-slider-fb .da-slide h2,
+	.da-slider-fb .da-slide p,
+	.da-slider-fb .da-slide .da-link {
+		left: 24px;
+	}
+
+	.da-dots {
+		bottom: 28px;
+	}
+}
 /* Animation classes and animations */
 
 /* Slide in from the right*/

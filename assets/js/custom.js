@@ -28,7 +28,9 @@ jQuery(document).ready(function ($) {
 		interval: 4000,
 	});
 // fancybox
-    $(".fancybox").fancybox();
+    if ($.fn.fancybox) {
+        $(".fancybox").fancybox();
+    }
 //isotope
     if ($('.isotopeWrapper').length) {
         var $container = $('.isotopeWrapper');
